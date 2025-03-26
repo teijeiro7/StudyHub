@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     const dropZone = document.getElementById('drop_zone');
     const fileInput = document.getElementById('fileInput');
@@ -62,12 +61,17 @@ document.addEventListener('DOMContentLoaded', function () {
             selectedFilename.textContent = file.name;
             fileInfo.style.display = 'block';
 
+            // Truncate filename if too long for better display on mobile
+            const displayName = file.name.length > 20
+                ? file.name.substring(0, 17) + '...'
+                : file.name;
+
             // Cambia el aspecto de la zona de soltar
             dropZone.innerHTML = `
-    <input type="file" id="fileInput" hidden>
-        <p>Archivo seleccionado</p>
-        <p class="selected-file">${file.name}</p>
-        `;
+                <input type="file" id="fileInput" hidden>
+                <p>Archivo seleccionado</p>
+                <p class="selected-file">${displayName}</p>
+            `;
         }
     }
 
@@ -77,13 +81,18 @@ document.addEventListener('DOMContentLoaded', function () {
         const dateStr = `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()}`;
         const fileName = selectedFilename.textContent;
 
+        // Truncate filename if too long for display
+        const displayName = fileName.length > 15
+            ? fileName.substring(0, 12) + '...'
+            : fileName;
+
         // Crear nuevo elemento para la lista de archivos convertidos
         const fileItem = document.createElement('div');
         fileItem.className = 'file-item';
         fileItem.innerHTML = `
-        <span class="file-name">Nombre archivo: ${fileName}</span>
-        <span class="file-date">Día conversión: ${dateStr}</span>
-        <span class="file-conversion">Cambio de extensión: Word a PDF</span>
+            <span class="file-name">Nombre archivo: ${displayName}</span>
+            <span class="file-date">Día conversión: ${dateStr}</span>
+            <span class="file-conversion">Cambio de extensión: Word a PDF</span>
         `;
 
         // Insertar el nuevo elemento al principio de la lista
@@ -92,9 +101,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Restablecer la zona de soltar
         dropZone.innerHTML = `
-        <input type="file" id="fileInput" hidden>
+            <input type="file" id="fileInput" hidden>
             <p>Selecciona un archivo o<br />suéltalo aquí</p>
-            `;
+        `;
 
         // Ocultar información del archivo
         fileInfo.style.display = 'none';
