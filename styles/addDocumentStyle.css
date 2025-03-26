@@ -22,7 +22,7 @@
 }
 
 body {
-    font-family: "Itim", cursive;
+    font-family: "Just Another Hand", cursive;
     font-size: 16px;
     color: #000000;
     line-height: 1.5;
@@ -37,105 +37,10 @@ body {
     flex-direction: column;
 }
 
-/* Barra superior */
-.overlap-group {
-    width: 100%;
-    padding: var(--spacing-md);
-    background-color: var(--primary-color);
-    border-bottom: 1px solid var(--border-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    z-index: 100;
-    box-shadow: var(--box-shadow);
-}
-
-.text-wrapper {
-    margin-left: var(--spacing-md);
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-/* Iconos de la barra superior */
-.user-controls {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-    margin-right: var(--spacing-md);
-}
-
-.image,
-.img,
-.image-2,
-.image-3,
-.image-4 {
-    width: 25px;
-    height: 25px;
-    object-fit: cover;
-    transition: transform 0.2s ease;
-}
-
-.image:hover,
-.img:hover,
-.image-2:hover,
-.image-3:hover,
-.image-4:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-.username {
-    font-size: 1rem;
-    margin-left: var(--spacing-sm);
-}
-
-.username_title {
-    font-weight: normal;
-    font-size: 1rem;
-}
-
-/* Menú de navegación */
 .nav-menu {
-    display: flex;
-    margin-top: 75px;
-    position: sticky;
-    top: 60px;
-    background-color: var(--primary-color-transparent);
-    z-index: 90;
-    width: 40%;
-    box-shadow: var(--box-shadow);
+    top: 75px;
 }
 
-.overlap-2,
-.div-wrapper,
-.overlap-3 {
-    flex: 1;
-    padding: var(--spacing-md);
-    text-align: center;
-    border-bottom: 1px solid var(--border-color);
-    border-right: 1px solid var(--border-color);
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.overlap-3 {
-    border-radius: 0 0 10px 0;
-}
-
-.overlap-2:hover,
-.div-wrapper:hover,
-.overlap-3:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-3px);
-    cursor: pointer;
-}
-
-.text-wrapper-3,
-.text-wrapper-4 {
-    font-size: 1.2rem;
-    font-weight: 500;
-}
 
 /* Main content */
 .main-content {
@@ -203,7 +108,7 @@ form {
 
 .form-label {
     display: block;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin-bottom: 0.5rem;
     color: var(--border-color);
     font-weight: 500;
@@ -215,7 +120,7 @@ form {
     border-radius: var(--border-radius);
     border: 2px solid transparent;
     font-family: inherit;
-    font-size: 1rem;
+    font-size: 1.3rem;
     background-color: #f0f5ff;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
@@ -269,7 +174,7 @@ form {
     border-radius: var(--border-radius);
     border: 2px solid transparent;
     font-family: inherit;
-    font-size: 1rem;
+    font-size: 1.3rem;
     background-color: #f0f5ff;
     cursor: pointer;
     appearance: none;
