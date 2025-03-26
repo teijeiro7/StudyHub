@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="../styles/addDocumentStyle.css" />
+    <title>Click&Connect - Añadir documento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Just+Another+Hand&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="pgina-principal">
+        <!-- Barra superior -->
+        <div class="overlap-group">
+            <div class="text-wrapper">StudyHub</div>
+            <div class="user-controls">
+                <img class="image-4" src="../images/search.png" alt="Icono" />
+                <img class="image-3" src="../images/list.png" alt="Icono" />
+                <img class="image-2" src="../images/settings.png" alt="Icono" />
+                <img class="image" src="../images/notifications.png" alt="Icono" />
+                <img class="img" src="../images/user.png" alt="Icono" />
+                <div class="username">
+                    <h3 class="username_title">hola123</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú de navegación -->
+        <div class="nav-menu">
+            <div class="overlap-2">
+                <div class="text-wrapper-3">Búsqueda</div>
+            </div>
+            <div class="div-wrapper">
+                <div class="text-wrapper-4">Mis Archivos</div>
+            </div>
+            <div class="overlap-3">
+                <div class="text-wrapper-4">Compartidos</div>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <main class="main-content">
+            <div class="form-container">
+                <h1 class="form-title">Añadir nuevo documento</h1>
+
+                <form>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label class="form-label">Seleccionar archivo</label>
+                            <input type="file" id="fileInput" class="file-input">
+                            <label for="fileInput">Seleccionar archivo</label>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label">Título del archivo</label>
+                            <input type="text" class="form-input" placeholder="Ingrese el título">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label class="form-label">Estudio</label>
+                            <select class="form-select">
+                                <option value="universidad">Universidad</option>
+                                <option value="bachillerato">Bachillerato</option>
+                                <option value="formacion_profesional">Formación Profesional</option>
+                                <option value="primaria">Educación Primaria</option>
+                                <option value="secundaria">Educación Secundaria</option>
+                                <option value="master">Máster</option>
+                                <option value="doctorado">Doctorado</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label">Lugar de estudio</label>
+                            <input type="text" class="form-input" placeholder="Ingrese el lugar">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label class="form-label">Color</label>
+                            <div class="color-selector"></div>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label">Extensión del archivo</label>
+                            <select class="form-select">
+                                <option value="pdf">PDF</option>
+                                <option value="doc">DOC</option>
+                                <option value="docx">DOCX</option>
+                                <option value="ppt">PPT</option>
+                                <option value="pptx">PPTX</option>
+                                <option value="xls">XLS</option>
+                                <option value="xlsx">XLSX</option>
+                                <option value="txt">TXT</option>
+                                <option value="jpg">JPG</option>
+                                <option value="png">PNG</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label">Etiquetas</label>
+                            <input type="text" class="form-input" placeholder="#">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-button">Añadir documento</button>
+                </form>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="click-connect">Click&amp;Connect</div>
+        </footer>
+    </div>
+</body>
+
+</html>

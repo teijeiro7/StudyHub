@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Just Another Hand', cursive;
+}
+
+.container {
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    background: white;
+    overflow: hidden;
+}
+
+/* Header Styles */
+.header {
+    width: 1920px;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: #84B6F4;
+    border-bottom: 1px #234269 solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.logo {
+    color: black;
+    font-size: 55px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.user-icons {
+    display: flex;
+    align-items: center;
+}
+
+.user-icons .icon {
+    margin-right: 10px;
+}
+
+.username {
+    color: black;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+/* Navigation */
+.navigation {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    display: flex;
+}
+
+.nav-item {
+    width: 250px;
+    height: 60px;
+    background: rgba(132, 182, 244, 0.80);
+    border-right: 1px #234269 solid;
+    border-bottom: 1px #234269 solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.nav-last {
+    border-bottom-right-radius: 10px;
+}
+
+/* Main Content */
+.content {
+    position: absolute;
+    top: 160px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    color: black;
+    font-size: 80px;
+    font-weight: 400;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.dropzone {
+    width: 900px;
+    height: 250px;
+    background: #84B6F4;
+    border-radius: 20px;
+    border: 1px #234269 solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.dropzone p {
+    color: black;
+    font-size: 75px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.subtitle {
+    color: black;
+    font-size: 70px;
+    font-weight: 400;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.file-item {
+    width: 900px;
+    height: 70px;
+    background: #84B6F4;
+    border-radius: 70px;
+    border: 1px #234269 solid;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.file-name,
+.file-date,
+.file-conversion {
+    color: black;
+    font-size: 40px;
+    font-weight: 400;
+    padding: 0 15px;
+}
+
+.file-name {
+    width: 33%;
+    border-right: 1px solid black;
+    padding-left: 40px;
+}
+
+.file-date {
+    width: 33%;
+    border-right: 1px solid black;
+    text-align: center;
+}
+
+.file-conversion {
+    width: 34%;
+    padding-left: 20px;
+}
+
+/* Footer */
+.footer {
+    width: 1920px;
+    height: 139px;
+    left: 0px;
+    bottom: 0;
+    position: absolute;
+    background: #84B6F4;
+    border: 1px #234269 solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright {
+    color: black;
+    font-size: 40px;
+    font-weight: 400;
+}

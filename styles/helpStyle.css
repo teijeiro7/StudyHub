@@ -1,0 +1,385 @@
+/* Variables globales */
+:root {
+    --primary-color: #84b6f4;
+    --primary-color-transparent: #84b6f4cc;
+    --secondary-color: #ffffff;
+    --border-color: #234269;
+    --text-color: #000000;
+    --border-radius: 15px;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Itim", cursive;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+/* Página principal */
+.pgina-principal {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra superior */
+.overlap-group {
+    width: 100%;
+    padding: var(--spacing-md);
+    background-color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--box-shadow);
+}
+
+.text-wrapper {
+    margin-left: var(--spacing-md);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Iconos de la barra superior */
+.user-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-right: var(--spacing-md);
+}
+
+.image,
+.img,
+.image-2,
+.image-3,
+.image-4 {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+.image:hover,
+.img:hover,
+.image-2:hover,
+.image-3:hover,
+.image-4:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.username {
+    font-size: 1rem;
+    margin-left: var(--spacing-sm);
+}
+
+.username_title {
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+/* Menú de navegación */
+.nav-menu {
+    display: flex;
+    margin-top: 75px;
+    position: sticky;
+    top: 60px;
+    background-color: var(--primary-color-transparent);
+    z-index: 90;
+    width: 40%;
+    box-shadow: var(--box-shadow);
+}
+
+.overlap-2,
+.div-wrapper,
+.overlap-3 {
+    flex: 1;
+    padding: var(--spacing-md);
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.overlap-3 {
+    border-radius: 0 0 10px 0;
+}
+
+.overlap-2:hover,
+.div-wrapper:hover,
+.overlap-3:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.text-wrapper-3,
+.text-wrapper-4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Título de la página */
+.title-container {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 0 var(--spacing-md);
+}
+
+.main-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 2rem;
+}
+
+/* Contenido principal */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+/* Sección de preguntas frecuentes */
+.faq-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.faq-item {
+    margin-bottom: 1.5rem;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    background-color: #f5f9ff;
+    box-shadow: var(--box-shadow);
+    border-left: 5px solid var(--primary-color);
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.faq-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+}
+
+.faq-question h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.faq-answer {
+    padding: 0.5rem 0 0 2rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Formulario de contacto */
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    color: var(--text-color);
+}
+
+.contact-form h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form h3 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-field {
+    margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: var(--border-radius);
+    border: none;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #888;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(35, 66, 105, 0.5);
+}
+
+.submit-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--border-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.2rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #1b3456;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    padding: var(--spacing-md);
+    background-color: var(--primary-color);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.click-connect {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 992px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-wrapper {
+        font-size: 1.5rem;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .overlap-2,
+    .div-wrapper,
+    .overlap-3 {
+        border-right: none;
+    }
+
+    .overlap-3 {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .user-controls {
+        gap: var(--spacing-sm);
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .click-connect {
+        font-size: 1.2rem;
+    }
+
+    .main-title {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 1.3rem;
+    }
+
+    .overlap-group {
+        padding: var(--spacing-sm);
+    }
+
+    .image,
+    .img,
+    .image-2,
+    .image-3,
+    .image-4 {
+        width: 20px;
+        height: 20px;
+    }
+
+    .username_title {
+        font-size: 0.9rem;
+    }
+
+    .nav-menu {
+        width: 100%;
+    }
+
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+
+    .contact-form {
+        padding: 1rem;
+    }
+
+    .contact-form h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-form h3 {
+        font-size: 1.2rem;
+    }
+}

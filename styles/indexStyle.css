@@ -1,0 +1,260 @@
+/* Variables globales */
+:root {
+    --primary-color: #84b6f4;
+    --primary-color-transparent: #84b6f4cc;
+    --secondary-color: #ffffff;
+    --border-color: #234269;
+    --text-color: #000000;
+    --border-radius: 15px;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+}
+
+/* Estilos base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Itim", cursive;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Página principal */
+.pgina-principal {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra superior */
+.overlap-group {
+    width: 100%;
+    padding: var(--spacing-md);
+    background-color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.text-wrapper {
+    margin-left: var(--spacing-md);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Iconos de la barra superior */
+.user-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-right: var(--spacing-md);
+}
+
+.image,
+.img,
+.image-2,
+.image-3,
+.image-4 {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}
+
+.div {
+    font-size: 1rem;
+    margin-left: var(--spacing-sm);
+}
+
+/* Menú de navegación */
+.nav-menu {
+    display: flex;
+    margin-top: 55px;
+    position: sticky;
+    top: 60px;
+    background-color: var(--primary-color-transparent);
+    z-index: 90;
+    width: 40%;
+}
+
+.overlap-2,
+.div-wrapper,
+.overlap-3 {
+    flex: 1;
+    padding: var(--spacing-md);
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    transition: background-color 0.3s;
+}
+
+.overlap-3 {
+    border-radius: 0 0 10px 0;
+}
+
+.overlap-2:hover,
+.div-wrapper:hover,
+.overlap-3:hover {
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.text-wrapper-3,
+.text-wrapper-4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Título de la página */
+.text-wrapper-2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: var(--spacing-lg) 0;
+    padding-top: 40px;
+}
+
+/* Panel de funcionalidades */
+.overlap-4 {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.feature-card {
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-height: 180px;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: var(--spacing-md);
+}
+
+.feature-card div {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Footer */
+.overlap {
+    width: 100%;
+    padding: var(--spacing-md);
+    background-color: var(--primary-color);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
+
+.click-connect {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .text-wrapper {
+        font-size: 1.5rem;
+    }
+
+    .text-wrapper-2 {
+        font-size: 2rem;
+        margin: var(--spacing-md) 0;
+    }
+
+    .overlap-4 {
+        grid-template-columns: repeat(2, 1fr);
+        width: 95%;
+        padding: var(--spacing-md);
+    }
+
+    .nav-menu {
+        flex-direction: column;
+    }
+
+    .overlap-2,
+    .div-wrapper,
+    .overlap-3 {
+        border-right: none;
+    }
+
+    .overlap-3 {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .user-controls {
+        gap: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .overlap-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .click-connect {
+        font-size: 1.2rem;
+    }
+
+    .text-wrapper-2 {
+        font-size: 1.8rem;
+    }
+
+    .overlap-group {
+        padding: var(--spacing-sm);
+    }
+
+    .image,
+    .img,
+    .image-2,
+    .image-3,
+    .image-4 {
+        width: 20px;
+        height: 20px;
+    }
+
+    .div {
+        font-size: 0.9rem;
+    }
+
+    .feature-card {
+        min-height: 150px;
+    }
+}
