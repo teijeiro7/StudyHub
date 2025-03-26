@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyHub - Búsqueda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Just+Another+Hand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/searchStyle.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Barra superior -->
+        <div class="overlap-group">
+            <div class="text-wrapper">StudyHub</div>
+            <div class="user-controls">
+                <img class="image-4" src="../images/search.png" alt="Icono" />
+                <img class="image-3" src="../images/list.png" alt="Icono" />
+                <img class="image-2" src="../images/settings.png" alt="Icono" />
+                <img class="image" src="../images/notifications.png" alt="Icono" />
+                <img class="img" src="../images/user.png" alt="Icono" />
+                <div class="username">
+                    <h3 class="username_title">hola123</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú de navegación -->
+        <div class="nav-menu">
+            <div class="overlap-2">
+                <div class="text-wrapper-3">Búsqueda</div>
+            </div>
+            <div class="div-wrapper">
+                <div class="text-wrapper-4">Mis Archivos</div>
+            </div>
+            <div class="overlap-3">
+                <div class="text-wrapper-4">Compartidos</div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1 class="search-title">Búsqueda: tema</h1>
+
+            <!-- Search Results -->
+            <div class="search-results">
+                <div class="result-card">
+                    <!-- Content for result 1 -->
+                    <div class="card-divider"></div>
+                    <div class="card-title">tema 1</div>
+                    <div class="card-more">...</div>
+                </div>
+
+                <div class="result-card">
+                    <!-- Content for result 2 -->
+                    <div class="card-divider"></div>
+                    <div class="card-title">tema 2</div>
+                    <div class="card-more">...</div>
+                </div>
+
+                <div class="result-card">
+                    <!-- Content for result 3 -->
+                    <div class="card-divider"></div>
+                    <div class="card-title">tema 3</div>
+                    <div class="card-more">...</div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <img src="../images/leftArrow.png" alt="Previous page" class="arrow_image">
+                <div class="page-current">1</div>
+                <div class="page-numbers">2 3 4 5 ...</div>
+                <img src="../images/rightArrow.png" alt="Next page" class="arrow_image">
+            </div>
+        </div>
+
+        <!-- Filters Panel -->
+        <div class="filters-panel">
+            <h2 class="filters-title">Filtros</h2>
+            <div class="divider"></div>
+
+            <!-- Study Level Filters -->
+            <div class="filter-group">
+                <h3 class="filter-group-title"><img src="../images/downArrow.png" alt="Icon" class="arrow_image">
+                    Estudios</h3>
+                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox" class="arrow_image"> FP
+                </div>
+                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox" class="arrow_image">
+                    Bachillerato</div>
+                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox" class="arrow_image"> ESO
+                </div>
+                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox" class="arrow_image">
+                    Trabajo</div>
+                <div class="filter-option"><img src="../images/downArrow.png" alt="Checkbox" class="arrow_image">
+                    Universidad</div>
+            </div>
+
+            <!-- University Filters -->
+            <div class="filter-subgroup">
+                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox" class="arrow_image">
+                    Carlos III</div>
+                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox" class="arrow_image"> URJC
+                </div>
+                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox" class="arrow_image"> Mates
+                </div>
+                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox" class="arrow_image"> ADE
+                </div>
+                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox" class="arrow_image"> Otros
+                </div>
+            </div>
+
+            <!-- Extension Filters -->
+            <div class="filter-group">
+                <h3 class="filter-group-title"><img src="../images/downArrow.png" alt="Icon" class="arrow_image">
+                    Extensiones</h3>
+                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox" class="arrow_image">PDF
+                </div>
+                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox"
+                        class="arrow_image">DOC/DOCX</div>
+                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox"
+                        class="arrow_image">PPT/PPTX</div>
+                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox"
+                        class="arrow_image">XLS/XLSX</div>
+                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox" class="arrow_image">TXT
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-text">Click&Connect</div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for responsive behavior
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterToggle = document.querySelector('.filter-toggle');
+            const filtersPanel = document.querySelector('.filters-panel');
+
+            // Check screen width and set filter panel visibility
+            function checkScreenSize() {
+                if (window.innerWidth >= 1024) {
+                    filtersPanel.classList.add('active');
+                } else {
+                    filtersPanel.classList.remove('active');
+                }
+            }
+
+            // Run on page load
+            checkScreenSize();
+
+            // Toggle filter panel on button click
+            filterToggle.addEventListener('click', function () {
+                filtersPanel.classList.toggle('active');
+            });
+
+            // Update on window resize
+            window.addEventListener('resize', checkScreenSize);
+        });
+    </script>
+</body>
+
+</html>

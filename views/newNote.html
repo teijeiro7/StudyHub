@@ -1,0 +1,158 @@
+Note.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyHub - Nota Rápida</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Just+Another+Hand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/newNoteStyle.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Barra superior -->
+        <div class="overlap-group">
+            <div class="text-wrapper">StudyHub</div>
+            <div class="user-controls">
+                <img class="image-4" src="../images/search.png" alt="Icono" />
+                <img class="image-3" src="../images/list.png" alt="Icono" />
+                <img class="image-2" src="../images/settings.png" alt="Icono" />
+                <img class="image" src="../images/notifications.png" alt="Icono" />
+                <img class="img" src="../images/user.png" alt="Icono" />
+                <div class="username">
+                    <h3 class="username_title">hola123</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú de navegación -->
+        <div class="nav-menu">
+            <div class="overlap-2">
+                <div class="text-wrapper-3">Búsqueda</div>
+            </div>
+            <div class="div-wrapper">
+                <div class="text-wrapper-4">Mis Archivos</div>
+            </div>
+            <div class="overlap-3">
+                <div class="text-wrapper-4">Compartidos</div>
+            </div>
+        </div>
+
+        <div class="head">
+            <!-- Título de la nota -->
+            <h1 class="note-title">Nota rápida Latín</h1>
+
+            <!-- Barra de herramientas -->
+            <div class="toolbar">
+                <!-- Botón de formato -->
+                <button class="format-button">
+                    <img src="../images/narrator.png" alt="Formato" />
+                </button>
+
+                <!-- Selector de etiquetas -->
+                <div class="tag-selector">
+                    <div class="tag tag-ct">CT</div>
+                    <div class="tag tag-la">LA</div>
+                    <div class="tag tag-jb">JB</div>
+                    <div class="tag tag-ag">AG</div>
+                    <div class="tag tag-oc">OC</div>
+                </div>
+
+                <!-- Herramientas de formato -->
+                <div class="format-tools">
+                    <button class="format-btn" id="bold-btn" title="Negrita">
+                        <img class="format-icon" src="../images/bold.png" alt="Negrita" />
+                    </button>
+                    <div class="divider"></div>
+                    <button class="format-btn" id="underline-btn" title="Subrayado">
+                        <img class="format-icon" src="../images/underline.png" alt="Subrayado" />
+                    </button>
+                    <div class="divider"></div>
+                    <button class="format-btn" id="italic-btn" title="Cursiva">
+                        <img class="format-icon" src="../images/cursive.png" alt="Cursiva" />
+                    </button>
+                    <div class="divider"></div>
+
+                    <!-- Font family dropdown -->
+                    <div class="dropdown-container">
+                        <button class="dropdown-btn" id="font-dropdown-btn">
+                            <img class="format-icon small" src="../images/downArrow.png" alt="Lista" />
+                        </button>
+                        <div class="font-family" id="current-font">Just Another Hand</div>
+                        <div class="dropdown-content" id="font-dropdown">
+                            <div class="dropdown-item" data-font="Arial">Arial</div>
+                            <div class="dropdown-item" data-font="Times New Roman">Times New Roman</div>
+                            <div class="dropdown-item" data-font="Courier New">Courier New</div>
+                            <div class="dropdown-item" data-font="Georgia">Georgia</div>
+                            <div class="dropdown-item selected" data-font="Just Another Hand">Just Another Hand</div>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <!-- Font size dropdown -->
+                    <div class="dropdown-container">
+                        <button class="dropdown-btn" id="size-dropdown-btn">
+                            <img class="format-icon small" src="../images/downArrow.png" alt="Tamaño" />
+                        </button>
+                        <div class="font-size" id="current-size">48</div>
+                        <div class="dropdown-content" id="size-dropdown">
+                            <div class="dropdown-item" data-size="12">12</div>
+                            <div class="dropdown-item" data-size="18">18</div>
+                            <div class="dropdown-item" data-size="24">24</div>
+                            <div class="dropdown-item" data-size="36">36</div>
+                            <div class="dropdown-item selected" data-size="48">48</div>
+                            <div class="dropdown-item" data-size="64">64</div>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+                    <button class="format-btn" id="undo-btn" title="Deshacer">
+                        <img class="format-icon" src="../images/undo.png" alt="Undo" />
+                    </button>
+                    <div class="divider"></div>
+                    <button class="format-btn" id="redo-btn" title="Rehacer">
+                        <img class="format-icon" src="../images/redo.png" alt="Redo" />
+                    </button>
+                </div>
+
+                <!-- Botón de compartir -->
+                <div class="share-button">
+                    <img src="../images/compartir.png" alt="Compartir" />
+                    <span>Compartir</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Área de texto de la nota -->
+        <div class="note-area" contenteditable="true">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea
+                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                id est
+                laborum.</p>
+        </div>
+
+        <!-- Botón de guardar -->
+        <button class="save-button">Guardar</button>
+
+        <!-- Footer -->
+        <div class="overlap">
+            <div class="click-connect">Click&amp;Connect</div>
+        </div>
+    </div>
+</body>
+<script src="../js/newNote.js"></script>
+
+</html>
