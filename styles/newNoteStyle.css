@@ -1,0 +1,457 @@
+/* Variables globales */
+:root {
+    --primary-color: #84b6f4;
+    --primary-color-transparent: #84b6f4cc;
+    --secondary-color: #ffffff;
+    --border-color: #234269;
+    --text-color: #000000;
+    --border-radius: 15px;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --active-color: #5b92d9;
+}
+
+/* Estilos base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Just Another Hand", cursive;
+}
+
+body {
+    line-height: 1.5;
+    background-color: var(--secondary-color);
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: var(--secondary-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-menu {
+    top: 60px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-bottom: 150px;
+    /* Space for footer */
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 220px);
+    margin: 30px 0 0 0;
+}
+
+/* Título de la nota */
+.note-title {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 3rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Barra de herramientas */
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 20px 110px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Botón de formato */
+.format-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    border: 1px var(--border-color) solid;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.format-button:hover {
+    background-color: #f0f0f0;
+}
+
+.format-button img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Selector de etiquetas */
+.tag-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--primary-color);
+    padding: 0 10px;
+    border-radius: 20px;
+    border: 1px var(--border-color) solid;
+    height: 60px;
+}
+
+.tag {
+    width: 43px;
+    height: 43px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px black solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tag:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tag.active {
+    background-color: var(--active-color);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Herramientas de formato */
+.format-tools {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: var(--primary-color);
+    padding: 0 15px;
+    border-radius: 20px;
+    border: 1px var(--border-color) solid;
+    gap: 8px;
+}
+
+.format-icon-btn {
+    background: none;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.format-icon-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.format-icon-btn.active {
+    background-color: var(--active-color);
+}
+
+.format-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s;
+}
+
+.format-icon.small {
+    width: 20px;
+    height: 20px;
+}
+
+.format-icon-btn:hover .format-icon {
+    transform: scale(1.1);
+}
+
+.divider {
+    width: 1px;
+    height: 40px;
+    background-color: var(--border-color);
+    margin: 0 5px;
+}
+
+.font-family,
+.font-size {
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+
+/* Botón de compartir */
+.share-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--primary-color);
+    padding: 0 20px;
+    border-radius: 20px;
+    border: 1px var(--border-color) solid;
+    height: 60px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.share-button:hover {
+    background-color: var(--active-color);
+}
+
+.share-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.share-button span {
+    font-size: 1.6rem;
+}
+
+/* Área de texto de la nota */
+.note-area {
+    width: calc(100% - 220px);
+    height: 520px;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 1px black solid;
+    padding: 30px;
+    overflow-y: auto;
+    background-color: var(--secondary-color);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.5;
+    outline: none;
+}
+
+.note-area:focus {
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.note-area p {
+    margin-bottom: 1rem;
+}
+
+/* Botón de guardar */
+.save-button {
+    width: 700px;
+    height: 60px;
+    margin: 25px auto;
+    background-color: var(--border-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    display: block;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.save-button:hover {
+    background-color: #1a345a;
+}
+
+.save-button:active {
+    transform: scale(0.98);
+}
+
+.save-button:disabled {
+    background-color: #6c8cb7;
+    cursor: not-allowed;
+}
+
+/* Dropdown styles */
+.dropdown-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.dropdown-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.font-family,
+.font-size {
+    font-size: 1.5rem;
+    white-space: nowrap;
+    margin: 0 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--secondary-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-item.selected {
+    background-color: var(--active-color);
+    color: white;
+}
+
+.format-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Media queries para responsividad */
+@media (max-width: 1280px) {
+    .toolbar {
+        margin: 20px 20px;
+        justify-content: center;
+    }
+
+    .format-tools {
+        order: 3;
+        width: 100%;
+        margin-top: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 15px;
+    }
+
+    .note-area {
+        width: calc(100% - 40px);
+        height: 400px;
+    }
+
+    .save-button {
+        width: 80%;
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .note-title {
+        font-size: 2.5rem;
+        margin-top: 150px;
+    }
+
+    .toolbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .tag-selector,
+    .format-tools,
+    .share-button {
+        width: 100%;
+    }
+
+    .tag-selector {
+        justify-content: center;
+    }
+
+    .share-button {
+        justify-content: center;
+    }
+
+    .note-area {
+        height: 300px;
+        font-size: 1.5rem;
+    }
+
+    .save-button {
+        font-size: 1.5rem;
+        height: 50px;
+    }
+
+    .footer {
+        height: 100px;
+    }
+
+    .footer-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .note-title {
+        font-size: 2rem;
+        margin-top: 180px;
+    }
+
+    .tag {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .format-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .format-icon.small {
+        width: 18px;
+        height: 18px;
+    }
+
+    .font-family,
+    .font-size {
+        font-size: 1.2rem;
+    }
+
+    .share-button span {
+        font-size: 1.3rem;
+    }
+
+    .note-area {
+        font-size: 1.3rem;
+        padding: 15px;
+    }
+
+    .save-button {
+        width: 90%;
+        font-size: 1.3rem;
+    }
+}

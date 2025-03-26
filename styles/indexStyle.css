@@ -89,23 +89,6 @@ a {
     font-weight: 500;
 }
 
-/* Footer */
-.overlap {
-    width: 100%;
-    padding: var(--spacing-md);
-    background-color: var(--primary-color);
-    border-top: 1px solid var(--border-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: auto;
-}
-
-.click-connect {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
 /* Media queries para responsividad */
 @media (max-width: 768px) {
     .text-wrapper {
