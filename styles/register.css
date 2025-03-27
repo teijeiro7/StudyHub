@@ -32,7 +32,7 @@ a {
 .pgina-principal {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100% - 24px);
     background-color: var(--secondary-color);
     display: flex;
     flex-direction: column;
@@ -45,7 +45,6 @@ a {
     font-family: "Just Another Hand", cursive;
     font-weight: bold;
     margin: var(--spacing-lg) 0;
-    padding-top: 40px;
 }
 
 /* Contenido principal */
@@ -59,6 +58,7 @@ a {
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin-top: 0;
 }
 
 form {
@@ -103,6 +103,13 @@ button {
     font-family: "Just Another Hand", cursive;
     cursor: pointer;
 
+}
+
+.checkbox_container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
 }
 
 
