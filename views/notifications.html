@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyHub - Notificaciones</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Just+Another+Hand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/notifications.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+</head>
+
+<body>
+    <div class="pgina-principal">
+        <!-- Barra superior -->
+        <div class="overlap-group">
+            <div class="text-wrapper">StudyHub</div>
+            <div class="user-controls">
+                <a href="search.html"><img class="image-4" src="../images/search.png" alt="Icono" /></a>
+                <a href="index.html"><img class="image-3" src="../images/list.png" alt="Icono" /></a>
+                <a href="settings.html"><img class="image-2" src="../images/settings.png" alt="Icono" /></a>
+                <a href="notifications.html"><img class="image" src="../images/notifications.png" alt="Icono" /></a>
+                <a href="profile.html"><img class="img" src="../images/user.png" alt="Icono" /></a>
+                <div class="username">
+                    <h3 class="username_title">hola123</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú de navegación -->
+        <div class="nav-menu">
+            <div class="overlap-2">
+                <div class="text-wrapper-3">Búsqueda</div>
+            </div>
+            <div class="div-wrapper">
+                <div class="text-wrapper-4">Mis Archivos</div>
+            </div>
+            <div class="overlap-3">
+                <div class="text-wrapper-4">Compartidos</div>
+            </div>
+        </div>
+
+        <!-- Título principal -->
+        <div class="text-wrapper-2">Notificaciones</div>
+
+        <!-- Contenido de notificaciones -->
+        <div class="notifications-content">
+            <!-- Filtros de notificaciones -->
+            <div class="notification-filters">
+                <button class="filter-button active" data-filter="all">Todas</button>
+                <button class="filter-button" data-filter="unread">No leídas</button>
+                <button class="filter-button" data-filter="mentions">Menciones</button>
+                <button class="filter-button" data-filter="shares">Compartidos</button>
+            </div>
+
+            <!-- Lista de notificaciones -->
+            <div class="notifications-list">
+                <!-- Notificación no leída -->
+                <div class="notification-item unread">
+                    <div class="notification-icon">
+                        <img src="../images/user.png" alt="Usuario">
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-header">
+                            <span class="notification-user">Sara López</span>
+                            <span class="notification-time">Hace 5 min</span>
+                        </div>
+                        <p class="notification-text">Te ha compartido un nuevo documento: <strong>"Ejercicios de
+                                Matemáticas"</strong></p>
+                        <div class="notification-actions">
+                            <button class="action-button">Ver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notificación no leída con mención -->
+                <div class="notification-item unread mention">
+                    <div class="notification-icon">
+                        <img src="../images/user.png" alt="Usuario">
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-header">
+                            <span class="notification-user">Carlos Martínez</span>
+                            <span class="notification-time">Hace 1 hora</span>
+                        </div>
+                        <p class="notification-text">Te ha mencionado en un comentario: <strong>"@hola123 revisa los
+                                cambios que hice"</strong></p>
+                        <div class="notification-actions">
+                            <button class="action-button">Ver</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Notificación leída de compartido -->
+                <div class="notification-item share">
+                    <div class="notification-icon">
+                        <img src="../images/user.png" alt="Usuario">
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-header">
+                            <span class="notification-user">Laura García</span>
+                            <span class="notification-time">Ayer</span>
+                        </div>
+                        <p class="notification-text">Ha aceptado colaborar en tu documento: <strong>"Apuntes de
+                                Física"</strong></p>
+                        <div class="notification-actions">
+                            <button class="action-button">Ver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notificación leída de sistema -->
+                <div class="notification-item">
+                    <div class="notification-icon system">
+                        <img src="../images/info.png" alt="Sistema">
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-header">
+                            <span class="notification-user">StudyHub</span>
+                            <span class="notification-time">2 días</span>
+                        </div>
+                        <p class="notification-text">Actualización del sistema completada. <strong>Nuevas funciones
+                                disponibles.</strong></p>
+                        <div class="notification-actions">
+                            <button class="action-button">Ver novedades</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notificación leída -->
+                <div class="notification-item">
+                    <div class="notification-icon">
+                        <img src="../images/user.png" alt="Usuario">
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-header">
+                            <span class="notification-user">Pedro Sánchez</span>
+                            <span class="notification-time">3 días</span>
+                        </div>
+                        <p class="notification-text">Ha comentado en tu documento: <strong>"Buen trabajo, me ha servido
+                                mucho!"</strong></p>
+                        <div class="notification-actions">
+                            <button class="action-button">Ver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Control de carga -->
+            <div class="load-more">
+                <button class="load-more-button">Cargar más notificaciones</button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="overlap">
+            <div class="click-connect">Click&amp;Connect</div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,13 +1,13 @@
-.html
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="../styles/nav.css" />
     <link rel="stylesheet" href="../styles/settings.css" />
-    <title>StudyHub - Página Principal</title>
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <title>StudyHub - Ajustes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,15 +17,14 @@
 
 <body>
     <div class="pgina-principal">
-        <!-- Barra superior -->
         <div class="overlap-group">
             <div class="text-wrapper">StudyHub</div>
             <div class="user-controls">
-                <img class="image-4" src="../images/search.png" alt="Icono" />
-                <img class="image-3" src="../images/list.png" alt="Icono" />
-                <img class="image-2" src="../images/settings.png" alt="Icono" />
+                <a href="search.html"><img class="image-4" src="../images/search.png" alt="Icono" /></a>
+                <a href="index.html"><img class="image-3" src="../images/list.png" alt="Icono" /></a>
+                <a href="settings.html"><img class="image-2" src="../images/settings.png" alt="Icono" /></a>
                 <img class="image" src="../images/notifications.png" alt="Icono" />
-                <img class="img" src="../images/user.png" alt="Icono" />
+                <a href="profile.html"><img class="img" src="../images/user.png" alt="Icono" /></a>
                 <div class="username">
                     <h3 class="username_title">hola123</h3>
                 </div>
@@ -49,75 +48,97 @@
         <div class="text-wrapper-2">Ajustes</div>
 
         <!-- Configuraciones -->
-        <div class="container">
-            <div class="dark-mode-setting">
-                <p>Modo oscuro</p>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label>
+        <div class="settings-container">
+            <div class="settings-card">
+                <div class="setting-item">
+                    <div class="setting-label">Modo oscuro</div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-item">
+                    <div class="setting-label">Tamaño de la letra</div>
+                    <div class="setting-control">
+                        <input type="number" min="1" max="100" value="16" class="number-input">
+                    </div>
+                </div>
+
+                <div class="setting-item">
+                    <div class="setting-label">Estilo de letra</div>
+                    <div class="setting-control">
+                        <select id="font-style" name="font-style">
+                            <option value="Arial">Arial</option>
+                            <option value="Calibri">Calibri</option>
+                            <option value="Courier New">Courier New</option>
+                            <option value="Palatino Linotype">Palatino Linotype</option>
+                            <option value="Just Another Hand" selected>Just Another Hand</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="setting-item">
+                    <div class="setting-label">Rechazar solicitudes de unión</div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-item">
+                    <div class="setting-label">Narrador automático</div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-item">
+                    <div class="setting-label">Idioma</div>
+                    <div class="setting-control">
+                        <select id="language" name="language">
+                            <option value="Castellano">Castellano</option>
+                            <option value="Inglés">Inglés</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="setting-item">
+                    <div class="setting-label">Lectura por voz narrador</div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-item apply-changes">
+                    <button class="changes-button">Aplicar cambios</button>
+                </div>
             </div>
-
-            <div class="font-size-setting">
-                <p>Tamaño de la letra</p>
-                <input type="number" min="1" max="100" value="16">
-            </div>
-
-            <div class="font-size-setting">
-                <p>Estilo de letra</p>
-                <label for="opciones"></label>
-                <select id="opciones" name="opciones">
-                <option value="opcion1">Arial</option>
-                <option value="opcion2">Calibri</option>
-                <option value="opcion3">Courier New</option>
-                <option value="opcion4">Palatino Linotype</option>
-                </select>
-            </div>
-
-            <div class="decline-union-setting">
-                <p>Rechazar solictudes de union</p>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label>
-            </div>
-
-            <div class="automatic-narrator-setting">
-                <p>Narrador automático</p>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label>
-            </div>
-            <div class="language-setting">
-                <p>Idioma</p>
-                <label for="opciones"></label>
-                <select id="opciones" name="opciones">
-                    <option value="opcion1">Castellano</option>
-                    <option value="opcion2">Inglés</option>
-                    
-                </select>
-            </div>
-            <div class="voice-narrator-setting">
-                <p>Lectura por voz narrador</p>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label>
-            </div>
-
-            <div><button class="changes">Aplicar cambios</button></div>
-
-
-
-         </div>
-
+        </div>
 
         <!-- Footer -->
         <div class="overlap">
             <div class="click-connect">Click&Connect</div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const changesButton = document.querySelector('.changes-button');
+
+            changesButton.addEventListener('click', function () {
+                this.classList.add('active');
+                this.textContent = '¡Cambios aplicados!';
+
+                setTimeout(() => {
+                    this.classList.remove('active');
+                    this.textContent = 'Aplicar cambios';
+                }, 2000);
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -1,22 +1,32 @@
+-->
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudyHub - Mi Cuenta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Just+Another+Hand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/nav.css">
     <link rel="stylesheet" href="../styles/profile.css">
+    <link rel="stylesheet" href="../styles/footer.css">
 </head>
+
 <body>
     <div class="pgina-principal">
         <!-- Barra superior -->
         <div class="overlap-group">
             <div class="text-wrapper">StudyHub</div>
             <div class="user-controls">
-                <img class="image-4" src="../images/search.png" alt="Icono" />
-                <img class="image-3" src="../images/list.png" alt="Icono" />
-                <img class="image-2" src="../images/settings.png" alt="Icono" />
+                <a href="search.html"><img class="image-4" src="../images/search.png" alt="Icono" /></a>
+                <a href="index.html"><img class="image-3" src="../images/list.png" alt="Icono" /></a>
+                <a href="settings.html"><img class="image-2" src="../images/settings.png" alt="Icono" /></a>
                 <img class="image" src="../images/notifications.png" alt="Icono" />
-                <img class="img" src="../images/user.png" alt="Icono" />
+                <a href="profile.html"><img class="img" src="../images/user.png" alt="Icono" /></a>
                 <div class="username">
                     <h3 class="username_title">hola123</h3>
                 </div>
@@ -39,41 +49,58 @@
         <!-- Título principal -->
         <div class="text-wrapper-2">Mi Cuenta</div>
 
-    
-       <div class="container">
-
-            <div class="container2">
-                <img src="../images/user.png" alt="">
-            </div>
-
-            <div class="container3">
-                <div class="perfil">
-                    <div class="avatar">
-                        <img src="../images/user.png" alt="avatar">
+        <!-- Contenido del perfil -->
+        <div class="profile-content">
+            <!-- Banner del perfil -->
+            <div class="profile-banner">
+                <div class="banner-overlay">
+                    <div class="profile-picture">
+                        <img src="../images/user.png" alt="Foto de perfil">
                     </div>
-                    <div class="info">
-                        <p><strong>Nombre:</strong> User</p>
-                        <p><strong>Nombre de usuario:</strong> user123</p>
-                        <p><strong>Correo Electrónico:</strong> user123@gmail.com</p>
-                        <p><strong>Fecha de nacimiento:</strong> 31/12/2004</p>
-                        <p><strong>Sexo:</strong> Hombre</p>
-                    </div>
-                    <button class="editar">Editar Perfil</button>
-                </div>
-    
-                <div class="insignias">
-                    <img src="../images/insignia.png" alt="insignia">
-                    <h3>Mis Insignias</h3>
                 </div>
             </div>
 
-            
-       </div>
-        
+            <!-- Información y badges -->
+            <div class="profile-sections">
+                <!-- Sección de información personal -->
+                <div class="profile-section info-section">
+                    <h3 class="section-title">Información Personal</h3>
+                    <div class="profile-info">
+                        <p><span>Nombre:</span> User</p>
+                        <p><span>Nombre de usuario:</span> user123</p>
+                        <p><span>Correo Electrónico:</span> user123@gmail.com</p>
+                        <p><span>Fecha de nacimiento:</span> 31/12/2004</p>
+                        <p><span>Sexo:</span> Hombre</p>
+                    </div>
+                    <button class="edit-button">Editar Perfil</button>
+                </div>
 
-    <!-- Footer -->
-    <div class="overlap">
-        <div class="click-connect">Click&amp;Connect</div>
+                <!-- Sección de insignias -->
+                <div class="profile-section badges-section">
+                    <h3 class="section-title">Mis Insignias</h3>
+                    <div class="badges-grid">
+                        <div class="badge">
+                            <img src="../images/insignia.png" alt="Insignia">
+                            <p>Escritor</p>
+                        </div>
+                        <div class="badge">
+                            <img src="../images/insignia.png" alt="Insignia">
+                            <p>Estudioso</p>
+                        </div>
+                        <div class="badge">
+                            <img src="../images/insignia.png" alt="Insignia">
+                            <p>Matemáticas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="overlap">
+            <div class="click-connect">Click&amp;Connect</div>
+        </div>
     </div>
 </body>
+
 </html>

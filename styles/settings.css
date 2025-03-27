@@ -19,7 +19,7 @@
 }
 
 body {
-    font-family: "Itim", cursive;
+    font-family: "Just Another Hand", cursive;
     line-height: 1.5;
 }
 
@@ -38,298 +38,292 @@ a {
     flex-direction: column;
 }
 
-/* Barra superior */
-.overlap-group {
-    width: 100%;
-    padding: var(--spacing-md);
-    background-color: var(--primary-color);
-    border-bottom: 1px solid var(--border-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    z-index: 100;
-}
-
-.text-wrapper {
-    margin-left: var(--spacing-md);
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-/* Iconos de la barra superior */
-.user-controls {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-    margin-right: var(--spacing-md);
-}
-
-.image,
-.img,
-.image-2,
-.image-3,
-.image-4 {
-    width: 25px;
-    height: 25px;
-    object-fit: cover;
-}
-
-.div {
-    font-size: 1rem;
-    margin-left: var(--spacing-sm);
-}
-
-/* Menú de navegación */
 .nav-menu {
-    display: flex;
-    margin-top: 55px;
-    position: sticky;
-    top: 60px;
-    background-color: var(--primary-color-transparent);
-    z-index: 90;
-    width: 40%;
-}
-
-.overlap-2,
-.div-wrapper,
-.overlap-3 {
-    flex: 1;
-    padding: var(--spacing-md);
-    text-align: center;
-    border-bottom: 1px solid var(--border-color);
-    border-right: 1px solid var(--border-color);
-    transition: background-color 0.3s;
-}
-
-.overlap-3 {
-    border-radius: 0 0 10px 0;
-}
-
-.overlap-2:hover,
-.div-wrapper:hover,
-.overlap-3:hover {
-    background-color: var(--primary-color);
-    cursor: pointer;
-}
-
-.text-wrapper-3,
-.text-wrapper-4 {
-    font-size: 1.2rem;
-    font-weight: 500;
+    top: 75px;
 }
 
 /* Título de la página */
 .text-wrapper-2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
-    margin: var(--spacing-lg) 0;
-    padding-top: 40px;
+    margin: var(--spacing-md) 0;
+    color: var(--text-color);
 }
 
-/* Contenido principal */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+/* Contenedor de ajustes */
+.settings-container {
+    width: 90%;
     max-width: 600px;
-    margin: auto;
+    /* Reduced from 800px */
+    margin: 10px auto 80px auto;
+    /* Reduced margins */
+    padding: 0 15px;
+    /* Reduced padding */
 }
 
-.container > div{
+.settings-card {
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    /* Reduced padding */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Elemento de configuración */
+.setting-item {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: row;
-
+    margin-bottom: var(--spacing-md);
+    /* Reduced margin */
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.container > div > p{
-    margin: 12px;
+.setting-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
 }
 
+.setting-label {
+    font-size: 2.2rem;
+    /* Reduced font size */
+    color: var(--text-color);
+    flex-grow: 1;
+}
+
+.setting-control {
+    min-width: 120px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Switch (toggle) */
 .switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 25px;
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    /* Reduced width */
+    height: 28px;
+    /* Reduced height */
+    margin-left: var(--spacing-md);
 }
 
 .switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
 .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.4s;
-  border-radius: 25px;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
 }
 
 .slider:before {
-  position: absolute;
-  content: "";
-  height: 18px;
-  width: 18px;
-  left: 4px;
-  bottom: 3px;
-  background-color: white;
-  transition: 0.4s;
-  border-radius: 50%;
+    position: absolute;
+    content: "";
+    height: 20px;
+    /* Reduced height */
+    width: 20px;
+    /* Reduced width */
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
 }
 
-input:checked + .slider {
-  background-color: var(--border-color);
+input:checked+.slider {
+    background-color: var(--border-color);
 }
 
-input:checked + .slider:before {
-  transform: translateX(25px);
+input:checked+.slider:before {
+    transform: translateX(22px);
+    /* Adjusted for smaller switch */
 }
 
-.changes{
-    height: 30px;
-    width: 200px;
-    background-color:var(--border-color);
-    margin-bottom: 10px;
-    border-radius: 10px;
-    color: #ffffff;
+/* Entrada numérica */
+.number-input {
+    width: 70px;
+    /* Reduced width */
+    height: 34px;
+    /* Reduced height */
+    font-size: 1.8rem;
+    /* Reduced font size */
+    text-align: center;
+    border-radius: calc(var(--border-radius) - 5px);
+    /* Smaller radius */
+    border: 1px solid var(--border-color);
+    /* Thinner border */
+    background-color: var(--secondary-color);
+    font-family: "Just Another Hand", cursive;
+    font-weight: bold;
 }
 
-/* Estilos para selectores */
+/* Selector */
 select {
     width: 100%;
-    padding: calc(var(--spacing-sm) / 3);
-    margin: calc(var(--spacing-sm) / 3) 0;
+    height: 34px;
+    /* Reduced height */
+    padding: 3px 8px;
+    /* Reduced padding */
+    border-radius: calc(var(--border-radius) - 5px);
+    /* Smaller radius */
     border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    background-color:var(--primary-color);
+    /* Thinner border */
+    background-color: var(--secondary-color);
+    font-family: "Just Another Hand", cursive;
+    font-size: 1.6rem;
+    /* Reduced font size */
     color: var(--text-color);
-    font-size: 0.8rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23234269' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+    /* Smaller icon */
+    cursor: pointer;
 }
 
 select:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 5px var(--primary-color);
     outline: none;
+    border-color: var(--border-color);
+    box-shadow: 0 0 0 1px rgba(35, 66, 105, 0.3);
 }
 
-/* Footer */
-.overlap {
-    width: 100%;
-    padding: var(--spacing-md);
-    background-color: var(--primary-color);
-    border-top: 1px solid var(--border-color);
+/* Botón de aplicar cambios */
+.apply-changes {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: auto;
+    padding-top: var(--spacing-sm);
+    /* Reduced padding */
+    margin-top: var(--spacing-md);
+    /* Reduced margin */
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: none;
 }
 
-.click-connect {
-    font-size: 1.5rem;
-    font-weight: bold;
+.changes-button {
+    width: 90%;
+    /* Reduced width */
+    max-width: 400px;
+    /* Reduced max-width */
+    height: 50px;
+    /* Reduced height */
+    background-color: var(--border-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-family: "Just Another Hand", cursive;
+    font-size: 2.2rem;
+    /* Reduced font size */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.changes-button:hover {
+    background-color: #1a3456;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.changes-button:active,
+.changes-button.active {
+    background-color: #0f6b0f;
+    transform: translateY(0);
 }
 
 /* Media queries para responsividad */
 @media (max-width: 768px) {
-    .text-wrapper {
-        font-size: 1.5rem;
-    }
-
     .text-wrapper-2 {
-        font-size: 2rem;
-        margin: var(--spacing-md) 0;
+        font-size: 2.7rem;
+        padding-top: 80px;
     }
 
-    .overlap-4 {
-        grid-template-columns: repeat(2, 1fr);
-        width: 95%;
-        padding: var(--spacing-md);
-    }
-
-    .nav-menu {
+    .setting-item {
         flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: var(--spacing-sm);
+    }
+
+    .setting-label {
+        margin-bottom: calc(var(--spacing-sm) / 2);
+        font-size: 2rem;
+    }
+
+    .switch {
+        margin-left: 0;
+    }
+
+    .setting-control {
+        width: 100%;
+        min-width: auto;
+    }
+
+    select,
+    .number-input {
         width: 100%;
     }
 
-    .overlap-2,
-    .div-wrapper,
-    .overlap-3 {
-        border-right: none;
-    }
-
-    .overlap-3 {
-        border-radius: 0 0 10px 10px;
-    }
-
-    .user-controls {
-        gap: var(--spacing-sm);
-    }
-
-    .perfil,
-    .insignias {
-        width: 100%;
-        margin-top: var(--spacing-md);
-    }
-
-    .container2,
-    .container3 {
-        width: 100%;
+    .apply-changes {
+        margin-top: var(--spacing-sm);
     }
 }
 
 @media (max-width: 480px) {
-    .overlap-4 {
-        grid-template-columns: 1fr;
-    }
-
-    .click-connect {
-        font-size: 1.2rem;
-    }
-
     .text-wrapper-2 {
-        font-size: 1.8rem;
+        font-size: 2.3rem;
+        padding-top: 100px;
     }
 
-    .overlap-group {
+    .settings-container {
+        width: 95%;
+        padding: 0 10px;
+    }
+
+    .settings-card {
         padding: var(--spacing-sm);
     }
 
-    .image,
-    .img,
-    .image-2,
-    .image-3,
-    .image-4 {
-        width: 20px;
-        height: 20px;
+    .setting-label {
+        font-size: 1.8rem;
     }
 
-    .div {
-        font-size: 0.9rem;
+    .changes-button {
+        font-size: 1.8rem;
+        height: 45px;
     }
 
-    .feature-card {
-        min-height: 150px;
+    .switch {
+        width: 46px;
+        height: 26px;
     }
 
-    .perfil,
-    .insignias {
-        width: 100%;
-        margin-top: var(--spacing-sm);
+    .slider:before {
+        height: 18px;
+        width: 18px;
     }
 
-    .container2,
-    .container3 {
-        width: 100%;
+    input:checked+.slider:before {
+        transform: translateX(20px);
+    }
+
+    .number-input {
+        height: 32px;
+        font-size: 1.6rem;
+    }
+
+    select {
+        height: 32px;
+        font-size: 1.5rem;
     }
 }
