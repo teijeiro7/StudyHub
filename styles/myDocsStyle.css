@@ -1,0 +1,483 @@
+/* Variables globales */
+:root {
+    --primary-color: #84b6f4;
+    --primary-color-transparent: #84b6f4cc;
+    --secondary-color: #ffffff;
+    --border-color: #234269;
+    --text-color: #000000;
+    --border-radius: 15px;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+}
+
+/* Estilos base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Just Another Hand", cursive;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.nav-menu {
+    top: 75px;
+}
+
+/* Página principal */
+.pgina-principal {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Título de la página */
+.text-wrapper-2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: var(--spacing-lg) 0;
+    /* Para dejar espacio para la barra de navegación fija */
+}
+
+/* Contenido principal */
+.main-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto var(--spacing-lg);
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+}
+
+/* Files header section */
+.files-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.file-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.upload-btn {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    font-family: "Just Another Hand", cursive;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.upload-btn:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+}
+
+.search-bar {
+    display: flex;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: var(--secondary-color);
+}
+
+.search-bar input {
+    padding: 8px 12px;
+    border: none;
+    outline: none;
+    width: 250px;
+    font-family: "Just Another Hand", cursive;
+    font-size: 1.2rem;
+}
+
+.search-btn {
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.search-btn:hover {
+    background-color: #f8f9fa;
+}
+
+/* Files view options */
+.files-view-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.view-toggles {
+    display: flex;
+    gap: 10px;
+}
+
+.view-btn {
+    background: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-color);
+    font-family: "Just Another Hand", cursive;
+    font-size: 1.2rem;
+}
+
+.view-btn.active {
+    background-color: #e9ecef;
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+.view-btn:hover:not(.active) {
+    background-color: #f1f3f5;
+}
+
+.file-filters {
+    display: flex;
+    gap: 10px;
+}
+
+.file-filters select {
+    padding: 6px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    outline: none;
+    font-family: "Just Another Hand", cursive;
+    font-size: 1.2rem;
+}
+
+/* Files grid view */
+.files-container.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* Files list view */
+.files-container.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.files-container.list-view .file-card {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.files-container.list-view .file-icon {
+    margin-right: 15px;
+    min-width: 40px;
+}
+
+/* File card */
+.file-card {
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.file-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.file-icon {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 36px;
+}
+
+.file-icon.pdf {
+    color: #e74c3c;
+}
+
+.file-icon.doc {
+    color: #3498db;
+}
+
+.file-icon.image {
+    color: #27ae60;
+}
+
+.file-icon.ppt {
+    color: #e67e22;
+}
+
+.file-icon.zip {
+    color: #8e44ad;
+}
+
+.file-info {
+    text-align: center;
+}
+
+.file-name {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0 0 5px;
+    color: var(--text-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.file-meta {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.file-card .file-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: #7f8c8d;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.action-btn:hover {
+    background-color: #f1f3f5;
+    color: var(--text-color);
+}
+
+/* Upload Modal */
+.upload-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #7f8c8d;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.drop-area {
+    border: 2px dashed var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 40px 20px;
+    text-align: center;
+    transition: border-color 0.2s;
+    background-color: #f9f9f9;
+}
+
+.drop-area:hover,
+.drop-area.active {
+    border-color: var(--primary-color);
+}
+
+.drop-area i {
+    font-size: 48px;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.drop-area p {
+    font-size: 1.4rem;
+}
+
+.browse-btn {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: "Just Another Hand", cursive;
+    font-size: 1.4rem;
+}
+
+.selected-files {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.modal-footer {
+    padding: 15px 20px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    background-color: #f9f9f9;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.cancel-btn {
+    background-color: #f1f3f5;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-family: "Just Another Hand", cursive;
+    font-size: 1.4rem;
+}
+
+.upload-confirm-btn {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-family: "Just Another Hand", cursive;
+    font-size: 1.4rem;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .text-wrapper-2 {
+        font-size: 2rem;
+        margin: var(--spacing-md) 0;
+        margin-top: 100px;
+    }
+
+    .main-content {
+        width: 95%;
+        padding: var(--spacing-md);
+    }
+
+    .files-header,
+    .files-view-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    .file-actions {
+        width: 100%;
+    }
+
+    .files-container.grid-view {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .file-filters {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .file-filters select {
+        flex: 1;
+    }
+
+    .nav-menu {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .files-container.grid-view {
+        grid-template-columns: 1fr;
+    }
+
+    .view-toggles,
+    .file-filters {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .text-wrapper-2 {
+        font-size: 1.8rem;
+        margin-top: 80px;
+    }
+
+    .file-name {
+        font-size: 1.3rem;
+    }
+
+    .file-meta {
+        font-size: 1rem;
+    }
+}
