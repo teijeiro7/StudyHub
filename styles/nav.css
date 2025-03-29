@@ -55,6 +55,11 @@
     width: 40%;
 }
 
+.nav-menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .overlap-2,
 .div-wrapper,
 .overlap-3 {
