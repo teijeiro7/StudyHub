@@ -1,0 +1,285 @@
+/* Variables globales */
+:root {
+    --primary-color: #84b6f4;
+    --primary-color-transparent: #84b6f4cc;
+    --secondary-color: #ffffff;
+    --border-color: #234269;
+    --text-color: #000000;
+    --border-radius: 15px;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --light-gray: #f1f3f5;
+}
+
+/* Estilos base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Just Another Hand", cursive;
+    line-height: 1.5;
+}
+
+.nav-menu {
+    top: 75px;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Título de la página */
+.text-wrapper-2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: var(--spacing-lg) 0;
+}
+
+/* Contenido principal */
+.main-content {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto var(--spacing-lg);
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    flex: 1;
+}
+
+/* Contenedor del perfil */
+.profile-container {
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: var(--spacing-md);
+}
+
+/* Avatar */
+.avatar-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.avatar-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--light-gray);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-edit {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 32px;
+    height: 32px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid var(--secondary-color);
+    transition: background-color 0.3s;
+}
+
+.avatar-edit:hover {
+    background-color: var(--border-color);
+}
+
+/* Formulario */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-sm);
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1.2rem;
+    font-family: "Inter", sans-serif;
+}
+
+.form-row {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-divider {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin: var(--spacing-sm) 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Checkbox */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.checkbox-group input {
+    width: 18px;
+    height: 18px;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+}
+
+/* Tags input */
+.tags-input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-color);
+}
+
+.tag {
+    background-color: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.tag-close {
+    margin-left: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tags-input input {
+    flex: 1;
+    min-width: 100px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-family: "Inter", sans-serif;
+}
+
+/* Botones */
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.cancel-btn,
+.save-btn {
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+}
+
+.cancel-btn {
+    background-color: var(--secondary-color);
+}
+
+.save-btn {
+    background-color: var(--primary-color);
+}
+
+.cancel-btn:hover {
+    background-color: var(--light-gray);
+}
+
+.save-btn:hover {
+    background-color: var(--border-color);
+    color: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .text-wrapper-2 {
+        font-size: 2rem;
+        margin-top: 80px;
+    }
+
+    .main-content {
+        width: 95%;
+        padding: var(--spacing-md);
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .nav-menu {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-wrapper-2 {
+        font-size: 1.8rem;
+        margin-top: 70px;
+    }
+
+    .main-content {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .profile-container {
+        border-radius: 0;
+    }
+
+    .form-buttons {
+        flex-direction: column-reverse;
+        gap: var(--spacing-sm);
+    }
+
+    .cancel-btn,
+    .save-btn {
+        width: 100%;
+    }
+}

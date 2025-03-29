@@ -47,13 +47,21 @@ body {
     /* Space for footer */
 }
 
-.head {
+.main_head_div {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: calc(100% - 220px);
+    width: 100%;
     margin: 30px 0 0 0;
+}
+
+.head_div {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 /* Título de la nota */

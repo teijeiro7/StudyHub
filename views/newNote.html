@@ -18,18 +18,19 @@ Note.html -->
 
 <body>
     <div class="container">
+        <!-- Header navigation -->
         <div class="overlap-group">
             <div class="text-wrapper">
                 <a href="index.html" style="text-decoration: none; color: inherit;">StudyHub</a>
             </div>
             <div class="user-controls">
                 <a href="search.html"><img class="image-4" src="../images/search.png" alt="Icono" /></a>
-                <a href="index.html"><img class="image-3" src="../images/home.png" alt="Icono" /></a>
+                <a href="index.html"><img class="image-3" src="../images/list.png" alt="Icono" /></a>
                 <a href="settings.html"><img class="image-2" src="../images/settings.png" alt="Icono" /></a>
                 <a href="notifications.html"><img class="image" src="../images/notifications.png" alt="Icono" /></a>
                 <a href="profile.html"><img class="img" src="../images/user.png" alt="Icono" /></a>
                 <div class="username">
-                    <h3 class="username_title"><a href="profile.html" style="text-decoration: none;color:inherit">hola123</h3></a>
+                    <h3 class="username_title"><a href="profile.html">hola123</h3></a>
                 </div>
             </div>
         </div>
@@ -37,98 +38,101 @@ Note.html -->
         <!-- Menú de navegación -->
         <div class="nav-menu">
             <div class="overlap-2">
-                <div class="text-wrapper-3"><a href="search.html" style="text-decoration: none;color:inherit">Búsqueda</div></a>
+                <div class="text-wrapper-3"><a href="search.html">Búsqueda</a></div>
             </div>
             <div class="div-wrapper">
-                <a href="myDocs.html"><div class="text-wrapper-4">Mis Archivos</div></a>
+                <div class="text-wrapper-4"><a href="myDocs.html">Mis Archivos</a></div>
             </div>
             <div class="overlap-3">
-                <div class="text-wrapper-4">Compartidos</div>
+                <div class="text-wrapper-4"><a href="sharedDocs.html">Compartidos</a></div>
             </div>
         </div>
 
-        <div class="head">
-            <!-- Título de la nota -->
-            <h1 class="note-title">Nota rápida Latín</h1>
+        <div class="main_head_div">
+            <div class="head_div">
+                <!-- Título de la nota -->
+                <h1 class="note-title">Nota rápida Latín</h1>
 
-            <!-- Barra de herramientas -->
-            <div class="toolbar">
-                <!-- Botón de formato -->
-                <button class="format-button">
-                    <img src="../images/narrator.png" alt="Formato" />
-                </button>
-
-                <!-- Selector de etiquetas -->
-                <div class="tag-selector">
-                    <div class="tag tag-ct">CT</div>
-                    <div class="tag tag-la">LA</div>
-                    <div class="tag tag-jb">JB</div>
-                    <div class="tag tag-ag">AG</div>
-                    <div class="tag tag-oc">OC</div>
-                </div>
-
-                <!-- Herramientas de formato -->
-                <div class="format-tools">
-                    <button class="format-btn" id="bold-btn" title="Negrita">
-                        <img class="format-icon" src="../images/bold.png" alt="Negrita" />
+                <!-- Barra de herramientas -->
+                <div class="toolbar">
+                    <!-- Botón de formato -->
+                    <button class="format-button">
+                        <img src="../images/narrator.png" alt="Formato" />
                     </button>
-                    <div class="divider"></div>
-                    <button class="format-btn" id="underline-btn" title="Subrayado">
-                        <img class="format-icon" src="../images/underline.png" alt="Subrayado" />
-                    </button>
-                    <div class="divider"></div>
-                    <button class="format-btn" id="italic-btn" title="Cursiva">
-                        <img class="format-icon" src="../images/cursive.png" alt="Cursiva" />
-                    </button>
-                    <div class="divider"></div>
 
-                    <!-- Font family dropdown -->
-                    <div class="dropdown-container">
-                        <button class="dropdown-btn" id="font-dropdown-btn">
-                            <img class="format-icon small" src="../images/downArrow.png" alt="Lista" />
-                        </button>
-                        <div class="font-family" id="current-font">Just Another Hand</div>
-                        <div class="dropdown-content" id="font-dropdown">
-                            <div class="dropdown-item" data-font="Arial">Arial</div>
-                            <div class="dropdown-item" data-font="Times New Roman">Times New Roman</div>
-                            <div class="dropdown-item" data-font="Courier New">Courier New</div>
-                            <div class="dropdown-item" data-font="Georgia">Georgia</div>
-                            <div class="dropdown-item selected" data-font="Just Another Hand">Just Another Hand</div>
-                        </div>
+                    <!-- Selector de etiquetas -->
+                    <div class="tag-selector">
+                        <div class="tag tag-ct">CT</div>
+                        <div class="tag tag-la">LA</div>
+                        <div class="tag tag-jb">JB</div>
+                        <div class="tag tag-ag">AG</div>
+                        <div class="tag tag-oc">OC</div>
                     </div>
 
-                    <div class="divider"></div>
-
-                    <!-- Font size dropdown -->
-                    <div class="dropdown-container">
-                        <button class="dropdown-btn" id="size-dropdown-btn">
-                            <img class="format-icon small" src="../images/downArrow.png" alt="Tamaño" />
+                    <!-- Herramientas de formato -->
+                    <div class="format-tools">
+                        <button class="format-btn" id="bold-btn" title="Negrita">
+                            <img class="format-icon" src="../images/bold.png" alt="Negrita" />
                         </button>
-                        <div class="font-size" id="current-size">48</div>
-                        <div class="dropdown-content" id="size-dropdown">
-                            <div class="dropdown-item" data-size="12">12</div>
-                            <div class="dropdown-item" data-size="18">18</div>
-                            <div class="dropdown-item" data-size="24">24</div>
-                            <div class="dropdown-item" data-size="36">36</div>
-                            <div class="dropdown-item selected" data-size="48">48</div>
-                            <div class="dropdown-item" data-size="64">64</div>
+                        <div class="divider"></div>
+                        <button class="format-btn" id="underline-btn" title="Subrayado">
+                            <img class="format-icon" src="../images/underline.png" alt="Subrayado" />
+                        </button>
+                        <div class="divider"></div>
+                        <button class="format-btn" id="italic-btn" title="Cursiva">
+                            <img class="format-icon" src="../images/cursive.png" alt="Cursiva" />
+                        </button>
+                        <div class="divider"></div>
+
+                        <!-- Font family dropdown -->
+                        <div class="dropdown-container">
+                            <button class="dropdown-btn" id="font-dropdown-btn">
+                                <img class="format-icon small" src="../images/downArrow.png" alt="Lista" />
+                            </button>
+                            <div class="font-family" id="current-font">Just Another Hand</div>
+                            <div class="dropdown-content" id="font-dropdown">
+                                <div class="dropdown-item" data-font="Arial">Arial</div>
+                                <div class="dropdown-item" data-font="Times New Roman">Times New Roman</div>
+                                <div class="dropdown-item" data-font="Courier New">Courier New</div>
+                                <div class="dropdown-item" data-font="Georgia">Georgia</div>
+                                <div class="dropdown-item selected" data-font="Just Another Hand">Just Another Hand
+                                </div>
+                            </div>
                         </div>
+
+                        <div class="divider"></div>
+
+                        <!-- Font size dropdown -->
+                        <div class="dropdown-container">
+                            <button class="dropdown-btn" id="size-dropdown-btn">
+                                <img class="format-icon small" src="../images/downArrow.png" alt="Tamaño" />
+                            </button>
+                            <div class="font-size" id="current-size">48</div>
+                            <div class="dropdown-content" id="size-dropdown">
+                                <div class="dropdown-item" data-size="12">12</div>
+                                <div class="dropdown-item" data-size="18">18</div>
+                                <div class="dropdown-item" data-size="24">24</div>
+                                <div class="dropdown-item" data-size="36">36</div>
+                                <div class="dropdown-item selected" data-size="48">48</div>
+                                <div class="dropdown-item" data-size="64">64</div>
+                            </div>
+                        </div>
+
+                        <div class="divider"></div>
+                        <button class="format-btn" id="undo-btn" title="Deshacer">
+                            <img class="format-icon" src="../images/undo.png" alt="Undo" />
+                        </button>
+                        <div class="divider"></div>
+                        <button class="format-btn" id="redo-btn" title="Rehacer">
+                            <img class="format-icon" src="../images/redo.png" alt="Redo" />
+                        </button>
                     </div>
 
-                    <div class="divider"></div>
-                    <button class="format-btn" id="undo-btn" title="Deshacer">
-                        <img class="format-icon" src="../images/undo.png" alt="Undo" />
-                    </button>
-                    <div class="divider"></div>
-                    <button class="format-btn" id="redo-btn" title="Rehacer">
-                        <img class="format-icon" src="../images/redo.png" alt="Redo" />
-                    </button>
-                </div>
-
-                <!-- Botón de compartir -->
-                <div class="share-button">
-                    <img src="../images/compartir.png" alt="Compartir" />
-                    <span>Compartir</span>
+                    <!-- Botón de compartir -->
+                    <div class="share-button">
+                        <img src="../images/compartir.png" alt="Compartir" />
+                        <span>Compartir</span>
+                    </div>
                 </div>
             </div>
         </div>
