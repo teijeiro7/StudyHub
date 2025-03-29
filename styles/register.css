@@ -38,6 +38,33 @@ a {
     flex-direction: column;
 }
 
+/* Botones de inicio de sesión/registro */
+.login-btn,
+.register-btn {
+    padding: 8px 15px;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-family: "Just Another Hand", cursive;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register-btn {
+    background-color: var(--border-color);
+    color: var(--secondary-color);
+}
+
+.login-btn:hover {
+    background-color: var(--border-color);
+    color: var(--secondary-color);
+}
+
+.register-btn:hover {
+    background-color: #1a3050;
+}
+
 /* Título de la página */
 .text-wrapper-2 {
     text-align: center;
@@ -45,6 +72,7 @@ a {
     font-family: "Just Another Hand", cursive;
     font-weight: bold;
     margin: var(--spacing-lg) 0;
+    margin-top: 100px;
 }
 
 /* Contenido principal */
