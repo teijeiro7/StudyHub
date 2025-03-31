@@ -1,0 +1,366 @@
+/* Variables globales */
+:root {
+    --primary-color: #84b6f4;
+    --primary-color-transparent: #84b6f4cc;
+    --secondary-color: #ffffff;
+    --border-color: #234269;
+    --text-color: #000000;
+    --border-radius: 15px;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --timeline-color: var(--border-color);
+}
+
+/* Estilos base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Just Another Hand", cursive;
+}
+
+body {
+    line-height: 1.5;
+    background-color: var(--secondary-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Página principal */
+.pgina-principal {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-menu {
+    top: 75px;
+}
+
+/* Título de la página */
+.text-wrapper-2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: var(--spacing-lg) 0 var(--spacing-md);
+    margin-top: 100px;
+    color: var(--text-color);
+}
+
+/* Información del documento */
+.document-info {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto var(--spacing-md);
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md) var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.document-icon {
+    font-size: 3rem;
+    margin-right: var(--spacing-lg);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    flex-shrink: 0;
+}
+
+.document-icon.pdf {
+    color: #e74c3c;
+}
+
+.document-icon.doc {
+    color: #3498db;
+}
+
+.document-icon.image {
+    color: #27ae60;
+}
+
+.document-icon.ppt {
+    color: #e67e22;
+}
+
+.document-icon.zip {
+    color: #8e44ad;
+}
+
+.document-details {
+    flex: 1;
+    min-width: 200px;
+}
+
+.document-name {
+    font-size: 2.2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.document-meta {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.document-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.back-button,
+.action-button {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    font-size: 1.6rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    transition: all 0.2s ease;
+}
+
+.back-button:hover,
+.action-button:hover {
+    background-color: var(--border-color);
+    color: var(--secondary-color);
+}
+
+/* Timeline del historial de versiones */
+.history-timeline {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+    position: relative;
+    padding-left: var(--spacing-lg);
+}
+
+.history-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 15px;
+    width: 3px;
+    background-color: var(--timeline-color);
+}
+
+.version-item {
+    position: relative;
+    margin-bottom: var(--spacing-lg);
+}
+
+.version-dot {
+    position: absolute;
+    left: -15px;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    border: 3px solid var(--timeline-color);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.version-item.current .version-dot {
+    background-color: var(--border-color);
+    width: 24px;
+    height: 24px;
+    left: -17px;
+}
+
+.version-card {
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-md);
+    margin-left: var(--spacing-md);
+    border-left: 3px solid var(--primary-color);
+}
+
+.version-item.current .version-card {
+    background-color: var(--primary-color-transparent);
+    border-left-color: var(--border-color);
+}
+
+.version-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-md);
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.version-info h4 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.version-date {
+    font-size: 1.6rem;
+    color: #777;
+}
+
+.version-user {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 1.6rem;
+}
+
+.version-user img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.version-changes {
+    margin-bottom: var(--spacing-md);
+    font-size: 1.8rem;
+}
+
+.version-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-sm) var(--spacing-md);
+    cursor: pointer;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.2s ease;
+    font-family: "Just Another Hand", cursive;
+}
+
+.action-btn:hover {
+    background-color: var(--border-color);
+    color: var(--secondary-color);
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .text-wrapper-2 {
+        font-size: 2.2rem;
+        margin-top: 120px;
+    }
+
+    .document-info {
+        padding: var(--spacing-md);
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .document-icon {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .document-actions {
+        margin-top: var(--spacing-md);
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .back-button,
+    .action-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .version-header {
+        flex-direction: column;
+    }
+
+    .version-actions {
+        flex-direction: column;
+    }
+
+    .action-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-wrapper-2 {
+        font-size: 2rem;
+        margin-top: 140px;
+    }
+
+    .document-name {
+        font-size: 1.8rem;
+    }
+
+    .document-meta {
+        font-size: 1.4rem;
+    }
+
+    .history-timeline {
+        width: 95%;
+        padding-left: var(--spacing-md);
+    }
+
+    .history-timeline::before {
+        left: 10px;
+    }
+
+    .version-dot {
+        width: 16px;
+        height: 16px;
+        left: -13px;
+    }
+
+    .version-item.current .version-dot {
+        width: 20px;
+        height: 20px;
+        left: -15px;
+    }
+
+    .version-card {
+        padding: 12px;
+        margin-left: 8px;
+    }
+
+    .version-info h4 {
+        font-size: 1.8rem;
+    }
+
+    .version-date,
+    .version-user {
+        font-size: 1.4rem;
+    }
+
+    .version-changes {
+        font-size: 1.6rem;
+    }
+
+    .action-btn {
+        font-size: 1.4rem;
+    }
+}

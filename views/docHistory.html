@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/nav.css" />
+    <link rel="stylesheet" href="../styles/docHistory.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>StudyHub - Historial de Versiones</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Just+Another+Hand&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="pgina-principal">
+        <!-- Header navigation -->
+        <div class="overlap-group">
+            <div class="text-wrapper">
+                <a href="index.html" style="text-decoration: none; color: inherit;">StudyHub</a>
+            </div>
+            <div class="user-controls">
+                <a href="search.html"><img class="image-4" src="../images/search.png" alt="Icono" /></a>
+                <a href="index.html"><img class="image-3" src="../images/list.png" alt="Icono" /></a>
+                <a href="settings.html"><img class="image-2" src="../images/settings.png" alt="Icono" /></a>
+                <a href="notifications.html"><img class="image" src="../images/notifications.png" alt="Icono" /></a>
+                <a href="profile.html"><img class="img" src="../images/user.png" alt="Icono" /></a>
+                <div class="username">
+                    <h3 class="username_title"><a href="profile.html">hola123</h3></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú de navegación -->
+        <div class="nav-menu">
+            <div class="overlap-2">
+                <div class="text-wrapper-3"><a href="search.html">Búsqueda</a></div>
+            </div>
+            <div class="div-wrapper">
+                <div class="text-wrapper-4"><a href="myDocs.html">Mis Archivos</a></div>
+            </div>
+            <div class="overlap-3">
+                <div class="text-wrapper-4"><a href="sharedDocs.html">Compartidos</a></div>
+            </div>
+        </div>
+
+        <!-- Título principal -->
+        <div class="text-wrapper-2">Historial de Versiones</div>
+
+        <!-- Información del documento -->
+        <div class="document-info">
+            <div class="document-icon pdf">
+                <i class="far fa-file-pdf"></i>
+            </div>
+            <div class="document-details">
+                <h3 class="document-name" id="documentName">Apuntes_Tema1.pdf</h3>
+                <p class="document-meta">PDF • 2.4 MB • Última modificación: 15/03/2025</p>
+            </div>
+            <div class="document-actions">
+                <a href="myDocs.html" class="back-button"><i class="fas fa-arrow-left"></i> Volver a Mis Archivos</a>
+                <a href="#" class="action-button"><i class="fas fa-download"></i> Descargar versión actual</a>
+            </div>
+        </div>
+
+        <!-- Timeline del historial de versiones -->
+        <div class="history-timeline">
+            <!-- Versión actual -->
+            <div class="version-item current">
+                <div class="version-dot"></div>
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-info">
+                            <h4>Versión actual</h4>
+                            <span class="version-date">15/03/2025, 14:32</span>
+                        </div>
+                        <div class="version-user">
+                            <img src="../images/user.png" alt="Usuario">
+                            <span>hola123 (tú)</span>
+                        </div>
+                    </div>
+                    <div class="version-changes">
+                        <p>Añadidos nuevos ejercicios resueltos y corregido error en página 5.</p>
+                    </div>
+                    <div class="version-actions">
+                        <button class="action-btn"><i class="fas fa-download"></i> Descargar</button>
+                        <button class="action-btn"><i class="fas fa-eye"></i> Visualizar</button>
+                        <button class="action-btn"><i class="fas fa-exchange-alt"></i> Restaurar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Versión anterior 1 -->
+            <div class="version-item">
+                <div class="version-dot"></div>
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-info">
+                            <h4>Versión 2</h4>
+                            <span class="version-date">10/03/2025, 09:15</span>
+                        </div>
+                        <div class="version-user">
+                            <img src="../images/user.png" alt="Usuario">
+                            <span>hola123 (tú)</span>
+                        </div>
+                    </div>
+                    <div class="version-changes">
+                        <p>Revisión de fórmulas y actualización de ejemplos.</p>
+                    </div>
+                    <div class="version-actions">
+                        <button class="action-btn"><i class="fas fa-download"></i> Descargar</button>
+                        <button class="action-btn"><i class="fas fa-eye"></i> Visualizar</button>
+                        <button class="action-btn"><i class="fas fa-exchange-alt"></i> Restaurar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Versión anterior 2 -->
+            <div class="version-item">
+                <div class="version-dot"></div>
+                <div class="version-card">
+                    <div class="version-header">
+                        <div class="version-info">
+                            <h4>Versión 1</h4>
+                            <span class="version-date">02/03/2025, 16:45</span>
+                        </div>
+                        <div class="version-user">
+                            <img src="../images/user.png" alt="Usuario colaborador">
+                            <span>Laura García</span>
+                        </div>
+                    </div>
+                    <div class="version-changes">
+                        <p>Creación inicial del documento con apuntes básicos del Tema 1.</p>
+                    </div>
+                    <div class="version-actions">
+                        <button class="action-btn"><i class="fas fa-download"></i> Descargar</button>
+                        <button class="action-btn"><i class="fas fa-eye"></i> Visualizar</button>
+                        <button class="action-btn"><i class="fas fa-exchange-alt"></i> Restaurar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="overlap">
+            <div class="click-connect">Click&amp;Connect</div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
