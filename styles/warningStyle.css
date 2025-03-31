@@ -41,8 +41,7 @@ body {
     width: 70%;
     max-width: 1000px;
     height: auto;
-    margin: auto;
-    margin-top: 150px;
+    margin: calc(50vh - 300px) auto; 
     background-color: var(--primary-color);
     border-radius: 20px;
     padding: 2rem;
@@ -53,7 +52,7 @@ body {
 }
 
 .warning-title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 400;
     margin-bottom: 1.5rem;
     text-align: center;
@@ -68,7 +67,7 @@ body {
 }
 
 .warning-message p {
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1.3;
     text-align: center;
 }
@@ -87,7 +86,7 @@ body {
     border-radius: 20px;
     border: none;
     color: white;
-    font-size: 2.5rem;
+    font-size: 2rem;
     cursor: pointer;
     transition: all 0.2s ease;
 }

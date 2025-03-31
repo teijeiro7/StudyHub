@@ -25,7 +25,7 @@
             </div>
             <div class="user-controls">
                 <a href="search.html"><img class="image-4" src="../images/search.png" alt="Icono" /></a>
-                <a href="index.html"><img class="image-3" src="../images/list.png" alt="Icono" /></a>
+                <a href="index.html"><img class="image-3" src="../images/home.png" alt="Icono" /></a>
                 <a href="settings.html"><img class="image-2" src="../images/settings.png" alt="Icono" /></a>
                 <a href="notifications.html"><img class="image" src="../images/notifications.png" alt="Icono" /></a>
                 <a href="profile.html"><img class="img" src="../images/user.png" alt="Icono" /></a>
@@ -53,7 +53,7 @@
 
         <!-- Contenido principal -->
         <div class="main-content">
-            <form id="profileForm" action="profile.html" method="get">
+            <form id="profileForm" action="warning.html" method="get">
                 <div class="profile-container">
                     <!-- Avatar section -->
                     <div class="avatar-section">
@@ -77,12 +77,12 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="fullName">Nombre completo</label>
-                                <input type="text" id="fullName" name="fullName" placeholder="Tu nombre completo"
+                                <input type="text" id="fullName" name="fullName" value="Hola Hola"
                                     required>
                             </div>
                             <div class="form-group">
                                 <label for="email">Correo electrónico</label>
-                                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                                <input type="email" id="email" name="email" value="hola@email.com" required>
                             </div>
                         </div>
 
@@ -91,11 +91,11 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="university">Universidad</label>
-                                <input type="text" id="university" name="university" placeholder="Tu universidad">
+                                <input type="text" id="university" name="university" value="UJRC">
                             </div>
                             <div class="form-group">
-                                <label for="degree">Grado/Carrera</label>
-                                <input type="text" id="degree" name="degree" placeholder="Tu carrera">
+                                <label for="degree">Grado/s</label>
+                                <input type="text" id="degree" name="degree" value="Ingeniería de Software">
                             </div>
                         </div>
 
@@ -135,7 +135,8 @@
                         <div class="form-buttons">
                             <button type="button" class="cancel-btn"
                                 onclick="window.location.href='profile.html'">Cancelar</button>
-                            <button type="submit" class="save-btn">Guardar</button>
+                            <button type="submit" class="save-btn"
+                            onclick="window.location.href='warning.html'">Guardar</button>
                         </div>
                     </div>
                 </div>
