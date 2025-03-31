@@ -238,9 +238,112 @@ select:focus {
 
 .changes-button:active,
 .changes-button.active {
-    background-color: #0f6b0f;
     transform: translateY(0);
 }
+
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #121212; /* Fondo oscuro global */
+    color: #e0e0e0; /* Texto claro global */
+}
+
+/* Modo oscuro para la página principal */
+body.dark-mode .pgina-principal {
+    background-color: #1c1c1c;
+}
+
+/* Modo oscuro para la tarjeta de configuración */
+body.dark-mode .settings-card {
+    background-color: #333333;
+}
+
+/* Modo oscuro para los elementos de configuración */
+body.dark-mode .setting-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Cambios en el toggle */
+body.dark-mode .switch input:checked + .slider {
+    background-color: #234269; /* Toggle con el nuevo color */
+}
+
+/* Modo oscuro para los botones */
+body.dark-mode .changes-button {
+    background-color: #234269; /* Fondo oscuro para el botón */
+    color: white;
+}
+
+body.dark-mode .changes-button:hover {
+    background-color: #1a3456; /* Hover más oscuro */
+}
+
+body.dark-mode .changes-button:active {
+    background-color: rgb(11, 9, 85); /* Acción más oscura */
+}
+
+/* Otros elementos que podrían necesitar ajustes */
+body.dark-mode .setting-label {
+    color: #e0e0e0; /* Color de texto más claro */
+}
+
+body.dark-mode .setting-control input,
+body.dark-mode select {
+    background-color: #333; /* Fondo oscuro para inputs y selects */
+    color: #e0e0e0; /* Texto claro en inputs */
+    border-color: #234269; /* Borde con el nuevo color */
+}
+
+body.dark-mode .setting-control select {
+    background-color: #444; /* Fondo oscuro en el selector */
+}
+
+/* Modo oscuro para la cabecera */
+body.dark-mode .overlap-group {
+    background-color: #234269; /* Color de fondo de la cabecera */
+}
+
+body.dark-mode .text-wrapper a {
+    color: #ffffff; /* Color de texto en la cabecera */
+}
+
+body.dark-mode .user-controls img {
+    filter: brightness(0) invert(1); /* Cambia el color de los iconos a blanco */
+}
+
+body.dark-mode .username_title a {
+    color: #ffffff; /* Color de texto del nombre de usuario */
+}
+
+/* Modo oscuro para el footer */
+body.dark-mode .overlap {
+    background-color: #234269; /* Fondo oscuro para el footer */
+}
+
+body.dark-mode .click-connect {
+    color: #ffffff; /* Texto blanco en el footer */
+}
+
+/* Modo oscuro para el menú de navegación */
+body.dark-mode .nav-menu {
+    background-color: #234269; /* Fondo oscuro para el menú */
+}
+
+body.dark-mode .text-wrapper-3 a,
+body.dark-mode .text-wrapper-4 a {
+    color: #ffffff; /* Texto blanco en los enlaces */
+}
+
+body.dark-mode .text-wrapper-3 a:hover,
+body.dark-mode .text-wrapper-4 a:hover {
+    color: #f1f1f1; /* Color al pasar el ratón sobre los enlaces */
+}
+
+/* Modo oscuro para el texto del título de ajustes */
+body.dark-mode .text-wrapper-2 {
+    color: #ffffff; /* Texto blanco en el título */
+}
+
+
 
 /* Media queries para responsividad */
 @media (max-width: 768px) {

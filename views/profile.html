@@ -58,10 +58,6 @@
             <div class="avatar-section">
                 <div class="avatar-container">
                     <img id="avatarImage" src="../images/user.png" alt="Foto de perfil">
-                    <div class="avatar-edit">
-                        <label for="avatarUpload"><i class="fas fa-camera"></i></label>
-                        <input type="file" id="avatarUpload" accept="image/*" hidden>
-                    </div>
                 </div>
             </div>
 
@@ -71,11 +67,9 @@
                 <div class="profile-section info-section">
                     <h3 class="section-title">Información Personal</h3>
                     <div class="profile-info">
-                        <p><span>Nombre:</span> User</p>
-                        <p><span>Nombre de usuario:</span> user123</p>
-                        <p><span>Correo Electrónico:</span> user123@gmail.com</p>
-                        <p><span>Fecha de nacimiento:</span> 31/12/2004</p>
-                        <p><span>Sexo:</span> Hombre</p>
+                        <p><span>Nombre completo:</span> Hola</p>
+                        <p><span>Nombre de usuario:</span> hola123</p>
+                        <p><span>Correo Electrónico:</span> hola@gmail.com</p>
                     </div>
                     <button class="edit-button" onclick="window.location.href='editProfile.html'">Editar Perfil</button>
                 </div>
@@ -83,7 +77,16 @@
                 <!-- Sección de insignias -->
                 <div class="profile-section badges-section">
                     <h3 class="section-title">Mis Insignias</h3>
-                    <div class="badges-grid">
+                    
+                    <!-- Toggle para activar/desactivar las insignias -->
+                    <div class="toggle-container">
+                        <label class="switch">
+                            <input type="checkbox" id="badge-toggle" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                
+                    <div class="badges-grid" id="badges-grid">
                         <div class="badge">
                             <img src="../images/artist.jpg" alt="Insignia">
                             <p>Artista</p>
@@ -97,7 +100,7 @@
                             <p>Calculador</p>
                         </div>
                     </div>
-                </div>
+                </div>                              
             </div>
         </div>
 
@@ -108,6 +111,7 @@
     </div>
 
     <script src="../js/profileImage.js"></script>
+    <script src="../js/insignias.js"></script>
 </body>
 
 </html>

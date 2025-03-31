@@ -245,6 +245,32 @@ a {
     cursor: not-allowed;
 }
 
+.mark-as-read-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.mark-as-read-btn {
+    background-color: #234269; /* Color de fondo */
+    color: white; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.mark-as-read-btn:hover {
+    background-color: #1b3557; /* Color al pasar el mouse */
+}
+
+.notification-item.read {
+    opacity: 0.6; /* Baja la opacidad para indicar que está leída */
+    background-color: #f0f0f0; /* Color de fondo claro */
+}
+
+
 /* Media queries para responsividad */
 @media (max-width: 768px) {
     .text-wrapper-2 {
