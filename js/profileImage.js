@@ -5,3 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
         avatarImage.src = savedImage;
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("banner");
+    const savedBanner = localStorage.getItem("bannerImage");
+
+    if (savedBanner) {
+        banner.style.backgroundImage = `url(${savedBanner})`;  // Aplica el banner guardado
+    }
+});

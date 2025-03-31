@@ -54,12 +54,6 @@
 
         <!-- Contenido principal -->
         <div class="main-content">
-            <!-- Tabs de navegación -->
-            <div class="shared-tabs">
-                <button class="tab-btn active" data-tab="shared-by-me">Compartidos por mí</button>
-                <button class="tab-btn" data-tab="shared-with-me">Compartidos conmigo</button>
-            </div>
-
             <!-- Sección de búsqueda y filtros -->
             <div class="search-filter-section">
                 <div class="filters">
@@ -79,11 +73,10 @@
                 </div>
             </div>
 
-            <!-- Contenido de los tabs -->
             <div class="tab-content active" id="shared-by-me">
                 <div class="documents-container">
                     <!-- Documento 1 -->
-                    <div class="document-card" data-type="pdf">
+                    <div class="document-card" data-type="pdf" data-date="2025-03-11">
                         <div class="doc-info">
                             <div class="doc-icon pdf">
                                 <i class="far fa-file-pdf"></i>
@@ -91,11 +84,12 @@
                             <div class="doc-details">
                                 <h3 class="doc-title">Apuntes_Estadistica.pdf</h3>
                                 <p class="doc-meta">PDF • 3.2 MB • 15/03/2025</p>
+                                <p class="shared-by">Compartido por: <span>David Hernández</span></p>
                             </div>
                         </div>
                         <div class="share-info">
                             <div class="shared-with">
-                                <span>Compartido con:</span>
+                                <span>Colaboradores:</span>
                                 <div class="user-avatars">
                                     <div class="avatar" title="usuario1@mail.com">U1</div>
                                     <div class="avatar" title="usuario2@mail.com">U2</div>
@@ -109,7 +103,7 @@
                     </div>
 
                     <!-- Documento 2 -->
-                    <div class="document-card" data-type="doc">
+                    <div class="document-card" data-type="doc" data-date="2025-03-10">
                         <div class="doc-info">
                             <div class="doc-icon doc">
                                 <i class="far fa-file-word"></i>
@@ -117,11 +111,12 @@
                             <div class="doc-details">
                                 <h3 class="doc-title">Proyecto_Final_Grupo.docx</h3>
                                 <p class="doc-meta">DOCX • 1.5 MB • 10/03/2025</p>
+                                <p class="shared-by">Compartido por: <span>Alison Nerea</span></p>
                             </div>
                         </div>
                         <div class="share-info">
                             <div class="shared-with">
-                                <span>Compartido con:</span>
+                                <span>Colaboradores:</span>
                                 <div class="user-avatars">
                                     <div class="avatar" title="compañero1@mail.com">C1</div>
                                     <div class="avatar" title="compañero2@mail.com">C2</div>
@@ -135,7 +130,7 @@
                     </div>
 
                     <!-- Documento 3 -->
-                    <div class="document-card" data-type="ppt">
+                    <div class="document-card" data-type="other" data-date="2025-03-05">
                         <div class="doc-info">
                             <div class="doc-icon ppt">
                                 <i class="far fa-file-powerpoint"></i>
@@ -143,11 +138,12 @@
                             <div class="doc-details">
                                 <h3 class="doc-title">Exposicion_Semana8.pptx</h3>
                                 <p class="doc-meta">PPTX • 7.8 MB • 05/03/2025</p>
+                                <p class="shared-by">Compartido por: <span>Icíar Murillo</span></p>
                             </div>
                         </div>
                         <div class="share-info">
                             <div class="shared-with">
-                                <span>Compartido con:</span>
+                                <span>Colaboradores:</span>
                                 <div class="user-avatars">
                                     <div class="avatar" title="equipoPresentacion@grupo.edu">EP</div>
                                 </div>
@@ -157,14 +153,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Tab: Compartidos conmigo -->
-            <div class="tab-content" id="shared-with-me">
-                <div class="documents-container">
                     <!-- Documento 1 -->
-                    <div class="document-card" data-type="pdf">
+                    <div class="document-card" data-type="pdf" data-date="2025-03-18">
                         <div class="doc-info">
                             <div class="doc-icon pdf">
                                 <i class="far fa-file-pdf"></i>
@@ -175,47 +166,70 @@
                                 <p class="shared-by">Compartido por: <span>Profesor García</span></p>
                             </div>
                         </div>
+                        <div class="share-info">
+                        <div class="shared-with">
+                            <span>Colaboradores:</span>
+                            <div class="user-avatars">
+                                <div class="avatar" title="andrea@mail.com">AA</div>
+                                <div class="avatar" title="tulgencio@mail.com">T2</div>
+                            </div>
+                        </div>
                         <div class="doc-actions">
                             <button class="btn-action"><i class="fas fa-edit"></i></button>
                         </div>
                     </div>
+                    </div>
 
                     <!-- Documento 2 -->
-                    <div class="document-card" data-type="spreadsheet">
+                    <div class="document-card" data-type="other" data-date="2025-04-12">
                         <div class="doc-info">
                             <div class="doc-icon spreadsheet">
                                 <i class="far fa-file-excel"></i>
                             </div>
                             <div class="doc-details">
                                 <h3 class="doc-title">Datos_Proyecto_Grupo5.xlsx</h3>
-                                <p class="doc-meta">XLSX • 2.3 MB • 12/03/2025</p>
+                                <p class="doc-meta">XLSX • 2.3 MB • 12/04/2025</p>
                                 <p class="shared-by">Compartido por: <span>Ana Martínez</span></p>
                             </div>
                         </div>
+                        <div class="share-info">
+                            <div class="shared-with">
+                                <span>Colaboradores:</span>
+                        <div class="user-avatars">
+                            <div class="avatar" title="beatriz@mail.com">BA</div>
+                            <div class="avatar" title="gerardo@mail.com">GL</div>
+                        </div></div>
                         <div class="doc-actions">
                             <button class="btn-action"><i class="fas fa-edit"></i></button>
-                        </div>
+                        </div></div>
                     </div>
 
                     <!-- Documento 3 -->
-                    <div class="document-card" data-type="pdf">
+                    <div class="document-card" data-type="pdf" data-date="2025-01-01">
                         <div class="doc-info">
                             <div class="doc-icon pdf">
                                 <i class="far fa-file-pdf"></i>
                             </div>
                             <div class="doc-details">
                                 <h3 class="doc-title">Bibliografia_Recomendada.pdf</h3>
-                                <p class="doc-meta">PDF • 3.7 MB • 01/03/2025</p>
+                                <p class="doc-meta">PDF • 3.7 MB • 01/01/2025</p>
                                 <p class="shared-by">Compartido por: <span>Biblioteca URJC</span></p>
                             </div>
                         </div>
+                        <div class="share-info">
+                            <div class="shared-with">
+                                <span>Colaboradores:</span>
+                        <div class="user-avatars">
+                            <div class="avatar" title="eustaquio@mail.com">OD</div>
+                        </div></div>
                         <div class="doc-actions">
                             <button class="btn-action"><i class="fas fa-edit"></i></button>
                         </div>
                     </div>
+                    </div>
 
                     <!-- Documento 4 -->
-                    <div class="document-card" data-type="image">
+                    <div class="document-card" data-type="image" data-date="2025-02-25">
                         <div class="doc-info">
                             <div class="doc-icon image">
                                 <i class="far fa-file-image"></i>
@@ -233,93 +247,6 @@
                 </div>
             </div>
 
-            <!-- Modal para compartir documento (oculto por defecto) -->
-            <div class="share-modal" id="shareModal">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3>Compartir documento</h3>
-                        <button class="close-btn">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="document-preview">
-                            <div class="preview-icon pdf">
-                                <i class="far fa-file-pdf"></i>
-                            </div>
-                            <div class="preview-details">
-                                <h4 id="modalDocTitle">Apuntes_Estadistica.pdf</h4>
-                                <p>PDF • 3.2 MB</p>
-                            </div>
-                        </div>
-
-                        <div class="share-options">
-                            <div class="share-link-section">
-                                <h4>Enlace de compartir</h4>
-                                <div class="link-container">
-                                    <input type="text" value="https://studyhub.com/s/doc123456" readonly>
-                                    <button class="copy-btn"><i class="fas fa-copy"></i></button>
-                                </div>
-                                <div class="link-permissions">
-                                    <select id="link-permission">
-                                        <option value="view">Cualquiera con el enlace puede ver</option>
-                                        <option value="comment">Cualquiera con el enlace puede comentar</option>
-                                        <option value="edit">Cualquiera con el enlace puede editar</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="share-people-section">
-                                <h4>Compartir con personas</h4>
-                                <div class="add-people">
-                                    <input type="text" placeholder="Añadir correo electrónico o nombre">
-                                    <select id="people-permission">
-                                        <option value="view">Ver</option>
-                                        <option value="comment">Comentar</option>
-                                        <option value="edit">Editar</option>
-                                    </select>
-                                    <button class="invite-btn">Invitar</button>
-                                </div>
-
-                                <div class="people-list">
-                                    <div class="person-item">
-                                        <div class="person-info">
-                                            <div class="avatar">U1</div>
-                                            <div class="person-details">
-                                                <p class="person-name">usuario1@mail.com</p>
-                                                <p class="person-access">Editor</p>
-                                            </div>
-                                        </div>
-                                        <select class="person-permission">
-                                            <option value="view">Ver</option>
-                                            <option value="comment">Comentar</option>
-                                            <option value="edit" selected>Editar</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="person-item">
-                                        <div class="person-info">
-                                            <div class="avatar">U2</div>
-                                            <div class="person-details">
-                                                <p class="person-name">usuario2@mail.com</p>
-                                                <p class="person-access">Puede ver</p>
-                                            </div>
-                                        </div>
-                                        <select class="person-permission">
-                                            <option value="view" selected>Ver</option>
-                                            <option value="comment">Comentar</option>
-                                            <option value="edit">Editar</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn cancel-btn">Cancelar</button>
-                        <button class="btn share-btn">Guardar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Footer -->
         <div class="overlap">
@@ -328,6 +255,12 @@
     </div>
 
     <script src="../js/sharedDocs.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let element = document.querySelector(".overlap-3");
+            element.style.backgroundColor = "#36659e";
+        });
+    </script>
 </body>
 
 </html>

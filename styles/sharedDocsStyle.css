@@ -110,7 +110,7 @@ a {
 }
 
 .search-bar {
-    display: flex;
+    display: relative;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -123,7 +123,7 @@ a {
     outline: none;
     width: 250px;
     font-family: "Just Another Hand", cursive;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .search-btn {
@@ -134,9 +134,13 @@ a {
     color: var(--text-color);
 }
 
+/* Estilos del filtro */
 .filters {
+    padding: 8px 12px;
     display: flex;
+    align-items: center;
     gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
 }
 
 .filters select {
@@ -144,8 +148,23 @@ a {
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     font-family: "Just Another Hand", cursive;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     background-color: var(--secondary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filters select:hover {
+    background-color: #3c72b5a0;
+}
+
+.filters label {
+    font-size: 1.7rem;
+}
+
+.filters select:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--border-color);
 }
 
 /* Tab content */
@@ -536,6 +555,34 @@ a {
     border: 1px solid var(--border-color);
 }
 
+.suggestions-list {
+    list-style: none;
+    position: absolute;
+    top: 100%; /* Coloca la lista justo debajo del campo de búsqueda */
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 0;
+    display: none; /* Inicialmente oculta */
+    z-index: 1000; /* Asegura que la lista aparezca por encima de otros elementos */
+}
+
+.suggestions-list li {
+    padding: 8px;
+    cursor: pointer;
+    font-family: "Just Another Hand", cursive;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.suggestions-list li:hover {
+    background-color: var(--primary-color-transparent);
+}
+
 /* Añade JavaScript funcional para los tabs y modal */
 @media (max-width: 768px) {
     .text-wrapper-2 {
@@ -580,6 +627,11 @@ a {
 
     .search-bar input {
         flex: 1;
+        width: 100%;
+        padding: 10px;
+        font-size: 1.2rem;
+        border: 1px solid #234269;
+        border-radius: 5px;
     }
 
     .filters {

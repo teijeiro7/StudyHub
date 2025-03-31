@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudyHub - Búsqueda</title>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="../styles/nav.css" />
+    <link rel="stylesheet" href="../styles/sharedDocsStyle.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>StudyHub - Documentos Compartidos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Just+Another+Hand&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../styles/searchStyle.css">
-    <link rel="stylesheet" href="../styles/nav.css">
-    <link rel="stylesheet" href="../styles/footer.css">
 </head>
 
 <body>
-    <div class="container">
+    <div class="pgina-principal">
         <!-- Header navigation -->
         <div class="overlap-group">
             <div class="text-wrapper">
@@ -47,128 +49,140 @@
             </div>
         </div>
 
-        <!-- Main Content -->
+        <!-- Título principal -->
+        <div class="text-wrapper-2">Búsqueda</div>
+
+        <!-- Contenido principal -->
         <div class="main-content">
-            <h1 class="search-title">Búsqueda: tema</h1>
-
-            <!-- Search Results -->
-            <div class="search-results">
-                <div class="result-card">
-                    <!-- Content for result 1 -->
-                    <div class="card-divider"></div>
-                    <div class="card-title">tema 1</div>
-                    <div class="card-more">...</div>
+            <!-- Sección de búsqueda y filtros -->
+            <div class="search-filter-section">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Buscar documento..." oninput="filterDocuments()">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
                 </div>
 
-                <div class="result-card">
-                    <!-- Content for result 2 -->
-                    <div class="card-divider"></div>
-                    <div class="card-title">tema 2</div>
-                    <div class="card-more">...</div>
-                </div>
-
-                <div class="result-card">
-                    <!-- Content for result 3 -->
-                    <div class="card-divider"></div>
-                    <div class="card-title">tema 3</div>
-                    <div class="card-more">...</div>
+                <!-- Agregamos un filtro de categorías -->
+                <div class="filters">
+                    <label for="category">Filtrar por categoría:</label>
+                    <select id="category" onchange="filterByCategory()">
+                        <option value="all">Todas</option>
+                        <option value="examen">Examen</option>
+                        <option value="ejercicio">Ejercicio</option>
+                        <option value="practica">Práctica</option>
+                        <option value="apuntes">Ingeniería</option>
+                    </select>
                 </div>
             </div>
 
-            <!-- Pagination -->
-            <div class="pagination">
-                <img src="../images/leftArrow.png" alt="Previous page" class="arrow_image">
-                <div class="page-current">1</div>
-                <div class="page-numbers">2 3 4 5 ...</div>
-                <img src="../images/rightArrow.png" alt="Next page" class="arrow_image">
-            </div>
-        </div>
 
-        <!-- Filters Panel -->
-        <div class="filters-panel">
-            <h2 class="filters-title">Filtros</h2>
-            <div class="divider"></div>
 
-            <!-- Study Level Filters -->
-            <div class="filter-group">
-                <h3 class="filter-group-title"><img src="../images/downArrow.png" alt="Icon" class="arrow_image">
-                    Estudios</h3>
-                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox" class="arrow_image"> FP
-                </div>
-                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox" class="arrow_image">
-                    Bachillerato</div>
-                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox" class="arrow_image"> ESO
-                </div>
-                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox" class="arrow_image">
-                    Trabajo</div>
-                <div class="filter-option"><img src="../images/downArrow.png" alt="Checkbox" class="arrow_image">
-                    Universidad</div>
-            </div>
 
-            <!-- University Filters -->
-            <div class="filter-subgroup">
-                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox" class="arrow_image">
-                    Carlos III</div>
-                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox" class="arrow_image"> URJC
-                </div>
-                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox" class="arrow_image"> Mates
-                </div>
-                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox" class="arrow_image"> ADE
-                </div>
-                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox" class="arrow_image"> Otros
-                </div>
-            </div>
+            <div class="tab-content active" id="shared-by-me">
+                <div class="documents-container">
+                    <!-- Documento 1 -->
+                    <div class="document-card" data-type="pdf" data-date="2025-03-11" data-category="apuntes">
+                        <div class="doc-info">
+                            <div class="doc-icon pdf">
+                                <i class="far fa-file-pdf"></i>
+                            </div>
+                            <div class="doc-details">
+                                <h3 class="doc-title">Apuntes_Geometría.pdf</h3>
+                                <p class="doc-meta">PDF • 3.2 MB • 15/03/2025</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <!-- Extension Filters -->
-            <div class="filter-group">
-                <h3 class="filter-group-title"><img src="../images/downArrow.png" alt="Icon" class="arrow_image">
-                    Extensiones</h3>
-                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox" class="arrow_image">PDF
-                </div>
-                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox"
-                        class="arrow_image">DOC/DOCX</div>
-                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox"
-                        class="arrow_image">PPT/PPTX</div>
-                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox"
-                        class="arrow_image">XLS/XLSX</div>
-                <div class="filter-option"><img src="../images/rightArrow.png" alt="Checkbox" class="arrow_image">TXT
+                    <!-- Documento 2 -->
+                    <div class="document-card" data-type="doc" data-date="2025-03-10" data-category="practica">
+                        <div class="doc-info">
+                            <div class="doc-icon doc">
+                                <i class="far fa-file-word"></i>
+                            </div>
+                            <div class="doc-details">
+                                <h3 class="doc-title">Memoria_Práctica.docx</h3>
+                                <p class="doc-meta">DOCX • 1.5 MB • 10/03/2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Documento 4 -->
+                    <div class="document-card" data-type="image" data-date="2025-02-25" data-category="ejercicio">
+                        <div class="doc-info">
+                            <div class="doc-icon image">
+                                <i class="far fa-file-image"></i>
+                            </div>
+                            <div class="doc-details">
+                                <h3 class="doc-title">Diagrama_de_flujo.png</h3>
+                                <p class="doc-meta">PNG • 1.2 MB • 25/02/2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Documento 3 -->
+                    <div class="document-card" data-type="other" data-date="2025-03-05" data-category="ejercicio">
+                        <div class="doc-info">
+                            <div class="doc-icon ppt">
+                                <i class="far fa-file-powerpoint"></i>
+                            </div>
+                            <div class="doc-details">
+                                <h3 class="doc-title">Exposicion_Principios_WAI.pptx</h3>
+                                <p class="doc-meta">PPTX • 7.8 MB • 05/03/2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Documento 1 -->
+                    <div class="document-card" data-type="pdf" data-date="2025-03-18" data-category="examen">
+                        <div class="doc-info">
+                            <div class="doc-icon pdf">
+                                <i class="far fa-file-pdf"></i>
+                            </div>
+                            <div class="doc-details">
+                                <h3 class="doc-title">Examenes_Oposición.pdf</h3>
+                                <p class="doc-meta">PDF • 0.5 MB • 18/03/2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Documento 2 -->
+                    <div class="document-card" data-type="other" data-date="2025-04-12" data-category="practica">
+                        <div class="doc-info">
+                            <div class="doc-icon spreadsheet">
+                                <i class="far fa-file-excel"></i>
+                            </div>
+                            <div class="doc-details">
+                                <h3 class="doc-title">Análisis_Grupo2.xlsx</h3>
+                                <p class="doc-meta">XLSX • 2.3 MB • 12/04/2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Documento 3 -->
+                    <div class="document-card" data-type="pdf" data-date="2025-01-01" data-category="practica">
+                        <div class="doc-info">
+                            <div class="doc-icon pdf">
+                                <i class="far fa-file-pdf"></i>
+                            </div>
+                            <div class="doc-details">
+                                <h3 class="doc-title">Ejercicios_Prácticos.pdf</h3>
+                                <p class="doc-meta">PDF • 3.7 MB • 01/01/2025</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
 
         <!-- Footer -->
         <div class="overlap">
-            <div class="click-connect">Click&Connect</div>
+            <div class="click-connect">Click&amp;Connect</div>
         </div>
     </div>
 
-    <script>
-        // JavaScript for responsive behavior
-        document.addEventListener('DOMContentLoaded', function () {
-            const filterToggle = document.querySelector('.filter-toggle');
-            const filtersPanel = document.querySelector('.filters-panel');
-
-            // Check screen width and set filter panel visibility
-            function checkScreenSize() {
-                if (window.innerWidth >= 1024) {
-                    filtersPanel.classList.add('active');
-                } else {
-                    filtersPanel.classList.remove('active');
-                }
-            }
-
-            // Run on page load
-            checkScreenSize();
-
-            // Toggle filter panel on button click
-            filterToggle.addEventListener('click', function () {
-                filtersPanel.classList.toggle('active');
-            });
-
-            // Update on window resize
-            window.addEventListener('resize', checkScreenSize);
-        });
+    <script src="../js/search.js">
     </script>
+
 </body>
 
 </html>
