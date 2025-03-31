@@ -24,7 +24,7 @@
             </div>
             <div class="user-controls">
                 <a href="search.html"><img class="image-4" src="../images/search.png" alt="Icono" /></a>
-                <a href="index.html"><img class="image-3" src="../images/list.png" alt="Icono" /></a>
+                <a href="index.html"><img class="image-3" src="../images/home.png" alt="Icono" /></a>
                 <a href="settings.html"><img class="image-2" src="../images/settings.png" alt="Icono" /></a>
                 <a href="notifications.html"><img class="image" src="../images/notifications.png" alt="Icono" /></a>
                 <a href="profile.html"><img class="img" src="../images/user.png" alt="Icono" /></a>
@@ -50,16 +50,12 @@
         <!-- Título principal -->
         <div class="text-wrapper-2">Notificaciones</div>
 
+        <div class="mark-as-read-container">
+            <button class="mark-as-read-btn" onclick="markAsRead()">Marcar todas como leídas</button>
+        </div>
+
         <!-- Contenido de notificaciones -->
         <div class="notifications-content">
-            <!-- Filtros de notificaciones -->
-            <div class="notification-filters">
-                <button class="filter-button active" data-filter="all">Todas</button>
-                <button class="filter-button" data-filter="unread">No leídas</button>
-                <button class="filter-button" data-filter="mentions">Menciones</button>
-                <button class="filter-button" data-filter="shares">Compartidos</button>
-            </div>
-
             <!-- Lista de notificaciones -->
             <div class="notifications-list">
                 <!-- Notificación no leída -->
@@ -74,9 +70,6 @@
                         </div>
                         <p class="notification-text">Te ha compartido un nuevo documento: <strong>"Ejercicios de
                                 Matemáticas"</strong></p>
-                        <div class="notification-actions">
-                            <button class="action-button">Ver</button>
-                        </div>
                     </div>
                 </div>
 
@@ -92,15 +85,12 @@
                         </div>
                         <p class="notification-text">Te ha mencionado en un comentario: <strong>"@hola123 revisa los
                                 cambios que hice"</strong></p>
-                        <div class="notification-actions">
-                            <button class="action-button">Ver</button>
-                        </div>
                     </div>
 
                 </div>
 
                 <!-- Notificación leída de compartido -->
-                <div class="notification-item share">
+                <div class="notification-item read">
                     <div class="notification-icon">
                         <img src="../images/user.png" alt="Usuario">
                     </div>
@@ -111,16 +101,13 @@
                         </div>
                         <p class="notification-text">Ha aceptado colaborar en tu documento: <strong>"Apuntes de
                                 Física"</strong></p>
-                        <div class="notification-actions">
-                            <button class="action-button">Ver</button>
-                        </div>
                     </div>
                 </div>
 
                 <!-- Notificación leída de sistema -->
-                <div class="notification-item">
+                <div class="notification-item read">
                     <div class="notification-icon system">
-                        <img src="../images/info.png" alt="Sistema">
+                        <img src="../images/imac.png" alt="Sistema">
                     </div>
                     <div class="notification-content">
                         <div class="notification-header">
@@ -129,14 +116,11 @@
                         </div>
                         <p class="notification-text">Actualización del sistema completada. <strong>Nuevas funciones
                                 disponibles.</strong></p>
-                        <div class="notification-actions">
-                            <button class="action-button">Ver novedades</button>
-                        </div>
                     </div>
                 </div>
 
                 <!-- Notificación leída -->
-                <div class="notification-item">
+                <div class="notification-item read">
                     <div class="notification-icon">
                         <img src="../images/user.png" alt="Usuario">
                     </div>
@@ -147,17 +131,10 @@
                         </div>
                         <p class="notification-text">Ha comentado en tu documento: <strong>"Buen trabajo, me ha servido
                                 mucho!"</strong></p>
-                        <div class="notification-actions">
-                            <button class="action-button">Ver</button>
-                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Control de carga -->
-            <div class="load-more">
-                <button class="load-more-button">Cargar más notificaciones</button>
-            </div>
         </div>
 
         <!-- Footer -->
@@ -165,6 +142,20 @@
             <div class="click-connect">Click&amp;Connect</div>
         </div>
     </div>
+
+    <script>
+        function markAsRead() {
+    // Obtener todas las notificaciones no leídas
+    const unreadNotifications = document.querySelectorAll('.notification-item.unread');
+    
+    // Iterar sobre las notificaciones no leídas y cambiar su clase
+    unreadNotifications.forEach(notification => {
+        notification.classList.remove('unread'); // Elimina la clase 'unread'
+        notification.classList.add('read'); // Añade la clase 'read' (puedes definirla en tu CSS si lo deseas)
+    });
+}
+
+    </script>
 </body>
 
 </html>

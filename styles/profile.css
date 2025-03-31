@@ -61,27 +61,32 @@ a {
 }
 
 /* Banner del perfil */
-.profile-banner {
-    width: 100%;
-    height: 200px;
-    background-color: #D9D9D9;
-    border-radius: 20px;
-    overflow: hidden;
+.avatar-section {
     position: relative;
+    width: 100%;
+    height: 200px; /* Ajusta la altura del banner según lo que necesites */
 }
 
-.banner-overlay {
+.avatar-banner {
+    background-size: cover;
+    background-position: center;
+    height: 100%; /* Asegura que el banner ocupe toda la altura disponible */
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
-    height: 60px;
-    background-color: rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: flex-start;
-    /* Changed to align left */
-    padding-left: 40px;
-    /* Added padding for better positioning */
+}
+
+.avatar-container {
+    position: absolute;
+    bottom: -50px; /* Ajusta la posición del avatar respecto al banner */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px; /* Tamaño del avatar */
+    height: 100px; /* Tamaño del avatar */
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #fff; /* Puedes agregar un borde blanco alrededor del avatar */
 }
 
 .profile-picture {
@@ -154,12 +159,82 @@ a {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+.sign-out {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #5a1a1a;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
 .edit-button:hover {
     background-color: #1a345a;
 }
 
-/* Sección de insignias */
+.sign-out:hover {
+    background-color: #5a1a1a;
+}
+
+/* Estilo para el toggle de insignias */
+.toggle-container {
+    display: flex;
+    justify-content: center; /* Centra el toggle horizontalmente */
+    margin-bottom: 1rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-bottom: 1rem;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    border-radius: 50px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+}
+
+/* Cuando el interruptor está activado */
+input:checked + .slider {
+    background-color: #234269;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* La cuadrícula de insignias se mantiene intacta */
 .badges-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -167,6 +242,7 @@ a {
     justify-content: center;
 }
 
+/* Estilos de las insignias */
 .badge {
     display: flex;
     flex-direction: column;
@@ -175,14 +251,17 @@ a {
 }
 
 .badge img {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     margin-bottom: 10px;
 }
 
 .badge p {
     font-size: 1.8rem;
 }
+
+
+
 
 /* Media queries para responsividad */
 @media (max-width: 992px) {

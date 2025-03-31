@@ -163,6 +163,13 @@ button {
     font-size: 25px;
 }
 
+.fingerprint {
+    width: 80px; /* Ajusta según necesites */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Asegura que el tamaño se respete */
+}
+
+
 /* Media queries para responsividad */
 @media (max-width: 768px) {
     .text-wrapper {

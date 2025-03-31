@@ -13,6 +13,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../styles/nav.css">
     <link rel="stylesheet" href="../styles/profile.css">
+    <link rel="stylesheet" href="../styles/editProfileStyle.css">
     <link rel="stylesheet" href="../styles/footer.css">
 </head>
 
@@ -25,7 +26,7 @@
             </div>
             <div class="user-controls">
                 <a href="search.html"><img class="image-4" src="../images/search.png" alt="Icono" /></a>
-                <a href="index.html"><img class="image-3" src="../images/list.png" alt="Icono" /></a>
+                <a href="index.html"><img class="image-3" src="../images/home.png" alt="Icono" /></a>
                 <a href="settings.html"><img class="image-2" src="../images/settings.png" alt="Icono" /></a>
                 <a href="notifications.html"><img class="image" src="../images/notifications.png" alt="Icono" /></a>
                 <a href="profile.html"><img class="img" src="../images/user.png" alt="Icono" /></a>
@@ -54,13 +55,14 @@
         <!-- Contenido del perfil -->
         <div class="profile-content">
             <!-- Banner del perfil -->
-            <div class="profile-banner">
-                <div class="banner-overlay">
-                    <div class="profile-picture">
-                        <img src="../images/user.png" alt="Foto de perfil">
+            <div class="avatar-section">
+                <div class="avatar-banner" id="banner" style="background-image: url('../images/banner.jpg');">
+                    <div class="avatar-container">
+                        <img id="avatarImage" src="../images/user.png" alt="Foto de perfil">
                     </div>
                 </div>
             </div>
+            
 
             <!-- Información y badges -->
             <div class="profile-sections">
@@ -68,11 +70,9 @@
                 <div class="profile-section info-section">
                     <h3 class="section-title">Información Personal</h3>
                     <div class="profile-info">
-                        <p><span>Nombre:</span> User</p>
-                        <p><span>Nombre de usuario:</span> user123</p>
-                        <p><span>Correo Electrónico:</span> user123@gmail.com</p>
-                        <p><span>Fecha de nacimiento:</span> 31/12/2004</p>
-                        <p><span>Sexo:</span> Hombre</p>
+                        <p><span>Nombre completo:</span> Hola</p>
+                        <p><span>Nombre de usuario:</span> hola123</p>
+                        <p><span>Correo Electrónico:</span> hola@gmail.com</p>
                     </div>
                     <button class="edit-button" onclick="window.location.href='editProfile.html'">Editar Perfil</button>
                 </div>
@@ -80,22 +80,33 @@
                 <!-- Sección de insignias -->
                 <div class="profile-section badges-section">
                     <h3 class="section-title">Mis Insignias</h3>
-                    <div class="badges-grid">
+                    
+                    <!-- Toggle para activar/desactivar las insignias -->
+                    <div class="toggle-container">
+                        <label class="switch">
+                            <input type="checkbox" id="badge-toggle" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                
+                    <div class="badges-grid" id="badges-grid">
                         <div class="badge">
-                            <img src="../images/insignia.png" alt="Insignia">
-                            <p>Escritor</p>
+                            <img src="../images/artist.jpg" alt="Insignia">
+                            <p>Artista</p>
                         </div>
                         <div class="badge">
-                            <img src="../images/insignia.png" alt="Insignia">
-                            <p>Estudioso</p>
+                            <img src="../images/toadGenius.jpg" alt="Insignia">
+                            <p>Sabio</p>
                         </div>
                         <div class="badge">
-                            <img src="../images/insignia.png" alt="Insignia">
-                            <p>Matemáticas</p>
+                            <img src="../images/calculating.jpg" alt="Insignia">
+                            <p>Calculador</p>
                         </div>
                     </div>
-                </div>
+                </div>                              
             </div>
+
+            <button class="sign-out" onclick="window.location.href='login.html'">Cerrar sesión<button></button>
         </div>
 
         <!-- Footer -->
@@ -103,6 +114,9 @@
             <div class="click-connect">Click&amp;Connect</div>
         </div>
     </div>
+
+    <script src="../js/profileImage.js"></script>
+    <script src="../js/insignias.js"></script>
 </body>
 
 </html>

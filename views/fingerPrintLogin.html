@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="../styles/nav.css" />
     <link rel="stylesheet" href="../styles/login.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="../styles/conversorNotification.css" />
+    <link rel="stylesheet" href="../styles/nav.css" />
     <title>StudyHub - Página Principal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,36 +26,21 @@
                 <a href="login.html">StudyHub</a>
             </div>
             <div class="user-controls">
-                <a href="login.html"><button class="login-btn">Iniciar Sesión</button></a>
+                <a href="login.html"><button class="register-btn">Iniciar Sesión</button></a>
                 <a href="register.html"><button class="register-btn">Registrarse</button></a>
             </div>
         </div>
 
-        <!-- Título principal -->
-        <div class="text-wrapper-2">Iniciar Sesión</div>
-
-        <!-- Login -->
-        <div class="container">
-            <div>
-                <form action="index.html">
-                    <input type="text" name="" id="" placeholder="Nombre de usuario"><br>
-                    <input type="password" name="" id="" placeholder="Contraseña"><br>
-                    <div class="remember_div">
-                        <label for="">Recordarme</label>
-                        <input type="checkbox" name="" id=""><br>
-                    </div>
-                    <button type="submit">Iniciar sesión</button>
-                </form>
-
-                <p class="other-methods-text">Otros métodos</p>
-                <div class="others-methods">
-                    <a href="fingerPrintLogin.html"><img class="fingerprint" src="../images/fingerprint-scan_6692271.png" alt="Huella"/></a>
-                    <a href="doubleAuthentification.html"><button>Doble autentificación</button></a>
-                    <a href="recoverPassword.html"><button class="password">Recuperar Contraseña</button></a>
+        <div class="message-container">
+            <div class="message-box">
+                <div class="message-header">
+                    <h2>Mensaje de aviso:</h2>
+                    <button onclick="window.location.href='login.html'" class="close-button">&times;</button>
                 </div>
-
+                <div class="message-body">
+                    <p>Este dispositivo no es compatible con la huella dactilar.</p>
+                </div>
             </div>
-
         </div>
 
 

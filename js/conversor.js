@@ -4,113 +4,72 @@ document.addEventListener('DOMContentLoaded', function () {
     const fileInfo = document.getElementById('file-info');
     const selectedFilename = document.getElementById('selected-filename');
     const convertBtn = document.getElementById('convert-btn');
+    const formatSelect = document.getElementById('format-select');
+    const conversionMessage = document.getElementById('conversion-message');
 
-    // Permite hacer clic en la zona para seleccionar un archivo
     dropZone.addEventListener('click', function () {
         fileInput.click();
     });
 
-    // Maneja la selección de archivos desde el explorador
     fileInput.addEventListener('change', function (e) {
         handleFiles(e.target.files);
     });
 
-    // Evita que los eventos de arrastrar abran el archivo en una nueva pestaña
-    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-        dropZone.addEventListener(eventName, preventDefaults, false);
-        document.body.addEventListener(eventName, preventDefaults, false);
-    });
-
-    // Resalta la zona de soltar cuando se arrastra un archivo sobre ella
-    ['dragenter', 'dragover'].forEach(eventName => {
-        dropZone.addEventListener(eventName, highlight, false);
-    });
-
-    ['dragleave', 'drop'].forEach(eventName => {
-        dropZone.addEventListener(eventName, unhighlight, false);
-    });
-
-    // Maneja el evento de soltar archivos
-    dropZone.addEventListener('drop', handleDrop, false);
-
-    // Maneja el botón de conversión
-    convertBtn.addEventListener('click', convertFile);
-
-    function preventDefaults(e) {
+    dropZone.addEventListener('dragover', function (e) {
         e.preventDefault();
-        e.stopPropagation();
-    }
-
-    function highlight() {
         dropZone.classList.add('highlight');
-    }
+    });
 
-    function unhighlight() {
+    dropZone.addEventListener('dragleave', function () {
         dropZone.classList.remove('highlight');
-    }
+    });
 
-    function handleDrop(e) {
-        const dt = e.dataTransfer;
-        const files = dt.files;
-        handleFiles(files);
-    }
+    dropZone.addEventListener('drop', function (e) {
+        e.preventDefault();
+        dropZone.classList.remove('highlight');
+        handleFiles(e.dataTransfer.files);
+    });
+
+    convertBtn.addEventListener('click', function () {
+        convertFile();
+    });
 
     function handleFiles(files) {
         if (files.length > 0) {
             const file = files[0];
             selectedFilename.textContent = file.name;
             fileInfo.style.display = 'block';
-
-            // Truncate filename if too long for better display on mobile
-            const displayName = file.name.length > 20
-                ? file.name.substring(0, 17) + '...'
-                : file.name;
-
-            // Cambia el aspecto de la zona de soltar
             dropZone.innerHTML = `
-                <input type="file" id="fileInput" hidden>
-                <p>Archivo seleccionado</p>
-                <p class="selected-file">${displayName}</p>
+                <p>Archivo seleccionado:</p>
+                <p class="selected-file">${file.name}</p>
             `;
         }
     }
 
     function convertFile() {
-        // Simular una conversión agregando un nuevo elemento a la lista
+        const format = formatSelect.value;
+        const fileName = selectedFilename.textContent;
         const now = new Date();
         const dateStr = `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()}`;
-        const fileName = selectedFilename.textContent;
 
-        // Truncate filename if too long for display
-        const displayName = fileName.length > 15
-            ? fileName.substring(0, 12) + '...'
-            : fileName;
-
-        // Crear nuevo elemento para la lista de archivos convertidos
         const fileItem = document.createElement('div');
         fileItem.className = 'file-item';
         fileItem.innerHTML = `
-            <span class="file-name">Nombre archivo: ${displayName}</span>
+            <span class="file-name">Nombre archivo: ${fileName}</span>
             <span class="file-date">Día conversión: ${dateStr}</span>
-            <span class="file-conversion">Cambio de extensión: Word a PDF</span>
+            <span class="file-conversion">Cambio de extensión: ${format.toUpperCase()}</span>
         `;
 
-        // Insertar el nuevo elemento al principio de la lista
-        const subtitle = document.querySelector('.subtitle');
-        subtitle.parentNode.insertBefore(fileItem, subtitle.nextSibling);
+        document.querySelector('.subtitle').after(fileItem);
 
-        // Restablecer la zona de soltar
-        dropZone.innerHTML = `
-            <input type="file" id="fileInput" hidden>
-            <p>Selecciona un archivo o<br />suéltalo aquí</p>
-        `;
+        // Mostrar mensaje de conversión exitosa
+        conversionMessage.style.display = 'block';
 
-        // Ocultar información del archivo
+        setTimeout(() => {
+            conversionMessage.style.display = 'none';
+        }, 3000);
+
         fileInfo.style.display = 'none';
-
-        // Actualizar los eventos después de cambiar el DOM
-        document.getElementById('fileInput').addEventListener('change', function (e) {
-            handleFiles(e.target.files);
-        });
+        dropZone.innerHTML = `<p>Selecciona un archivo o<br />suéltalo aquí</p>`;
     }
 });

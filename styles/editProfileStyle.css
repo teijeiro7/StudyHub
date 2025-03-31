@@ -130,7 +130,7 @@ body {
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     font-size: 1.2rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Just Another Hand", cursive;
 }
 
 .form-row {
@@ -181,7 +181,7 @@ body {
     background-color: var(--primary-color);
     padding: 5px 10px;
     border-radius: 20px;
-    font-family: "Inter", sans-serif;
+    font-family: "Just Another Hand", cursive;
     font-size: 1rem;
     display: flex;
     align-items: center;
@@ -199,13 +199,14 @@ body {
     border: none;
     outline: none;
     padding: 5px;
-    font-family: "Inter", sans-serif;
+    font-family: "Just Another Hand", cursive;
 }
 
 /* Botones */
 .form-buttons {
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
     gap: var(--spacing-md);
     margin-top: var(--spacing-md);
 }
@@ -217,6 +218,7 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
     border: 1px solid var(--border-color);
+    font-family: "Just Another Hand", cursive;
 }
 
 .cancel-btn {
@@ -235,6 +237,52 @@ body {
     background-color: var(--border-color);
     color: var(--secondary-color);
 }
+
+
+/* Estilos para la sección del banner */
+.banner-section {
+    width: 100%;
+    height: 200px; /* Ajusta la altura del banner según lo necesites */
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.banner-container {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#bannerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-edit {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.banner-edit label {
+    color: #fff;
+    font-size: 1.5rem;
+    display: block;
+}
+
+/* Estilo para el input de carga */
+#bannerUpload {
+    display: none;
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
