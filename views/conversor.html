@@ -49,20 +49,34 @@
 
         <!-- Main Content -->
         <div class="content">
-            <h1 class="title">Conversor de<br />{Formato1} a {Formato2}</h1>
-
+            <h1 class="title">Conversor de Archivos</h1>
+        
             <div id="drop_zone" class="dropzone">
                 <input type="file" id="fileInput" hidden>
                 <p>Selecciona un archivo o<br />suéltalo aquí</p>
             </div>
-
+        
             <div id="file-info" class="file-info" style="display: none;">
                 <p>Archivo seleccionado: <span id="selected-filename"></span></p>
+        
+                <!-- Selección de formato de conversión -->
+                <label for="format-select">Convertir a:</label>
+                <select id="format-select">
+                    <option value="pdf">PDF</option>
+                    <option value="docx">Word (DOCX)</option>
+                    <option value="txt">Texto (TXT)</option>
+                </select>
+        
                 <button id="convert-btn">Convertir</button>
             </div>
-
+        
+            <!-- Mensaje de conversión exitosa -->
+            <div id="conversion-message" class="success-message" style="display: none;">
+                🎉 Archivo convertido correctamente. 🎉
+            </div>
+        
             <h2 class="subtitle">Archivos Convertidos</h2>
-
+        
             <div class="file-item">
                 <span class="file-name">Nombre archivo: tema1</span>
                 <span class="file-date">Día conversión: 21/01/2025</span>

@@ -48,26 +48,38 @@ Note.html -->
             </div>
         </div>
 
+        <!-- Título de la nota -->
+        <h1 class="note-title">Nota rápida Latín</h1>
         <div class="main_head_div">
-            <div class="head_div">
-                <!-- Título de la nota -->
-                <h1 class="note-title">Nota rápida Latín</h1>
-
                 <!-- Barra de herramientas -->
                 <div class="toolbar">
+                    <div class="controls">
+                        <select id="emojiPicker" class="emoji-selector">
+                            <option value="">Selecciona un emoji</option>
+                            <option value="😊">😊 Sonrisa</option>
+                            <option value="😂">😂 Risa</option>
+                            <option value="❤️">❤️ Corazón</option>
+                            <option value="👍">👍 Pulgar arriba</option>
+                            <option value="🔥">🔥 Fuego</option>
+                            <option value="🎉">🎉 Fiesta</option>
+                            <option value="💡">💡 Idea</option>
+                        </select>
+                        <button class="btn" onclick="addSelectedEmoji()">Añadir Emoji</button>
+                    </div>
+
                     <!-- Botón de formato -->
-                    <button class="format-button">
+                    <button class="format-button" onclick="window.location.href='errorNotification.html'">
                         <img src="../images/narrator.png" alt="Formato" />
-                    </button>
+                    </button>                    
 
                     <!-- Selector de etiquetas -->
                     <div class="tag-selector">
-                        <div class="tag tag-ct">CT</div>
-                        <div class="tag tag-la">LA</div>
-                        <div class="tag tag-jb">JB</div>
-                        <div class="tag tag-ag">AG</div>
-                        <div class="tag tag-oc">OC</div>
-                    </div>
+                        <div class="tag tag-ct" title="Colaboradores">CT</div>
+                        <div class="tag tag-la" title="Colaboradores">LA</div>
+                        <div class="tag tag-jb" title="Colaboradores">JB</div>
+                        <div class="tag tag-ag" title="Colaboradores">AG</div>
+                        <div class="tag tag-oc" title="Colaboradores">OC</div>
+                    </div>                    
 
                     <!-- Herramientas de formato -->
                     <div class="format-tools">
@@ -130,11 +142,10 @@ Note.html -->
 
                     <!-- Botón de compartir -->
                     <div class="share-button">
-                        <img src="../images/compartir.png" alt="Compartir" />
-                        <span>Compartir</span>
+                        <a href="shareMessage.html"><img src="../images/compartir.png" alt="Compartir" /></a>
                     </div>
                 </div>
-            </div>
+           
         </div>
 
         <!-- Área de texto de la nota -->
@@ -159,5 +170,17 @@ Note.html -->
     </div>
 </body>
 <script src="../js/newNote.js"></script>
+
+<script>
+    function addSelectedEmoji() {
+        const emojiPicker = document.getElementById('emojiPicker');
+        const selectedEmoji = emojiPicker.value;
+        const noteArea = document.querySelector('.note-area');
+
+        if (selectedEmoji) {
+            noteArea.innerHTML += selectedEmoji;
+        }
+    }
+</script>
 
 </html>

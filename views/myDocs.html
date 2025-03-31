@@ -77,7 +77,7 @@
                         <option value="all">Todos los tipos</option>
                         <option value="pdf">PDF</option>
                         <option value="doc">Documentos</option>
-                        <option value="image">Imágenes</option>
+                        <option value="png">Imágenes</option>
                         <option value="other">Otros</option>
                     </select>
                 </div>
@@ -85,7 +85,7 @@
 
             <section class="files-container grid-view">
                 <!-- PDF file example -->
-                <div class="file-card" data-type="pdf">
+                <div class="file-card" data-type="pdf" data-date="2025-03-15">
                     <div class="file-icon pdf">
                         <i class="far fa-file-pdf"></i>
                     </div>
@@ -93,78 +93,88 @@
                         <h3 class="file-name">Apuntes_Tema1.pdf</h3>
                         <p class="file-meta">PDF • 2.4 MB • 15/03/2025</p>
                         <div class="file-actions">
-                            <button class="action-btn"><i class="fas fa-download"></i></button>
-                            <button class="action-btn"><i class="fas fa-share-alt"></i></button>
-                            <button class="action-btn"><i class="fas fa-ellipsis-h"></i></button>
+                            <button class="action-btn" onclick="downloadFile('../documents/apuntesTema1.pdf')">
+                                <i class="fas fa-download"></i>
+                            </button>
+                            <a href="shareMessage.html"> <button class="action-btn"><i class="fas fa-share-alt"></i></button></a>
+                            <button class="action-btn"><i class="fas fa-edit"></i></button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Word document example -->
-                <div class="file-card" data-type="doc">
+                <div class="file-card" data-type="doc" data-date="2025-03-10">
                     <div class="file-icon doc">
                         <i class="far fa-file-word"></i>
                     </div>
                     <div class="file-info">
-                        <h3 class="file-name">Trabajo_Final.docx</h3>
+                        <h3 class="file-name">Trabajo_Final_Centenarios.docx</h3>
                         <p class="file-meta">DOCX • 1.8 MB • 10/03/2025</p>
                         <div class="file-actions">
-                            <button class="action-btn"><i class="fas fa-download"></i></button>
-                            <button class="action-btn"><i class="fas fa-share-alt"></i></button>
-                            <button class="action-btn"><i class="fas fa-ellipsis-h"></i></button>
+                            <button class="action-btn" onclick="downloadFile('../documents/centenarios.doc')">
+                                <i class="fas fa-download"></i>
+                            </button>
+                            <a href="shareMessage.html"><button class="action-btn"><i class="fas fa-share-alt"></i></button></a>
+                            <button class="action-btn"><i class="fas fa-edit"></i></button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Image example -->
-                <div class="file-card" data-type="image">
-                    <div class="file-icon image">
+                <div class="file-card" data-type="png" data-date="2025-03-05">
+                    <div class="file-icon png">
                         <i class="far fa-file-image"></i>
                     </div>
                     <div class="file-info">
                         <h3 class="file-name">Diagrama_UML.png</h3>
                         <p class="file-meta">PNG • 0.7 MB • 05/03/2025</p>
                         <div class="file-actions">
-                            <button class="action-btn"><i class="fas fa-download"></i></button>
-                            <button class="action-btn"><i class="fas fa-share-alt"></i></button>
-                            <button class="action-btn"><i class="fas fa-ellipsis-h"></i></button>
+                            <button class="action-btn" onclick="downloadFile('../documents/diagramaClases.png')">
+                                <i class="fas fa-download"></i>
+                            </button>
+                            <a href="shareMessage.html"> <button class="action-btn"><i class="fas fa-share-alt"></i></button></a>
+                            <button class="action-btn"><i class="fas fa-edit"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- PowerPoint example -->
-                <div class="file-card" data-type="other">
+                <!-- txt example -->
+                <div class="file-card" data-type="other" data-date="2025-03-01">
                     <div class="file-icon ppt">
                         <i class="far fa-file-powerpoint"></i>
                     </div>
                     <div class="file-info">
-                        <h3 class="file-name">Presentacion_Proyecto.pptx</h3>
-                        <p class="file-meta">PPTX • 5.2 MB • 01/03/2025</p>
+                        <h3 class="file-name">Presentacion_Proyecto.txt</h3>
+                        <p class="file-meta">TXT • 5.2 MB • 01/03/2025</p>
                         <div class="file-actions">
-                            <button class="action-btn"><i class="fas fa-download"></i></button>
-                            <button class="action-btn"><i class="fas fa-share-alt"></i></button>
-                            <button class="action-btn"><i class="fas fa-ellipsis-h"></i></button>
+                            <button class="action-btn" onclick="downloadFile('../documents/presentation.txt')">
+                                <i class="fas fa-download"></i>
+                            </button>
+                            <a href="shareMessage.html"> <button class="action-btn"><i class="fas fa-share-alt"></i></button></a>
+                            <button class="action-btn"><i class="fas fa-edit"></i></button>
                         </div>
                     </div>
                 </div>
 
                 <!-- More file examples -->
-                <div class="file-card" data-type="pdf">
-                    <div class="file-icon pdf">
-                        <i class="far fa-file-pdf"></i>
+                <div class="file-card" data-type="png" data-date="2025-02-20">
+                    <div class="file-icon png">
+                        <i class="far fa-file-image"></i>
                     </div>
                     <div class="file-info">
-                        <h3 class="file-name">Examen_Resuelto.pdf</h3>
-                        <p class="file-meta">PDF • 1.1 MB • 20/02/2025</p>
+                        <h3 class="file-name">fotoPerfil.jpg</h3>
+                        <p class="file-meta">JPG • 1.1 MB • 20/02/2025</p>
                         <div class="file-actions">
-                            <button class="action-btn"><i class="fas fa-download"></i></button>
-                            <button class="action-btn"><i class="fas fa-share-alt"></i></button>
-                            <button class="action-btn"><i class="fas fa-ellipsis-h"></i></button>
+                            <button class="action-btn" onclick="downloadFile('../documents/fotoPerfil.jpg')">
+                                <i class="fas fa-download"></i>
+                            </button>
+                            <a href="shareMessage.html"> <button class="action-btn"><i class="fas fa-share-alt"></i></button></a>
+                            <button class="action-btn"><i class="fas fa-edit"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <div class="file-card" data-type="other">
+                <div class="file-card" data-type="other" data-date="2025-02-17">
                     <div class="file-icon zip">
                         <i class="far fa-file-archive"></i>
                     </div>
@@ -172,36 +182,16 @@
                         <h3 class="file-name">Codigo_Proyecto.zip</h3>
                         <p class="file-meta">ZIP • 8.3 MB • 15/02/2025</p>
                         <div class="file-actions">
-                            <button class="action-btn"><i class="fas fa-download"></i></button>
-                            <button class="action-btn"><i class="fas fa-share-alt"></i></button>
-                            <button class="action-btn"><i class="fas fa-ellipsis-h"></i></button>
+                            <button class="action-btn" onclick="downloadFile('../documents/codigo-proyecto.zip')">
+                                <i class="fas fa-download"></i>
+                            </button>
+                            <a href="shareMessage.html"> <button class="action-btn"><i class="fas fa-share-alt"></i></button></a>
+                            <button class="action-btn"><i class="fas fa-edit"></i></button>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Upload file modal (hidden by default) -->
-            <div class="upload-modal" id="uploadModal">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3>Subir nuevo archivo</h3>
-                        <button class="close-btn">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="drop-area">
-                            <i class="fas fa-cloud-upload-alt"></i>
-                            <p>Arrastra y suelta archivos aquí o</p>
-                            <button class="btn browse-btn">Examinar archivos</button>
-                            <input type="file" id="fileInput" multiple hidden>
-                        </div>
-                        <div class="selected-files"></div>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn cancel-btn">Cancelar</button>
-                        <button class="btn upload-confirm-btn">Subir archivos</button>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <!-- Footer -->
@@ -211,6 +201,14 @@
     </div>
 
     <script src="../js/misArchivos.js"></script>
+    <script>
+        function downloadFile(filePath) {
+            const link = document.createElement('a');
+            link.href = filePath;  // Ruta relativa que pasas
+            link.download = filePath.split('/').pop();  // Extrae el nombre del archivo para la descarga
+            link.click();  // Simula el clic para iniciar la descarga
+        }
+    </script>
 </body>
 
 </html>

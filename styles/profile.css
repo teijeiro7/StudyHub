@@ -154,9 +154,25 @@ a {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+.sign-out {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #5a1a1a;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
 .edit-button:hover {
     background-color: #1a345a;
+}
+
+.sign-out:hover {
+    background-color: #5a1a1a;
 }
 
 /* Estilo para el toggle de insignias */
