@@ -13,6 +13,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../styles/nav.css">
     <link rel="stylesheet" href="../styles/profile.css">
+    <link rel="stylesheet" href="../styles/editProfileStyle.css">
     <link rel="stylesheet" href="../styles/footer.css">
 </head>
 
@@ -25,7 +26,7 @@
             </div>
             <div class="user-controls">
                 <a href="search.html"><img class="image-4" src="../images/search.png" alt="Icono" /></a>
-                <a href="index.html"><img class="image-3" src="../images/list.png" alt="Icono" /></a>
+                <a href="index.html"><img class="image-3" src="../images/home.png" alt="Icono" /></a>
                 <a href="settings.html"><img class="image-2" src="../images/settings.png" alt="Icono" /></a>
                 <a href="notifications.html"><img class="image" src="../images/notifications.png" alt="Icono" /></a>
                 <a href="profile.html"><img class="img" src="../images/user.png" alt="Icono" /></a>
@@ -54,10 +55,12 @@
         <!-- Contenido del perfil -->
         <div class="profile-content">
             <!-- Banner del perfil -->
-            <div class="profile-banner">
-                <div class="banner-overlay">
-                    <div class="profile-picture">
-                        <img src="../images/user.png" alt="Foto de perfil">
+            <div class="avatar-section">
+                <div class="avatar-container">
+                    <img id="avatarImage" src="../images/user.png" alt="Foto de perfil">
+                    <div class="avatar-edit">
+                        <label for="avatarUpload"><i class="fas fa-camera"></i></label>
+                        <input type="file" id="avatarUpload" accept="image/*" hidden>
                     </div>
                 </div>
             </div>
@@ -82,16 +85,16 @@
                     <h3 class="section-title">Mis Insignias</h3>
                     <div class="badges-grid">
                         <div class="badge">
-                            <img src="../images/insignia.png" alt="Insignia">
-                            <p>Escritor</p>
+                            <img src="../images/artist.jpg" alt="Insignia">
+                            <p>Artista</p>
                         </div>
                         <div class="badge">
-                            <img src="../images/insignia.png" alt="Insignia">
-                            <p>Estudioso</p>
+                            <img src="../images/toadGenius.jpg" alt="Insignia">
+                            <p>Sabio</p>
                         </div>
                         <div class="badge">
-                            <img src="../images/insignia.png" alt="Insignia">
-                            <p>Matemáticas</p>
+                            <img src="../images/calculating.jpg" alt="Insignia">
+                            <p>Calculador</p>
                         </div>
                     </div>
                 </div>
@@ -103,6 +106,8 @@
             <div class="click-connect">Click&amp;Connect</div>
         </div>
     </div>
+
+    <script src="../js/profileImage.js"></script>
 </body>
 
 </html>
