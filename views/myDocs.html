@@ -207,7 +207,20 @@
     </div>
 
     <script src="../js/misArchivos.js"></script>
-
+    <script>
+        function downloadFile(filePath) {
+            const link = document.createElement('a');
+            link.href = filePath;  // Ruta relativa que pasas
+            link.download = filePath.split('/').pop();  // Extrae el nombre del archivo para la descarga
+            link.click();  // Simula el clic para iniciar la descarga
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let element = document.querySelector(".div-wrapper");
+            element.style.backgroundColor = "#36659e";
+        });
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,411 @@
+/* Variables globales */
+:root {
+    --primary-color: #84b6f4;
+    --primary-color-transparent: #84b6f4cc;
+    --secondary-color: #ffffff;
+    --border-color: #234269;
+    --text-color: #000000;
+    --border-radius: 15px;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 2.5rem;
+    --tag-la: #f4a084;
+    /* Naranja para Latín */
+    --tag-ct: #84f4a8;
+    /* Verde para Ciencias */
+    --tag-jb: #d184f4;
+    /* Morado para Biología */
+    --tag-ag: #f4e484;
+    /* Amarillo para Agronomía */
+    --tag-oc: #84c4f4;
+    /* Azul claro para Química */
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --card-shadow-hover: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Just Another Hand", cursive;
+}
+
+body {
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Página principal */
+.pgina-principal {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Título de la página */
+.text-wrapper-2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: var(--spacing-lg) 0 var(--spacing-xl);
+    padding-top: 20px;
+}
+
+/* Barra de herramientas de notas */
+.notes-toolbar {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.search-bar {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    max-width: 400px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 12px 18px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    outline: none;
+    font-size: 1.8rem;
+}
+
+.search-btn {
+    padding: 0 18px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 1.4rem;
+}
+
+.search-btn:hover {
+    background-color: var(--border-color);
+    color: white;
+}
+
+.note-actions {
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.create-note-btn {
+    background-color: var(--border-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 12px 24px;
+    cursor: pointer;
+    font-family: "Just Another Hand", cursive;
+    font-size: 2rem;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.create-note-btn:hover {
+    background-color: #1a345a;
+}
+
+
+.filter-select {
+    padding: 10px 18px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-color);
+    outline: none;
+    font-family: "Just Another Hand", cursive;
+    font-size: 1.8rem;
+    cursor: pointer;
+    min-width: 180px;
+}
+
+/* Contenedor de notas - Grid View (default) */
+.notes-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+    transition: all 0.3s ease;
+}
+
+.notes-container.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-xl);
+    row-gap: var(--spacing-xl);
+}
+
+/* Contenedor de notas - List View */
+.notes-container.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+/* Tarjeta de nota */
+.note-card {
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s;
+    overflow: hidden;
+    min-height: 250px;
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.note-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.note-content {
+    padding: var(--spacing-lg);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.note-title {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+}
+
+.note-preview {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-lg);
+    flex: 1;
+    display: -webkit-box;
+    /* Muestra más líneas de texto */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.3;
+}
+
+.note-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    opacity: 0.7;
+    margin-top: auto;
+    padding-top: var(--spacing-md);
+}
+
+.note-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.tag-la {
+    background-color: var(--tag-la);
+}
+
+.tag-ct {
+    background-color: var(--tag-ct);
+}
+
+.tag-jb {
+    background-color: var(--tag-jb);
+}
+
+.tag-ag {
+    background-color: var(--tag-ag);
+}
+
+.tag-oc {
+    background-color: var(--tag-oc);
+}
+
+.note-actions {
+    display: flex;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.03);
+    height: 50px;
+    /* Altura fija para los botones de acción */
+}
+
+.action-btn {
+    flex: 1;
+    padding: var(--spacing-md) 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.action-btn:hover {
+    background-color: var(--border-color);
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #e74c3c;
+}
+
+/* Estilos de lista */
+.notes-container.list-view .note-card {
+    flex-direction: row;
+    min-height: 150px;
+}
+
+.notes-container.list-view .note-content {
+    flex: 1;
+    padding: var(--spacing-lg) var(--spacing-xl);
+}
+
+.notes-container.list-view .note-actions {
+    border-top: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    flex-direction: column;
+    width: 70px;
+    height: auto;
+}
+
+.notes-container.list-view .action-btn {
+    padding: var(--spacing-lg) 0;
+    height: 33.33%;
+}
+
+.notes-container.list-view .note-title {
+    margin-bottom: var(--spacing-sm);
+}
+
+.notes-container.list-view .note-preview {
+    margin-bottom: var(--spacing-md);
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .text-wrapper-2 {
+        font-size: 2.5rem;
+        margin-top: 120px;
+    }
+
+    .notes-toolbar {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .search-bar {
+        max-width: 100%;
+    }
+
+    .note-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .notes-container.grid-view {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: var(--spacing-lg);
+    }
+
+    .notes-container.list-view .note-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+    }
+
+    .note-card {
+        min-height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-wrapper-2 {
+        font-size: 2.2rem;
+        margin-top: 140px;
+    }
+
+    .create-note-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 20px;
+    }
+
+    .filter-options {
+        width: 100%;
+    }
+
+    .filter-options select {
+        width: 100%;
+    }
+
+    .notes-container.grid-view {
+        grid-template-columns: 1fr;
+    }
+
+    .notes-container.list-view .note-card {
+        flex-direction: column;
+    }
+
+    .notes-container.list-view .note-content {
+        padding: var(--spacing-md);
+    }
+
+    .notes-container.list-view .note-actions {
+        flex-direction: row;
+        width: 100%;
+        height: 45px;
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .notes-container.list-view .action-btn {
+        padding: var(--spacing-sm) 0;
+        height: 100%;
+    }
+
+    .note-title {
+        font-size: 2.2rem;
+    }
+
+    .note-preview {
+        font-size: 1.6rem;
+    }
+}

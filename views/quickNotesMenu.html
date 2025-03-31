@@ -1,0 +1,360 @@
+.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/nav.css" />
+    <link rel="stylesheet" href="../styles/quickNotesMenu.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>StudyHub - Notas Rápidas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Just+Another+Hand&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="pgina-principal">
+        <!-- Header navigation -->
+        <div class="overlap-group">
+            <div class="text-wrapper">
+                <a href="index.html" style="text-decoration: none; color: inherit;">StudyHub</a>
+            </div>
+            <div class="user-controls">
+                <a href="search.html"><img class="image-4" src="../images/search.png" alt="Icono" /></a>
+                <a href="index.html"><img class="image-3" src="../images/home.png" alt="Icono" /></a>
+                <a href="settings.html"><img class="image-2" src="../images/settings.png" alt="Icono" /></a>
+                <a href="notifications.html"><img class="image" src="../images/notifications.png" alt="Icono" /></a>
+                <a href="profile.html"><img class="img" src="../images/user.png" alt="Icono" /></a>
+                <div class="username">
+                    <h3 class="username_title"><a href="profile.html">hola123</h3></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú de navegación -->
+        <div class="nav-menu">
+            <div class="overlap-2">
+                <div class="text-wrapper-3"><a href="search.html">Búsqueda</a></div>
+            </div>
+            <div class="div-wrapper">
+                <div class="text-wrapper-4"><a href="myDocs.html">Mis Archivos</a></div>
+            </div>
+            <div class="overlap-3">
+                <div class="text-wrapper-4"><a href="sharedDocs.html">Compartidos</a></div>
+            </div>
+        </div>
+
+        <!-- Título principal -->
+        <div class="text-wrapper-2">Mis Notas Rápidas</div>
+
+        <!-- Barra de herramientas de notas -->
+        <div class="notes-toolbar">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar notas...">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="note-actions">
+                <select class="filter-select">
+                    <option value="all">Todas las notas</option>
+                    <option value="recent">Recientes primero</option>
+                    <option value="oldest">Antiguas primero</option>
+                    <option value="alphabetical">Alfabéticamente</option>
+                </select>
+                <a href="newNote.html" class="create-note-btn">
+                    <i class="fas fa-plus"></i> Nueva Nota
+                </a>
+            </div>
+        </div>
+
+        <!-- Contenedor de notas - Grid View (por defecto) -->
+        <div class="notes-container grid-view">
+            <!-- Nota 1 -->
+            <div class="note-card">
+                <div class="note-content">
+                    <h3 class="note-title">Nota rápida Latín</h3>
+                    <p class="note-preview">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua...
+                    </p>
+                    <div class="note-info">
+                        <span class="note-date">15/03/2025</span>
+                        <div class="note-tags">
+                            <span class="tag tag-la">LA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="note-actions">
+                    <a href="newNote.html" class="action-btn edit-btn" title="Editar">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <button class="action-btn share-btn" title="Compartir">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                    <button class="action-btn delete-btn" title="Eliminar">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Nota 2 -->
+            <div class="note-card">
+                <div class="note-content">
+                    <h3 class="note-title">Fórmulas Matemáticas</h3>
+                    <p class="note-preview">
+                        ∫ f(x) dx = F(x) + C<br>
+                        a² + b² = c²<br>
+                        E = mc²
+                    </p>
+                    <div class="note-info">
+                        <span class="note-date">10/03/2025</span>
+                        <div class="note-tags">
+                            <span class="tag tag-ct">CT</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="note-actions">
+                    <a href="newNote.html" class="action-btn edit-btn" title="Editar">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <button class="action-btn share-btn" title="Compartir">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                    <button class="action-btn delete-btn" title="Eliminar">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Nota 3 -->
+            <div class="note-card">
+                <div class="note-content">
+                    <h3 class="note-title">Vocabulario Inglés</h3>
+                    <p class="note-preview">
+                        Endeavor - Esfuerzo<br>
+                        Thoroughly - Minuciosamente<br>
+                        Struggle - Luchar<br>
+                        Achievement - Logro
+                    </p>
+                    <div class="note-info">
+                        <span class="note-date">05/03/2025</span>
+                        <div class="note-tags">
+                            <span class="tag tag-jb">JB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="note-actions">
+                    <a href="newNote.html" class="action-btn edit-btn" title="Editar">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <button class="action-btn share-btn" title="Compartir">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                    <button class="action-btn delete-btn" title="Eliminar">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Nota 4 -->
+            <div class="note-card">
+                <div class="note-content">
+                    <h3 class="note-title">Apuntes Física</h3>
+                    <p class="note-preview">
+                        Segunda ley de Newton: F = m·a<br>
+                        Ley de gravitación universal: F = G(m₁m₂/r²)
+                    </p>
+                    <div class="note-info">
+                        <span class="note-date">28/02/2025</span>
+                        <div class="note-tags">
+                            <span class="tag tag-ct">CT</span>
+                            <span class="tag tag-oc">OC</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="note-actions">
+                    <a href="newNote.html" class="action-btn edit-btn" title="Editar">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <button class="action-btn share-btn" title="Compartir">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                    <button class="action-btn delete-btn" title="Eliminar">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Nota 5 -->
+            <div class="note-card">
+                <div class="note-content">
+                    <h3 class="note-title">Lista de tareas</h3>
+                    <p class="note-preview">
+                        ✅ Estudiar para examen de matemáticas<br>
+                        ✅ Hacer ejercicios de física<br>
+                        ⬜ Terminar presentación de historia<br>
+                        ⬜ Repasar vocabulario inglés
+                    </p>
+                    <div class="note-info">
+                        <span class="note-date">25/02/2025</span>
+                        <div class="note-tags">
+                            <span class="tag tag-ag">AG</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="note-actions">
+                    <a href="newNote.html" class="action-btn edit-btn" title="Editar">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <button class="action-btn share-btn" title="Compartir">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                    <button class="action-btn delete-btn" title="Eliminar">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Nota 6 -->
+            <div class="note-card">
+                <div class="note-content">
+                    <h3 class="note-title">Historia: Fechas clave</h3>
+                    <p class="note-preview">
+                        1492 - Descubrimiento de América<br>
+                        1789 - Revolución Francesa<br>
+                        1914-1918 - Primera Guerra Mundial<br>
+                        1939-1945 - Segunda Guerra Mundial
+                    </p>
+                    <div class="note-info">
+                        <span class="note-date">20/02/2025</span>
+                        <div class="note-tags">
+                            <span class="tag tag-jb">JB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="note-actions">
+                    <a href="newNote.html" class="action-btn edit-btn" title="Editar">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <button class="action-btn share-btn" title="Compartir">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                    <button class="action-btn delete-btn" title="Eliminar">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="overlap">
+            <div class="click-connect">Click&amp;Connect</div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Cambio de vista (grid/list)
+            // const viewButtons = document.querySelectorAll('.view-btn');
+            // const notesContainer = document.querySelector('.notes-container');
+
+            // viewButtons.forEach(button => {
+            //     button.addEventListener('click', function () {
+            //         const viewType = this.getAttribute('data-view');
+
+            //         // Actualizar botones activos
+            //         viewButtons.forEach(btn => btn.classList.remove('active'));
+            //         this.classList.add('active');
+
+            //         // Cambiar vista
+            //         notesContainer.className = `notes-container ${viewType}-view`;
+            //     });
+            // });
+
+            // Búsqueda de notas
+            const searchInput = document.querySelector('.search-bar input');
+            const noteCards = document.querySelectorAll('.note-card');
+
+            searchInput.addEventListener('input', function () {
+                const searchTerm = this.value.toLowerCase();
+
+                noteCards.forEach(card => {
+                    const title = card.querySelector('.note-title').textContent.toLowerCase();
+                    const content = card.querySelector('.note-preview').textContent.toLowerCase();
+
+                    if (title.includes(searchTerm) || content.includes(searchTerm)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+
+            // Filtrado de notas
+            const filterSelect = document.querySelector('.filter-select');
+
+            filterSelect.addEventListener('change', function () {
+                const sortValue = this.value;
+                const notesArray = Array.from(noteCards);
+
+                if (sortValue === 'recent') {
+                    notesArray.sort((a, b) => {
+                        const dateA = new Date(a.querySelector('.note-date').textContent.split('/').reverse().join('/'));
+                        const dateB = new Date(b.querySelector('.note-date').textContent.split('/').reverse().join('/'));
+                        return dateB - dateA;
+                    });
+                } else if (sortValue === 'oldest') {
+                    notesArray.sort((a, b) => {
+                        const dateA = new Date(a.querySelector('.note-date').textContent.split('/').reverse().join('/'));
+                        const dateB = new Date(b.querySelector('.note-date').textContent.split('/').reverse().join('/'));
+                        return dateA - dateB;
+                    });
+                } else if (sortValue === 'alphabetical') {
+                    notesArray.sort((a, b) => {
+                        const titleA = a.querySelector('.note-title').textContent.toLowerCase();
+                        const titleB = b.querySelector('.note-title').textContent.toLowerCase();
+                        return titleA.localeCompare(titleB);
+                    });
+                }
+
+                // Reordenar en el DOM
+                notesContainer.innerHTML = '';
+                notesArray.forEach(note => {
+                    notesContainer.appendChild(note);
+                });
+            });
+
+            // Eliminar notas
+            const deleteButtons = document.querySelectorAll('.delete-btn');
+
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    if (confirm('¿Estás seguro de que quieres eliminar esta nota?')) {
+                        const noteCard = this.closest('.note-card');
+                        noteCard.style.opacity = '0';
+                        setTimeout(() => {
+                            noteCard.remove();
+                        }, 300);
+                    }
+                });
+            });
+
+            // Compartir notas
+            const shareButtons = document.querySelectorAll('.share-btn');
+
+            shareButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const noteTitle = this.closest('.note-card').querySelector('.note-title').textContent;
+                    alert(`Compartiendo nota: ${noteTitle}`);
+                    // Aquí se podría redirigir a una página de compartir o abrir un modal
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
