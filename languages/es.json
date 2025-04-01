@@ -1,0 +1,14 @@
+{
+    "app_name": "StudyHub",
+    "search": "Búsqueda",
+    "my_docs": "Mis Archivos",
+    "shared_docs": "Compartidos",
+    "settings": "Ajustes",
+    "dark-mode": "Modo oscuro",
+    "font_size": "Tamaño de la letra",
+    "font-style": "Estilo de letra",
+    "language": "Idioma",
+    "voice_reading": "Lectura por voz",
+    "color_blind_mode": "Modo daltónico",
+    "save": "Guardar"
+}

@@ -1,0 +1,38 @@
+/* Estilos para el modo daltónico */
+.daltonic-mode {
+    background-color: red; /* Fondo claro */
+    color: #333333; /* Texto oscuro */
+
+    /* Cambiar colores de enlaces */
+    a {
+        color: #cc3300; /* Azul para enlaces */
+    }
+
+    /* Cambiar los botones */
+    .changes-button {
+        background-color: #cc5500; /* Botón naranja oscuro */
+        color: white;
+    }
+
+    /* Cambiar el fondo de los menús y el footer */
+    .nav-menu, .overlap-group, .footer, .settings-container, .overlap {
+        background-color: #f9f9f9; /* Fondo más claro para menús y footer */
+    }
+
+    /* Cambiar el contenedor de ajustes */
+    .settings-card {
+        background-color: #ffcccc; /* Fondo claro para el contenedor de ajustes */
+    }
+
+    /* Cambiar otros elementos del footer */
+    .footer {
+        background-color: #e6e6e6; /* Fondo más claro para el footer */
+    }
+
+    /* Cambiar los iconos */
+    .image, .img {
+        filter: grayscale(100%); /* Hacer los iconos en escala de grises */
+    }
+}
+
+
