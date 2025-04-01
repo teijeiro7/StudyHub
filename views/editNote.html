@@ -174,4 +174,33 @@ Note.html -->
     }
 </script>
 
+
+<script>
+    // recoger los datos de la nota
+    document.addEventListener("DOMContentLoaded", () => {
+    const title = localStorage.getItem('noteTitle');
+    const content = localStorage.getItem('noteContent');
+    const date = localStorage.getItem('noteDate');
+    const tag = localStorage.getItem('noteTag');
+    //const collaborators = JSON.parse(localStorage.getItem('noteCollaborators')) || [];
+
+    document.querySelector(".note-title").textContent = title;
+    document.querySelector(".note-area").textContent = content;
+    document.querySelector(".note-date").textContent = date;
+
+    const tagSelector = document.querySelector(".tag-selector");
+    tagSelector.innerHTML = ""; // Limpiar contenido previo
+
+    collaborators.forEach(colaborador => {
+        const tagDiv = document.createElement("div");
+        tagDiv.classList.add("tag", `tag-${colaborador.toLowerCase()}`);
+        tagDiv.setAttribute("title", "Colaboradores");
+        tagDiv.textContent = colaborador;
+        tagSelector.appendChild(tagDiv);
+    });
+});
+
+
+</script>
+
 </html>
