@@ -68,18 +68,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Handle font family selection
-    const fontItems = document.querySelectorAll('#font-dropdown .dropdown-item');
+    const fontItems = document.querySelectorAll('#font-dropdown .dropdown-item')
     fontItems.forEach(item => {
         item.addEventListener('click', function () {
             const font = this.getAttribute('data-font');
 
-            // Update displayed font
+            // Cambiar la fuente visualmente
             currentFont.textContent = font;
+            noteArea.style.fontFamily = font;
 
-            // Apply font to selected text
-            document.execCommand('fontName', false, font);
-
-            // Update selected item
+            // Actualizar selección
             fontItems.forEach(i => i.classList.remove('selected'));
             this.classList.add('selected');
         });
@@ -91,13 +89,14 @@ document.addEventListener('DOMContentLoaded', function () {
         item.addEventListener('click', function () {
             const size = this.getAttribute('data-size');
 
-            // Update displayed size
-            currentSize.textContent = size;
+            // Aplicar el tamaño de fuente al área de notas
+            noteArea.style.fontSize = `${size * 2}px`; // Escalamos el tamaño de 1-7 a 10-32px
 
-            // Apply size to selected text
-            document.execCommand('fontSize', false, size);
+            // Actualizar el botón con el tamaño seleccionado
+            currentSize.textContent = this.textContent;
+            currentSize.style.fontSize = `${size * 2}px`;
 
-            // Update selected item
+            // Resaltar la opción seleccionada en el dropdown
             sizeItems.forEach(i => i.classList.remove('selected'));
             this.classList.add('selected');
         });
@@ -131,3 +130,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Make note area editable
     noteArea.focus();
 });
+
+
+

@@ -30,7 +30,7 @@
                 <a href="notifications.html"><img class="image" src="../images/notifications.png" alt="Icono" /></a>
                 <a href="profile.html"><img class="img" src="../images/user.png" alt="Icono" /></a>
                 <div class="username">
-                    <h3 class="username_title"><a href="profile.html">hola123</h3></a>
+                    <h3 class="username_title"><a href="profile.html">hola123</a></h3>
                 </div>
             </div>
         </div>
@@ -53,23 +53,28 @@
             <div class="form-container">
                 <h1 class="form-title">Añadir nuevo documento</h1>
 
-                <form>
+                <form id="addDocumentForm">
                     <div class="form-row">
                         <div class="form-field">
                             <label class="form-label">Seleccionar archivo</label>
-                            <input type="file" id="fileInput" class="file-input">
+                            <input type="file" id="fileInput" class="file-input" onchange="displayFileName()">
                             <label for="fileInput">Seleccionar archivo</label>
+                            <span id="fileNameDisplay" class="file-name-display"></span>
+                            <!-- Muestra el nombre del archivo aquí -->
                         </div>
+
+
+
                         <div class="form-field">
                             <label class="form-label">Título del archivo</label>
-                            <input type="text" class="form-input" placeholder="Ingrese el título">
+                            <input type="text" class="form-input" id="fileTitle" placeholder="Ingrese el título">
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-field">
                             <label class="form-label">Estudio</label>
-                            <select class="form-select">
+                            <select class="form-select" id="studyLevel">
                                 <option value="universidad">Universidad</option>
                                 <option value="bachillerato">Bachillerato</option>
                                 <option value="formacion_profesional">Formación Profesional</option>
@@ -82,7 +87,7 @@
                         </div>
                         <div class="form-field">
                             <label class="form-label">Lugar de estudio</label>
-                            <input type="text" class="form-input" placeholder="Ingrese el lugar">
+                            <input type="text" class="form-input" id="studyLocation" placeholder="Ingrese el lugar">
                         </div>
                     </div>
 
@@ -93,7 +98,7 @@
                         </div>
                         <div class="form-field">
                             <label class="form-label">Extensión del archivo</label>
-                            <select class="form-select">
+                            <select class="form-select" id="fileExtension">
                                 <option value="pdf">PDF</option>
                                 <option value="doc">DOC</option>
                                 <option value="docx">DOCX</option>
@@ -108,16 +113,19 @@
                         </div>
                         <div class="form-field">
                             <label class="form-label">Etiquetas</label>
-                            <input type="text" class="form-input" placeholder="#">
+                            <input type="text" class="form-input" id="tags" placeholder="#">
                         </div>
                     </div>
 
-                    <span id="fileNameDisplay" class="file-name-display"></span> 
+                    <!-- Contenedor para mostrar el mensaje de error -->
+                    <div id="errorMessage" class="error-message">
+                        ⚠️ Todos los campos son obligatorios.
+                    </div>
 
-                    <button type="submit" class="submit-button"
-                    onclick="window.location.href='aviso.html'" id="submitButton" disabled>Guardar</button>
+                    <button type="submit" class="submit-button" id="submitButton"
+                        onclick="validateForm()">Guardar</button>
                     <button type="button" class="cancel-btn"
-                                onclick="window.location.href='index.html'">Cancelar</button>
+                        onclick="window.location.href='index.html'">Cancelar</button>
                 </form>
             </div>
         </main>
@@ -127,6 +135,81 @@
             <div class="click-connect">Click&amp;Connect</div>
         </footer>
     </div>
+
+    <script>
+        let isFileSelected = false; // Booleano para verificar si se ha seleccionado un archivo
+
+        // Función para mostrar el nombre del archivo seleccionado
+        function displayFileName() {
+            const fileInput = document.getElementById('fileInput');
+            const fileNameDisplay = document.getElementById('fileNameDisplay');
+
+            if (fileInput.files.length > 0) {
+                fileNameDisplay.textContent = `Archivo seleccionado: ${fileInput.files[0].name}`;
+                isFileSelected = true; // Se ha seleccionado un archivo
+            } else {
+                fileNameDisplay.textContent = ''; // Si no hay archivo, limpiar el mensaje
+                isFileSelected = false; // No se ha seleccionado un archivo
+            }
+        }
+
+        // Función para validar el formulario
+        function validateForm() {
+            const fileTitle = document.getElementById('fileTitle').value.trim(); // Título del archivo
+            const studyLevel = document.getElementById('studyLevel').value; // Estudio seleccionado
+            const studyLocation = document.getElementById('studyLocation').value.trim(); // Lugar de estudio
+            const fileExtension = document.getElementById('fileExtension').value; // Extensión del archivo
+            const tags = document.getElementById('tags').value.trim(); // Etiquetas
+
+            const errorMessage = document.getElementById('errorMessage'); // Mensaje de error
+            const submitButton = document.getElementById('submitButton'); // Botón de guardar
+
+            // Comprobar si los campos están vacíos o si no se ha seleccionado un archivo
+            if (fileTitle === "" || studyLevel === "" || studyLocation === "" || fileExtension === "" || tags === "" || !isFileSelected) {
+                errorMessage.style.display = "block"; // Mostrar el mensaje de error
+                submitButton.disabled = true; // Deshabilitar el botón
+            } else {
+                errorMessage.style.display = "none"; // Ocultar el mensaje de error
+                submitButton.disabled = false; // Habilitar el botón si todos los campos están completos
+            }
+        }
+
+        // Evento para mostrar el nombre del archivo cuando el input cambia
+        document.getElementById('fileInput').addEventListener('change', displayFileName);
+
+        // Evento para validar cuando el usuario escribe en los campos del formulario
+        document.getElementById('addDocumentForm').addEventListener('input', validateForm);
+
+        // Procesar el formulario al hacer clic en "Guardar"
+        document.getElementById('addDocumentForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Evita el envío del formulario si los campos no están validados
+
+            // Ejecutar la validación antes de permitir la redirección
+            validateForm();
+
+            // Obtener los valores de los campos
+            const fileTitle = document.getElementById('fileTitle').value.trim();
+            const studyLevel = document.getElementById('studyLevel').value;
+            const studyLocation = document.getElementById('studyLocation').value.trim();
+            const fileExtension = document.getElementById('fileExtension').value;
+            const tags = document.getElementById('tags').value.trim();
+
+            // Si los campos están completos y se ha seleccionado un archivo, puedes proceder
+            if (fileTitle !== "" && studyLevel !== "" && studyLocation !== "" && fileExtension !== "" && tags !== "" && isFileSelected) {
+                window.location.href = "recibirInsignia.html"; // Aquí redirige a la página de aviso
+            } else {
+                // Si no se cumplen las condiciones, mostramos el mensaje de error
+                const errorMessage = document.getElementById('errorMessage');
+                errorMessage.style.display = "block";
+            }
+            validateForm();
+        });
+
+
+
+
+
+    </script>
 </body>
 
 </html>

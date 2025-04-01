@@ -51,101 +51,103 @@ Note.html -->
         <!-- Título de la nota -->
         <h1 class="note-title">Nota rápida</h1>
         <div class="main_head_div">
-                <!-- Barra de herramientas -->
-                <div class="toolbar">
-                    <div class="controls">
-                        <select id="emojiPicker" class="emoji-selector">
-                            <option value="">Emojis 🥰</option>
-                            <option value="😊">😊 Sonrisa</option>
-                            <option value="😂">😂 Risa</option>
-                            <option value="❤️">❤️ Corazón</option>
-                            <option value="👍">👍 Pulgar arriba</option>
-                            <option value="🔥">🔥 Fuego</option>
-                            <option value="🎉">🎉 Fiesta</option>
-                            <option value="💡">💡 Idea</option>
-                        </select>
-                        <button class="btn" onclick="addSelectedEmoji()">Añadir Emoji</button>
-                    </div>
-
-                    <!-- Botón de formato -->
-                    <button class="format-button" onclick="window.location.href='errorNotification.html'">
-                        <img src="../images/narrator.png" alt="Formato" />
-                    </button>                    
-
-                    <!-- Selector de etiquetas -->
-                    <div class="tag-selector">
-                        <div class="tag tag-ct" title="Colaboradores">CT</div>
-                        <div class="tag tag-la" title="Colaboradores">LA</div>
-                        <div class="tag tag-jb" title="Colaboradores">JB</div>
-                        <div class="tag tag-ag" title="Colaboradores">AG</div>
-                        <div class="tag tag-oc" title="Colaboradores">OC</div>
-                    </div>                    
-
-                    <!-- Herramientas de formato -->
-                    <div class="format-tools">
-                        <button class="format-btn" id="bold-btn" title="Negrita">
-                            <img class="format-icon" src="../images/bold.png" alt="Negrita" />
-                        </button>
-                        <div class="divider"></div>
-                        <button class="format-btn" id="underline-btn" title="Subrayado">
-                            <img class="format-icon" src="../images/underline.png" alt="Subrayado" />
-                        </button>
-                        <div class="divider"></div>
-                        <button class="format-btn" id="italic-btn" title="Cursiva">
-                            <img class="format-icon" src="../images/cursive.png" alt="Cursiva" />
-                        </button>
-                        <div class="divider"></div>
-
-                        <!-- Font family dropdown -->
-                        <div class="dropdown-container">
-                            <button class="dropdown-btn" id="font-dropdown-btn">
-                                <img class="format-icon small" src="../images/downArrow.png" alt="Lista" />
-                            </button>
-                            <div class="font-family" id="current-font">Just Another Hand</div>
-                            <div class="dropdown-content" id="font-dropdown">
-                                <div class="dropdown-item" data-font="Arial">Arial</div>
-                                <div class="dropdown-item" data-font="Times New Roman">Times New Roman</div>
-                                <div class="dropdown-item" data-font="Courier New">Courier New</div>
-                                <div class="dropdown-item" data-font="Georgia">Georgia</div>
-                                <div class="dropdown-item selected" data-font="Just Another Hand">Just Another Hand
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="divider"></div>
-
-                        <!-- Font size dropdown -->
-                        <div class="dropdown-container">
-                            <button class="dropdown-btn" id="size-dropdown-btn">
-                                <img class="format-icon small" src="../images/downArrow.png" alt="Tamaño" />
-                            </button>
-                            <div class="font-size" id="current-size">48</div>
-                            <div class="dropdown-content" id="size-dropdown">
-                                <div class="dropdown-item" data-size="12">12</div>
-                                <div class="dropdown-item" data-size="18">18</div>
-                                <div class="dropdown-item" data-size="24">24</div>
-                                <div class="dropdown-item" data-size="36">36</div>
-                                <div class="dropdown-item selected" data-size="48">48</div>
-                                <div class="dropdown-item" data-size="64">64</div>
-                            </div>
-                        </div>
-
-                        <div class="divider"></div>
-                        <button class="format-btn" id="undo-btn" title="Deshacer">
-                            <img class="format-icon" src="../images/undo.png" alt="Undo" />
-                        </button>
-                        <div class="divider"></div>
-                        <button class="format-btn" id="redo-btn" title="Rehacer">
-                            <img class="format-icon" src="../images/redo.png" alt="Redo" />
-                        </button>
-                    </div>
-
-                    <!-- Botón de compartir -->
-                    <div class="share-button">
-                        <a href="shareMessage.html"><img src="../images/compartir.png" alt="Compartir" /></a>
-                    </div>
+            <!-- Barra de herramientas -->
+            <div class="toolbar">
+                <div class="controls">
+                    <select id="emojiPicker" class="emoji-selector">
+                        <option value="">Emojis 🥰</option>
+                        <option value="😊">😊 Sonrisa</option>
+                        <option value="😂">😂 Risa</option>
+                        <option value="❤️">❤️ Corazón</option>
+                        <option value="👍">👍 Pulgar arriba</option>
+                        <option value="🔥">🔥 Fuego</option>
+                        <option value="🎉">🎉 Fiesta</option>
+                        <option value="💡">💡 Idea</option>
+                    </select>
+                    <button class="btn" onclick="addSelectedEmoji()">Añadir Emoji</button>
                 </div>
-           
+
+                <!-- Botón de formato -->
+                <button class="format-button" onclick="window.location.href='errorNotification.html'">
+                    <img src="../images/narrator.png" alt="Formato" />
+                </button>
+
+                <!-- Selector de etiquetas -->
+                <div class="tag-selector">
+                    <div class="tag tag-ct" title="Colaboradores">CT</div>
+                    <div class="tag tag-la" title="Colaboradores">LA</div>
+                    <div class="tag tag-jb" title="Colaboradores">JB</div>
+                    <div class="tag tag-ag" title="Colaboradores">AG</div>
+                    <div class="tag tag-oc" title="Colaboradores">OC</div>
+                </div>
+
+                <!-- Herramientas de formato -->
+                <div class="format-tools">
+                    <button class="format-btn" id="bold-btn" title="Negrita">
+                        <img class="format-icon" src="../images/bold.png" alt="Negrita" />
+                    </button>
+                    <div class="divider"></div>
+                    <button class="format-btn" id="underline-btn" title="Subrayado">
+                        <img class="format-icon" src="../images/underline.png" alt="Subrayado" />
+                    </button>
+                    <div class="divider"></div>
+                    <button class="format-btn" id="italic-btn" title="Cursiva">
+                        <img class="format-icon" src="../images/cursive.png" alt="Cursiva" />
+                    </button>
+                    <div class="divider"></div>
+
+                    <!-- Font family dropdown -->
+                    <div class="dropdown-container">
+                        <button class="dropdown-btn" id="font-dropdown-btn">
+                            <img class="format-icon small" src="../images/downArrow.png" alt="Lista" />
+                        </button>
+                        <div class="font-family" id="current-font">Just Another Hand</div>
+                        <div class="dropdown-content" id="font-dropdown">
+                            <div class="dropdown-item" data-font="Arial" style="font-family: Arial;">Arial</div>
+                            <div class="dropdown-item" data-font="Times New Roman"
+                                style="font-family: 'Times New Roman';">Times New Roman</div>
+                            <div class="dropdown-item" data-font="Courier New" style="font-family: 'Courier New';">
+                                Courier New</div>
+                            <div class="dropdown-item" data-font="Georgia" style="font-family: Georgia;">Georgia</div>
+                            <div class="dropdown-item" data-font="Just Another Hand"
+                                style="font-family: 'Just Another Hand', cursive;">Just Another Hand</div>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <!-- Font size dropdown -->
+                    <div class="dropdown-container">
+                        <button class="dropdown-btn" id="size-dropdown-btn">
+                            <img class="format-icon small" src="../images/downArrow.png" alt="Tamaño" />
+                        </button>
+                        <div class="font-size" id="current-size">48</div>
+                        <div class="dropdown-content" id="size-dropdown">
+                            <div class="dropdown-item" data-size="12">12</div>
+                            <div class="dropdown-item" data-size="18">18</div>
+                            <div class="dropdown-item" data-size="24">24</div>
+                            <div class="dropdown-item" data-size="36">36</div>
+                            <div class="dropdown-item selected" data-size="48">48</div>
+                            <div class="dropdown-item" data-size="64">64</div>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+                    <button class="format-btn" id="undo-btn" title="Deshacer">
+                        <img class="format-icon" src="../images/undo.png" alt="Undo" />
+                    </button>
+                    <div class="divider"></div>
+                    <button class="format-btn" id="redo-btn" title="Rehacer">
+                        <img class="format-icon" src="../images/redo.png" alt="Redo" />
+                    </button>
+                </div>
+
+                <!-- Botón de compartir -->
+                <div class="share-button">
+                    <a href="shareMessage.html"><img src="../images/compartir.png" alt="Compartir" /></a>
+                </div>
+            </div>
+
         </div>
 
         <!-- Área de texto de la nota -->
@@ -153,8 +155,7 @@ Note.html -->
 
         <!-- Botón de guardar -->
         <button class="save-button">Guardar</button>
-        <button class="cancel-btn"
-                                onclick="window.location.href='quickNotesMenu.html'">Cancelar</button>
+        <button class="cancel-btn" onclick="window.location.href='quickNotesMenu.html'">Cancelar</button>
 
         <!-- Footer -->
         <div class="overlap">

@@ -263,17 +263,21 @@ form {
 .file-name-display {
     display: block;
     margin-top: 5px;
-    font-size: 20px;
+    font-size: 25px;
     color: #234269; /* O el color que prefieras */
     font-weight: bold;
+    text-align: center;
 }
 
 .error-message {
-    color: red;
-    font-size: 1.2rem; /* Tamaño de fuente más grande */
-    margin-top: 5px;
-    background-color: #f8d7da;
-    border-radius: 5px;
+    color: red; /* Rojo oscuro */
+    font-size: 1.5rem; /* Tamaño de fuente más grande */
+    background-color: #f8d7da; /* Fondo suave */
+    padding: 10px; /* Más espacio alrededor del texto */
+    border-radius: 8px; /* Bordes más redondeados */
+    margin-top: 5px; /* Espacio superior */
+    text-align: center; /* Centra el texto */
+    display: none; /* Inicialmente no visible */
 }
 
 /* Botones */
