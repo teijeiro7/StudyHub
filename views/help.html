@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta charset="utf-8" />
@@ -103,18 +103,22 @@
                 <h2>¿No encuentras tu duda?</h2>
                 <h3>Mándanos un correo</h3>
 
-                <form action="ayudaNot.html" method="get">
+                <form action="ayudaNot.html" method="get" id="contactForm">
                     <div class="form-field">
-                        <input type="text" placeholder="Nombre" required>
+                        <input type="text" id="name" placeholder="Nombre">
+                        <span class="error-message" id="nameError"></span>
                     </div>
                     <div class="form-field">
-                        <input type="email" placeholder="Correo" required>
+                        <input type="email" id="email" placeholder="Correo">
+                        <span class="error-message" id="emailError"></span>
                     </div>
                     <div class="form-field">
-                        <input type="text" placeholder="Asunto" required>
+                        <input type="text" id="subject" placeholder="Asunto">
+                        <span class="error-message" id="subjectError"></span>
                     </div>
                     <div class="form-field">
-                        <textarea placeholder="Descripción" rows="4" required></textarea>
+                        <textarea id="description" placeholder="Descripción" rows="4"></textarea>
+                        <span class="error-message" id="descriptionError"></span>
                     </div>
                     <button type="submit" class="submit-button">Enviar</button>
                 </form>
@@ -127,5 +131,66 @@
         </div>
     </div>
 </body>
+
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById('contactForm');
+
+            // Cuando se intente enviar el formulario
+            form.addEventListener('submit', function(event) {
+                let valid = true;
+
+                // Limpiar los mensajes de error anteriores
+                document.querySelectorAll('.error-message').forEach(function(errorSpan) {
+                    errorSpan.textContent = '';
+                });
+
+                // Validación manual de los campos
+                const name = document.getElementById('name');
+                const email = document.getElementById('email');
+                const subject = document.getElementById('subject');
+                const description = document.getElementById('description');
+
+                // Validar el campo Nombre
+                if (name.value.trim() === '') {
+                    document.getElementById('nameError').textContent = 'Este campo es obligatorio.';
+                    valid = false;
+                }
+
+                // Validar el campo Correo
+                if (email.value.trim() === '') {
+                    document.getElementById('emailError').textContent = 'Este campo es obligatorio.';
+                    valid = false;
+                } else if (!validateEmail(email.value.trim())) {
+                    document.getElementById('emailError').textContent = 'Por favor, ingrese un correo electrónico válido.';
+                    valid = false;
+                }
+
+                // Validar el campo Asunto
+                if (subject.value.trim() === '') {
+                    document.getElementById('subjectError').textContent = 'Este campo es obligatorio.';
+                    valid = false;
+                }
+
+                // Validar el campo Descripción
+                if (description.value.trim() === '') {
+                    document.getElementById('descriptionError').textContent = 'Este campo es obligatorio.';
+                    valid = false;
+                }
+
+                // Si hay errores, prevenimos el envío del formulario
+                if (!valid) {
+                    event.preventDefault();  // Esto previene la redirección
+                }
+            });
+
+            // Función para validar el correo electrónico
+            function validateEmail(email) {
+                const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                return emailRegex.test(email);
+            }
+        });
+</script>
+    
 
 </html>

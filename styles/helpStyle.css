@@ -12,6 +12,15 @@
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.error-message {
+    color: red;
+    font-size: 1.2rem; /* Tamaño de fuente más grande */
+    margin-top: 5px;
+    background-color: #f8d7da;
+    border-radius: 5px;
+}
+
+
 /* Estilos base */
 * {
     box-sizing: border-box;

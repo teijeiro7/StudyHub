@@ -257,6 +257,18 @@ body {
 }
 
 /* Botón de guardar */
+.cancel-btn{
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-size: 1.9rem;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    font-family: "Just Another Hand", cursive;
+    width: 700px;
+    margin: var(--spacing-md) auto; /* <-- Esto lo centrará */
+    text-align: center;
+    display: block;
+}
 .save-button {
     width: 700px;
     height: 60px;
@@ -283,6 +295,15 @@ body {
     background-color: #6c8cb7;
     cursor: not-allowed;
 }
+
+.cancel-btn {
+    background-color: var(--secondary-color);
+}
+
+.cancel-btn:hover {
+    background-color: var(--light-gray);
+}
+
 
 /* Dropdown styles */
 .dropdown-container {
