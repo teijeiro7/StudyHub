@@ -126,7 +126,7 @@
                 </div>
 
                 <div class="reset-container">
-                    <button class="reset-button">Restablecer</button>
+                    <button class="reset-button" data-lang="reset">Restablecer</button>
                 </div>
             </div>
         </div>
@@ -188,13 +188,13 @@
 
                 // Esperar 2 segundos y luego devolver el texto del botón a su estado original
                 setTimeout(() => {
-            this.classList.remove('active');
-            this.textContent = 'Restablecer';
-        }, 2000);
+                    this.classList.remove('active');
+                    this.textContent = 'Restablecer';
+                }, 2000);
 
-        // Simular el clic en el botón de guardar
-        saveButton.click();
-        
+                // Simular el clic en el botón de guardar
+                saveButton.click();
+
             });
         });
     </script>
