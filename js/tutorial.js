@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             element: '.image-2', // Icono de ajustes
-            description: 'Aquí puedes acceder a los ajustes de tu cuenta y la aplicación.',
+            description: 'Aquí puedes acceder a los ajustes de la aplicación.',
             position: 'top',
         },
         {
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             element: '.text-wrapper-3 a[href="search.html"]', // Búsqueda
-            description: 'En "Búsqueda", podrás buscar documentos en tu cuenta.',
+            description: 'En "Búsqueda", podrás buscar documentos en tu cuenta y de la aplicación.',
             position: 'top',
         },
         {
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             element: '.text-wrapper-9', // Ajustes
-            description: 'En "Ajustes", podrás cambiar la configuración de tu cuenta y la aplicación.',
+            description: 'En "Ajustes", podrás cambiar la configuración de la aplicación.',
             position: 'top',
         },
         {

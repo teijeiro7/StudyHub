@@ -1,11 +1,4 @@
-/* Estilos del contenedor de botones */
-#tutorial-button-container {
-    display: flex;
-    flex-direction: column;  /* Alinea los botones verticalmente */
-    gap: 10px;  /* Espacio entre los botones */
-    margin-top: 10px;  /* Espacio por encima de los botones */
-    align-items: flex-start; /* Centra los botones horizontalmente */
-}
+
 
 /* Estilos del botón de inicio de tutorial */
 #tutorial-start {
@@ -37,19 +30,21 @@
     z-index: 9999;
     line-height: 1.4;
     font-family: 'Inter', sans-serif;
+    /*font-family: "Just Another Hand", cursive;*/
 }
 
 #tutorial-next-button {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 22px;
     border: none;
     cursor: pointer;
     position: absolute;
     bottom: 20px;
-    right: 20px;
+    right: 90px;
     z-index: 9999;
+    font-family: "Just Another Hand", cursive;
 }
 
 #tutorial-next-button:hover {
@@ -59,17 +54,35 @@
 #tutorial-back-button {
     background-color: #2196F3;
     color: white;
+    padding: 10px 20px;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    right: 179px;
+    z-index: 9999;
+    font-family: "Just Another Hand", cursive;
 }
 
 #tutorial-back-button:hover {
     background-color: #1976D2;
 }
 
+#tutorial-exit-button {
+    background-color: #f44336; /* Color rojo para el botón de salida */
+    color: white;
+    padding: 10px 20px;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    font-family: "Just Another Hand", cursive;
+}
 
 #tutorial-exit-button:hover {
     background-color: #cd4628;
-}
-#tutorial-exit-button {
-    background-color: #f44336; /* Color rojo para el botón de salida */
-    right: 150px;
 }
