@@ -180,9 +180,19 @@ document.addEventListener('DOMContentLoaded', function () {
         alert('Tutorial finalizado');
     }
 
+    // Función para reiniciar el tutorial
+    function restartTutorial() {
+        currentStep = 0;  // Reiniciar el tutorial desde el primer paso
+        clearTutorialStep();
+        showStep(tutorialSteps[currentStep]);
+    }
+
     // Evento para iniciar el tutorial al hacer clic en el botón
     tutorialStartButton.addEventListener('click', function () {
         tutorialStartButton.style.display = 'none';
         showStep(tutorialSteps[currentStep]);
     });
+
+     // Evento para reiniciar el tutorial al hacer clic en la imagen una vez terminado
+     tutorialStartButton.addEventListener('click', restartTutorial);
 });
