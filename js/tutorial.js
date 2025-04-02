@@ -40,17 +40,17 @@ document.addEventListener('DOMContentLoaded', function () {
             position: 'top',
         },
         {
-            element: '.text-wrapper-3 a[href="search.html"]', // Búsqueda
+            element: '.text-wrapper-3', // Búsqueda
             description: 'En "Búsqueda", podrás buscar documentos en tu cuenta y de la aplicación.',
             position: 'top',
         },
         {
-            element: '.text-wrapper-4 a[href="myDocs.html"]', // Mis Archivos
+            element: '.text-wrapper-4 ', // Mis Archivos
             description: 'En "Mis Archivos", podrás ver y gestionar todos tus documentos guardados.',
             position: 'top',
         },
         {
-            element: '.text-wrapper-4 a[href="sharedDocs.html"]', // Compartidos
+            element: '.text-wrapper-12', // Compartidos
             description: 'En "Compartidos", podrás acceder a los documentos que has compartido o te han compartido.',
             position: 'top',
         },
