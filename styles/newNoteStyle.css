@@ -257,20 +257,25 @@ body {
 }
 
 /* Botón de guardar */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra los botones en la línea */
+    gap: 20px; /* Espaciado entre botones */
+}
+
 .cancel-btn{
-    padding: 10px 20px;
     border-radius: var(--border-radius);
-    font-size: 1.9rem;
+    font-size: 2rem;
     cursor: pointer;
     border: 1px solid var(--border-color);
     font-family: "Just Another Hand", cursive;
-    width: 700px;
-    margin: var(--spacing-md) auto; /* <-- Esto lo centrará */
+    width: 500px;
     text-align: center;
-    display: block;
+    margin: 25px auto;
+    height: 60px;
 }
 .save-button {
-    width: 700px;
+    width: 500px;
     height: 60px;
     margin: 25px auto;
     background-color: var(--border-color);
@@ -279,7 +284,7 @@ body {
     border-radius: 20px;
     font-size: 2rem;
     cursor: pointer;
-    display: block;
+    text-align: center;
     transition: background-color 0.3s, transform 0.1s;
 }
 
