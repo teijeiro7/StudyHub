@@ -5,7 +5,7 @@ Este prototipo de la página web **StudyHub** no requiere un servidor para ejecu
 ## Pasos para ejecutar:
 
 1. Descarga o clona el proyecto en tu ordenador.
-2. Navega hasta la carpeta principal del proyecto.
+2. Navega hasta la carpeta views del proyecto.
 3. Abre el archivo `index.html` o `login.html` con tu navegador web favorito (por ejemplo, Google Chrome, Firefox, Edge, etc.).
    - Para abrir el archivo, puedes hacer doble clic sobre él.
 4. Una vez abierto, podrás interactuar con el prototipo y navegar entre las diferentes páginas.
