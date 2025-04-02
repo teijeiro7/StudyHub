@@ -16,19 +16,25 @@
         rel="stylesheet">
 </head>
 
-<body >
+<body>
     <div class="pgina-principal">
         <!-- Header navigation -->
         <div class="overlap-group">
             <div class="text-wrapper">
-                <a href="index.html" style="text-decoration: none; color: inherit;" title="Volver Página Principal">StudyHub</a>
+                <a href="index.html" style="text-decoration: none; color: inherit;"
+                    title="Volver Página Principal">StudyHub</a>
             </div>
             <div class="user-controls">
-                <a href="search.html"><img class="image-4" src="../images/search.png" alt="Icono lupa" title="Buscar archivos"/></a>
-                <a href="index.html"><img class="image-3" src="../images/home.png" alt="Icono casa" title="Volver Página Principal"/></a>
-                <a href="settings.html"><img class="image-2" src="../images/settings.png" alt="Icono ajustes" title="Ajustes"/></a>
-                <a href="notifications.html"><img class="image" src="../images/notifications.png" alt="Icono campana" title="Notificaciones" /></a>
-                <a href="profile.html"><img class="img" src="../images/user.png" alt="Icono perfil" title="Perfil"/></a>
+                <a href="search.html"><img class="image-4" src="../images/search.png" alt="Icono lupa"
+                        title="Buscar archivos" /></a>
+                <a href="index.html"><img class="image-3" src="../images/home.png" alt="Icono casa"
+                        title="Volver Página Principal" /></a>
+                <a href="settings.html"><img class="image-2" src="../images/settings.png" alt="Icono ajustes"
+                        title="Ajustes" /></a>
+                <a href="notifications.html"><img class="image" src="../images/notifications.png" alt="Icono campana"
+                        title="Notificaciones" /></a>
+                <a href="profile.html"><img class="img" src="../images/user.png" alt="Icono perfil"
+                        title="Perfil" /></a>
                 <div class="username">
                     <h3 class="username_title"><a href="profile.html">hola123</h3></a>
                 </div>
@@ -71,7 +77,8 @@
                 <div class="setting-item">
                     <div class="setting-label" data-lang="font_size">Tamaño de la letra</div>
                     <div class="setting-control">
-                        <input type="number" min="1" max="100" value="48" class="number-input" id="font-size-input">
+                        <input type="number" min="1" max="100" value="35" class="number-input" id="font-size-input"
+                            placeholder="35">
                     </div>
                 </div>
 
@@ -117,6 +124,10 @@
                 <div class="setting-item apply-changes">
                     <button class="changes-button" id="save-btn" data-lang="save">Guardar</button>
                 </div>
+
+                <div class="reset-container">
+                    <button class="reset-button">Restablecer</button>
+                </div>
             </div>
         </div>
 
@@ -148,6 +159,45 @@
             });
         });
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const resetButton = document.querySelector('.reset-button');
+            const saveButton = document.querySelector('.changes-button');
+
+            resetButton.addEventListener('click', function () {
+                // Cambiar el texto del botón a "Restablecido"
+                this.classList.add('active');
+                this.textContent = 'Restablecido';
+
+                // Restablecer cookies
+                document.cookie = "dark-mode=;expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+                document.cookie = "font-size=;expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+                document.cookie = "font-style=;expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+                document.cookie = "language=;expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+                document.cookie = "voice-reading=;expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+                document.cookie = "daltonic=;expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+
+                // Restablecer valores por defecto
+                document.getElementById('dark-mode-toggle').checked = false;
+                document.getElementById('font-size-input').value = 35;
+                document.getElementById('font-style').value = 'Just Another Hand';
+                document.getElementById('language').value = 'es';
+                document.getElementById('voice-reading-toggle').checked = false;
+                document.getElementById('daltonic-toggle').checked = false;
+
+                // Esperar 2 segundos y luego devolver el texto del botón a su estado original
+                setTimeout(() => {
+            this.classList.remove('active');
+            this.textContent = 'Restablecer';
+
+            // Simular el clic en el botón de guardar
+            saveButton.click();
+        });
+            });
+        });
+    </script>
+
 
 
 

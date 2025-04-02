@@ -239,6 +239,16 @@ body {
     color: var(--secondary-color);
 }
 
+.error-message {
+    color: red; /* Rojo oscuro */
+    font-size: 1.5rem; /* Tamaño de fuente más grande */
+    background-color: #f8d7da; /* Fondo suave */
+    padding: 10px; /* Más espacio alrededor del texto */
+    border-radius: 8px; /* Bordes más redondeados */
+    margin-top: 15px; /* Espacio superior */
+    display: none; /* Inicialmente no visible */
+    text-align: center; /* Centra el texto */
+}
 
 /* Estilos para la sección del banner */
 .banner-section {
