@@ -10,5 +10,6 @@
     "language": "Language",
     "voice_reading": "Voice Reading",
     "color_blind_mode": "Color Blind Mode",
-    "save": "Save"
+    "save": "Save",
+    "reset": "Reset"
 }

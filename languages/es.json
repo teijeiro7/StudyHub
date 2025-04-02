@@ -10,5 +10,6 @@
     "language": "Idioma",
     "voice_reading": "Lectura por voz",
     "color_blind_mode": "Modo daltónico",
-    "save": "Guardar"
+    "save": "Guardar",
+    "reset": "Reestablecer"
 }
