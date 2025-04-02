@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../styles/nav.css" />
     <link rel="stylesheet" href="../styles/settings.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/daltonic.css" />
     <title>StudyHub - Ajustes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,19 +16,19 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body >
     <div class="pgina-principal">
         <!-- Header navigation -->
         <div class="overlap-group">
             <div class="text-wrapper">
-                <a href="index.html" style="text-decoration: none; color: inherit;">StudyHub</a>
+                <a href="index.html" style="text-decoration: none; color: inherit;" title="Volver Página Principal">StudyHub</a>
             </div>
             <div class="user-controls">
-                <a href="search.html"><img class="image-4" src="../images/search.png" alt="Icono" /></a>
-                <a href="index.html"><img class="image-3" src="../images/home.png" alt="Icono" /></a>
-                <a href="settings.html"><img class="image-2" src="../images/settings.png" alt="Icono" /></a>
-                <a href="notifications.html"><img class="image" src="../images/notifications.png" alt="Icono" /></a>
-                <a href="profile.html"><img class="img" src="../images/user.png" alt="Icono" /></a>
+                <a href="search.html"><img class="image-4" src="../images/search.png" alt="Icono lupa" title="Buscar archivos"/></a>
+                <a href="index.html"><img class="image-3" src="../images/home.png" alt="Icono casa" title="Volver Página Principal"/></a>
+                <a href="settings.html"><img class="image-2" src="../images/settings.png" alt="Icono ajustes" title="Ajustes"/></a>
+                <a href="notifications.html"><img class="image" src="../images/notifications.png" alt="Icono campana" title="Notificaciones" /></a>
+                <a href="profile.html"><img class="img" src="../images/user.png" alt="Icono perfil" title="Perfil"/></a>
                 <div class="username">
                     <h3 class="username_title"><a href="profile.html">hola123</h3></a>
                 </div>
@@ -37,39 +38,45 @@
         <!-- Menú de navegación -->
         <div class="nav-menu">
             <div class="overlap-2">
-                <div class="text-wrapper-3"><a href="search.html">Búsqueda</a></div>
+                <a href="search.html" title="Buscar archivos">
+                    <div class="text-wrapper-3">Búsqueda</div>
+                </a>
             </div>
             <div class="div-wrapper">
-                <div class="text-wrapper-4"><a href="myDocs.html">Mis Archivos</a></div>
+                <a href="myDocs.html" title="Acceder a Mis Documentos">
+                    <div class="text-wrapper-4">Mis Archivos</div>
+                </a>
             </div>
             <div class="overlap-3">
-                <div class="text-wrapper-4"><a href="sharedDocs.html">Compartidos</a></div>
+                <a href="sharedDocs.html" title="Ver Documentos Compartidos">
+                    <div class="text-wrapper-4">Compartidos</div>
+                </a>
             </div>
         </div>
 
         <!-- Título principal -->
-        <div class="text-wrapper-2">Ajustes</div>
+        <div class="text-wrapper-2" data-lang="settings">Ajustes</div>
 
         <!-- Configuraciones -->
         <div class="settings-container">
             <div class="settings-card">
                 <div class="setting-item">
-                    <div class="setting-label">Modo oscuro</div>
+                    <div class="setting-label" data-lang="dark-mode">Modo oscuro</div>
                     <label class="switch">
-                        <input type="checkbox">
+                        <input type="checkbox" id="dark-mode-toggle">
                         <span class="slider"></span>
                     </label>
                 </div>
 
                 <div class="setting-item">
-                    <div class="setting-label">Tamaño de la letra</div>
+                    <div class="setting-label" data-lang="font_size">Tamaño de la letra</div>
                     <div class="setting-control">
-                        <input type="number" min="1" max="100" value="16" class="number-input">
+                        <input type="number" min="1" max="100" value="48" class="number-input" id="font-size-input">
                     </div>
                 </div>
 
                 <div class="setting-item">
-                    <div class="setting-label">Estilo de letra</div>
+                    <div class="setting-label" data-lang="font-style">Estilo de letra</div>
                     <div class="setting-control">
                         <select id="font-style" name="font-style">
                             <option value="Arial">Arial</option>
@@ -82,33 +89,33 @@
                 </div>
 
                 <div class="setting-item">
-                    <div class="setting-label">Idioma</div>
+                    <div class="setting-label" data-lang="language">Idioma</div>
                     <div class="setting-control">
                         <select id="language" name="language">
-                            <option value="Castellano">Castellano</option>
-                            <option value="Inglés">Inglés</option>
+                            <option class="es" value="es" value="Castellano">Castellano</option>
+                            <option class="en" value="en" value="Inglés">Inglés</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="setting-item">
-                    <div class="setting-label">Lectura por voz</div>
+                    <div class="setting-label" data-lang="voice_reading">Lectura e instrucciones por voz</div>
                     <label class="switch">
-                        <input type="checkbox">
+                        <input type="checkbox" id="voice-reading-toggle">
                         <span class="slider"></span>
                     </label>
                 </div>
 
                 <div class="setting-item">
-                    <div class="setting-label">Modo daltónico</div>
+                    <div class="setting-label" data-lang="color_blind_mode">Modo daltónico</div>
                     <label class="switch">
-                        <input type="checkbox">
+                        <input type="checkbox" id="daltonic-toggle">
                         <span class="slider"></span>
                     </label>
                 </div>
 
                 <div class="setting-item apply-changes">
-                    <button class="changes-button">Guardar</button>
+                    <button class="changes-button" id="save-btn" data-lang="save">Guardar</button>
                 </div>
             </div>
         </div>
@@ -119,6 +126,13 @@
         </div>
     </div>
 
+    <!-- Scripts -->
+    <script src="../js/idioma.js"></script>
+    <script src="../js/tamaño_fuente.js"></script>
+    <script src="../js/modo_oscuro.js"></script>
+    <script src="../js/tipografía.js"></script>
+    <script src="../js/daltonic.js"></script>
+    <script src="../js/lectura_por_voz.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const changesButton = document.querySelector('.changes-button');
@@ -135,29 +149,7 @@
         });
     </script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const toggleSwitch = document.querySelector('.switch input'); // Obtén el toggle
-        const body = document.body;
 
-        // Verifica si el modo oscuro está habilitado previamente en localStorage
-        if (localStorage.getItem('dark-mode') === 'enabled') {
-            body.classList.add('dark-mode');
-            toggleSwitch.checked = true;
-        }
-
-        // Cuando el toggle cambie de estado
-        toggleSwitch.addEventListener('change', function () {
-            if (this.checked) {
-                body.classList.add('dark-mode');
-                localStorage.setItem('dark-mode', 'enabled'); // Guarda la preferencia en localStorage
-            } else {
-                body.classList.remove('dark-mode');
-                localStorage.setItem('dark-mode', 'disabled'); // Guarda la preferencia en localStorage
-            }
-        });
-    });
-</script>
 
 </body>
 
