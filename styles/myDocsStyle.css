@@ -289,6 +289,60 @@ a {
     color: var(--text-color);
 }
 
+.access-control {
+    position: relative;
+    display: inline-block;
+}
+
+.access-btn {
+    border: none;
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 50%;
+    color: #7f8c8d;
+    background-color: transparent;
+    font-family: "Just Another Hand", cursive;
+    font-size: 13px;
+}
+
+.access-btn:hover{
+    background-color: #f1f3f5;
+    color: var(--text-color);
+}
+
+.access-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    color: #7f8c8d;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.access-menu li {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.access-menu li:hover {
+    background: #f0f0f0;
+}
+
+
+
 /* Upload Modal */
 .upload-modal {
     display: none;

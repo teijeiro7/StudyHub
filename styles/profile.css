@@ -42,10 +42,9 @@ a {
 /* Título de la página */
 .text-wrapper-2 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 20px;
-    color: var(--text-color);
+    margin: var(--spacing-lg) 0;
 }
 
 /* Contenido del perfil */

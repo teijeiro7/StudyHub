@@ -56,3 +56,68 @@ function filterFiles() {
         }
     });
 }
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const currentUser = "hola123"; // Aquí deberías obtener el usuario actual dinámicamente
+    const editButtons = document.querySelectorAll(".edit-btn");
+
+    editButtons.forEach(button => {
+        const owner = button.getAttribute("data-owner");
+
+        if (owner !== currentUser) {
+            button.disabled = true; // Desactiva el botón
+            button.style.opacity = "0.5"; // Cambia la apariencia
+            button.style.cursor = "not-allowed"; // Indica que no se puede usar
+
+            // Muestra una alerta si intentan hacer clic
+            button.addEventListener("click", function (event) {
+                event.preventDefault();
+                alert("No tienes permiso para editar este archivo.");
+            });
+        }
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".access-btn");
+
+    buttons.forEach(btn => {
+        const menu = btn.nextElementSibling; // Encuentra el menú asociado al botón
+        const options = menu.querySelectorAll("li");
+
+        // Mostrar/ocultar el menú al hacer clic en el botón
+        btn.addEventListener("click", function (event) {
+            event.stopPropagation(); // Evita que el evento se propague y cierre el menú inmediatamente
+            // Cierra otros menús abiertos antes de abrir este
+            document.querySelectorAll(".access-menu").forEach(m => {
+                if (m !== menu) {
+                    m.style.display = "none";
+                }
+            });
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        });
+
+        // Seleccionar una opción dentro del menú
+        options.forEach(option => {
+            option.addEventListener("click", function () {
+                const iconClass = this.querySelector("i").className;
+                btn.innerHTML = `<i class="${iconClass}"></i> ${this.textContent}`;
+                menu.style.display = "none"; // Ocultar menú
+            });
+        });
+    });
+
+    // Cerrar el menú si se hace clic fuera
+    document.addEventListener("click", function (e) {
+        document.querySelectorAll(".access-menu").forEach(menu => {
+            if (!menu.contains(e.target) && !menu.previousElementSibling.contains(e.target)) {
+                menu.style.display = "none";
+            }
+        });
+    });
+});
+
+

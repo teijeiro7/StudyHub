@@ -103,6 +103,13 @@ body {
     font-style: italic;
 }
 
+.text-wrapper-2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: var(--spacing-lg) 0;
+}
+
 .file-info {
     width: 90%;
     max-width: 900px;
