@@ -1,6 +1,7 @@
 a {
     text-decoration: none;
     color: inherit;
+    display: block;
 }
 
 .overlap-group {
@@ -54,22 +55,23 @@ a {
 .nav-menu {
     display: flex;
     margin-top: 55px;
+    margin-bottom: 10px;
     position: sticky;
     background-color: var(--primary-color-transparent);
-    z-index: 90;
-    width: 40%;
+    width: 30%;
 }
 
 .nav-menu a {
     text-decoration: none;
     color: inherit;
+    display: block;
 }
 
 .overlap-2,
 .div-wrapper,
 .overlap-3 {
     flex: 1;
-    padding: var(--spacing-md);
+    padding: var(--spacing-sm);
     text-align: center;
     border-bottom: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
@@ -89,6 +91,6 @@ a {
 
 .text-wrapper-3,
 .text-wrapper-4 {
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     font-weight: 500;
 }
