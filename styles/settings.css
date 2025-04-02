@@ -200,6 +200,41 @@ select:focus {
     box-shadow: 0 0 0 1px rgba(35, 66, 105, 0.3);
 }
 
+/* Estilo para el botón Restablecer */
+.reset-container {
+    display: flex;
+    justify-content: center;
+    padding-top: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.reset-button {
+    width: 90%;
+    max-width: 400px;
+    height: 50px;
+    background-color: #9f2c2c;
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-family: "Just Another Hand", cursive;
+    font-size: 2.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+}
+
+.reset-button:hover {
+    background-color: #5a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.reset-button.active {
+    background-color: #27ae60; /* Verde para indicar que se ha restablecido */
+    transform: translateY(-2px);
+}
+
 /* Botón de aplicar cambios */
 .apply-changes {
     display: flex;

@@ -59,7 +59,7 @@
 
         <!-- Contenido principal -->
         <div class="main-content">
-            <form id="profileForm" action="aviso.html" method="get">
+            <form id="profileForm">
                 <div class="profile-container">
                     <!-- Avatar section -->
                     <div class="avatar-section">
@@ -87,31 +87,17 @@
                         <!-- Personal info -->
                         <div class="form-group">
                             <label for="username">Nombre de usuario</label>
-                            <input type="text" id="username" name="username" value="hola123" required>
+                            <input type="text" id="username" name="username" value="hola123">
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="fullName">Nombre completo</label>
-                                <input type="text" id="fullName" name="fullName" value="Hola"
-                                    required>
+                                <label>Nombre completo</label>
+                                <input type="text" id="fullName" value="Hola">
                             </div>
                             <div class="form-group">
                                 <label for="email">Correo electrónico</label>
-                                <input type="email" id="email" name="email" value="hola@gmail.com" required>
-                            </div>
-                        </div>
-
-                        <!-- Academic info -->
-                        <div class="form-divider">Información académica</div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="university">Universidad</label>
-                                <input type="text" id="university" name="university" value="UJRC">
-                            </div>
-                            <div class="form-group">
-                                <label for="degree">Grado/s</label>
-                                <input type="text" id="degree" name="degree" value="Ingeniería de Software">
+                                <input type="email" id="email" value="hola@gmail.com">
                             </div>
                         </div>
 
@@ -119,40 +105,19 @@
                         <div class="form-group">
                             <label for="interests">Etiquetas</label>
                             <div class="tags-input" id="interestsContainer">
-                                <span class="tag">Programación<span class="tag-close">&times;</span></span>
-                                <span class="tag">Diseño Web<span class="tag-close">&times;</span></span>
                                 <input type="text" id="interests" placeholder="Añadir interés y presionar Enter">
                             </div>
                         </div>
 
-                        <!-- Links -->
-                        <div class="form-divider">Enlaces</div>
-                        <div class="form-group">
-                            <label><i class="fab fa-linkedin"></i> LinkedIn</label>
-                            <input type="url" name="linkedin" placeholder="https://linkedin.com/in/usuario">
-                        </div>
-                        <div class="form-group">
-                            <label><i class="fab fa-github"></i> GitHub</label>
-                            <input type="url" name="github" placeholder="https://github.com/usuario">
-                        </div>
-
-                        <!-- Privacy -->
-                        <div class="form-divider">Privacidad</div>
-                        <div class="form-group checkbox-group">
-                            <input type="checkbox" id="showEmail" name="showEmail" checked>
-                            <label for="showEmail">Mostrar correo en perfil público</label>
-                        </div>
-                        <div class="form-group checkbox-group">
-                            <input type="checkbox" id="showActivity" name="showActivity" checked>
-                            <label for="showActivity">Mostrar mi actividad reciente</label>
-                        </div>
+                        <!-- Mensaje de error -->
+                        <p id="profileErrorMessage" class="error-message" style="display: none;">⚠️ Todos los campos son obligatorios.</p>
+                        <p id="profileErrorMessageEmail" class="error-message" style="display: none;">⚠️ Todos los campos son obligatorios.</p>
 
                         <!-- Form buttons -->
                         <div class="form-buttons">
                             <button type="button" class="cancel-btn"
                                 onclick="window.location.href='warning.html'">Cancelar</button>
-                            <button type="submit" class="save-btn"
-                            onclick="window.location.href='aviso.html'">Guardar</button>
+                            <button type="submit" class="save-btn" >Guardar</button>
                         </div>
                     </div>
                 </div>
