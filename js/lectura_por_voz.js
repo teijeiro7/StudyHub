@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
             setTimeout(function () {
                 window.location.href = "settings.html"; // Redirige a la página de ajustes
             }, 1500);
-        } else if (command.includes("icono notificaciones")) {
+        } else if (command.includes("icono campana")) {
             readText("Redirigiendo a la página de notificaciones");
             setTimeout(function () {
                 window.location.href = "notifications.html"; // Redirige a la página de notificaciones
