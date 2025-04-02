@@ -1,0 +1,88 @@
+
+
+/* Estilos del botón de inicio de tutorial */
+#tutorial-start {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f0f0f0;
+    padding: 20px;  /* Aumentamos el tamaño del círculo */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+}
+
+#tutorial-start img {
+    width: 80px;  /* Aumentamos el tamaño de la imagen dentro del círculo */
+    height: 80px;
+}
+
+/* Estilo para la descripción del tutorial */
+.tutorial-description {
+    position: absolute;
+    background-color: #333;
+    color: white;
+    padding: 15px;  /* Aumentamos el padding */
+    border-radius: 5px;
+    font-size: 18px;  /* Aumentamos el tamaño del texto */
+    max-width: 250px; /* Ajustamos el ancho para una mejor visibilidad */
+    z-index: 9999;
+    line-height: 1.4;
+    font-family: 'Inter', sans-serif;
+    /*font-family: "Just Another Hand", cursive;*/
+}
+
+#tutorial-next-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    right: 90px;
+    z-index: 9999;
+    font-family: "Just Another Hand", cursive;
+}
+
+#tutorial-next-button:hover {
+    background-color: #45a049;
+}
+
+#tutorial-back-button {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    right: 179px;
+    z-index: 9999;
+    font-family: "Just Another Hand", cursive;
+}
+
+#tutorial-back-button:hover {
+    background-color: #1976D2;
+}
+
+#tutorial-exit-button {
+    background-color: #f44336; /* Color rojo para el botón de salida */
+    color: white;
+    padding: 10px 20px;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    font-family: "Just Another Hand", cursive;
+}
+
+#tutorial-exit-button:hover {
+    background-color: #cd4628;
+}

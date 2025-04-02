@@ -22,14 +22,14 @@
         <!-- Header navigation -->
         <div class="overlap-group">
             <div class="text-wrapper">
-                <a href="index.html" style="text-decoration: none; color: inherit;">StudyHub</a>
+                <a href="index.html" style="text-decoration: none; color: inherit;" title="Volver Página Principal">StudyHub</a>
             </div>
             <div class="user-controls">
-                <a href="search.html"><img class="image-4" src="../images/search.png" alt="Icono" /></a>
-                <a href="index.html"><img class="image-3" src="../images/home.png" alt="Icono" /></a>
-                <a href="settings.html"><img class="image-2" src="../images/settings.png" alt="Icono" /></a>
-                <a href="notifications.html"><img class="image" src="../images/notifications.png" alt="Icono" /></a>
-                <a href="profile.html"><img class="img" src="../images/user.png" alt="Icono" /></a>
+                <a href="search.html"><img class="image-4" src="../images/search.png" alt="Icono" title="Buscar archivos"/></a>
+                <a href="index.html"><img class="image-3" src="../images/home.png" alt="Icono" title="Volver Página Principal"/></a>
+                <a href="settings.html"><img class="image-2" src="../images/settings.png" alt="Icono" title="Ajustes"/></a>
+                <a href="notifications.html"><img class="image" src="../images/notifications.png" alt="Icono" title="Notificaciones" /></a>
+                <a href="profile.html"><img class="img" src="../images/user.png" alt="Icono" title="Perfil"/></a>
                 <div class="username">
                     <h3 class="username_title"><a href="profile.html">hola123</h3></a>
                 </div>
@@ -39,13 +39,19 @@
         <!-- Menú de navegación -->
         <div class="nav-menu">
             <div class="overlap-2">
-                <div class="text-wrapper-3"><a href="search.html">Búsqueda</a></div>
+                <a href="search.html" title="Buscar archivos">
+                    <div class="text-wrapper-3">Búsqueda</div>
+                </a>
             </div>
             <div class="div-wrapper">
-                <div class="text-wrapper-4"><a href="myDocs.html">Mis Archivos</a></div>
+                <a href="myDocs.html" title="Acceder a Mis Documentos">
+                    <div class="text-wrapper-4">Mis Archivos</div>
+                </a>
             </div>
             <div class="overlap-3">
-                <div class="text-wrapper-4"><a href="sharedDocs.html">Compartidos</a></div>
+                <a href="sharedDocs.html" title="Ver Documentos Compartidos">
+                    <div class="text-wrapper-4">Compartidos</div>
+                </a>
             </div>
         </div>
 
@@ -89,11 +95,12 @@
                     </div>
                 </div>
                 <div class="note-actions">
-                    <a href="newNote.html" class="action-btn edit-btn" title="Editar">
+                    <a href="editNote.html" class="action-btn edit-btn" title="Editar"
+                        onclick="editNote(event, 'Nota rápida Latín', 'Lorem ipsum dolor sit amet...', '15/03/2025', ['OC'])">
                         <i class="fas fa-edit"></i>
                     </a>
                     <button class="action-btn share-btn" title="Compartir">
-                        <i class="fas fa-share-alt"></i>
+                        <a href="shareMessage.html"><i class="fas fa-share-alt"></i></a>
                     </button>
                     <button class="action-btn delete-btn" title="Eliminar">
                         <i class="fas fa-trash"></i>
@@ -121,11 +128,12 @@
                     </div>
                 </div>
                 <div class="note-actions">
-                    <a href="newNote.html" class="action-btn edit-btn" title="Editar">
+                    <a href="newNote.html" class="action-btn edit-btn" title="Editar"
+                    onclick="editNote(event, 'Fórmulas Matemáticas', '∫ f(x) dx = F(x) + C, a² + b² = c², E = mc²')">
                         <i class="fas fa-edit"></i>
                     </a>
                     <button class="action-btn share-btn" title="Compartir">
-                        <i class="fas fa-share-alt"></i>
+                        <a href="shareMessage.html"><i class="fas fa-share-alt"></i></a>
                     </button>
                     <button class="action-btn delete-btn" title="Eliminar">
                         <i class="fas fa-trash"></i>
@@ -154,11 +162,12 @@
                     </div>
                 </div>
                 <div class="note-actions">
-                    <a href="newNote.html" class="action-btn edit-btn" title="Editar">
+                    <a href="newNote.html" class="action-btn edit-btn" title="Editar"
+                    onclick="editNote(event, 'Vocabulario Inglés', 'Endeavor - Esfuerzo, Thoroughly - Minuciosamente, Struggle - Luchar')">
                         <i class="fas fa-edit"></i>
                     </a>
                     <button class="action-btn share-btn" title="Compartir">
-                        <i class="fas fa-share-alt"></i>
+                        <a href="shareMessage.html"><i class="fas fa-share-alt"></i></a>
                     </button>
                     <button class="action-btn delete-btn" title="Eliminar">
                         <i class="fas fa-trash"></i>
@@ -186,11 +195,12 @@
                     </div>
                 </div>
                 <div class="note-actions">
-                    <a href="newNote.html" class="action-btn edit-btn" title="Editar">
+                    <a href="newNote.html" class="action-btn edit-btn" title="Editar" 
+                    onclick="editNote(event, 'Apuntes Física', ' Segunda ley de Newton: F = m·a, Ley de gravitación universal: F = G(m₁m₂/r²)')">
                         <i class="fas fa-edit"></i>
                     </a>
                     <button class="action-btn share-btn" title="Compartir">
-                        <i class="fas fa-share-alt"></i>
+                        <a href="shareMessage.html"><i class="fas fa-share-alt"></i></a>
                     </button>
                     <button class="action-btn delete-btn" title="Eliminar">
                         <i class="fas fa-trash"></i>
@@ -219,11 +229,12 @@
                     </div>
                 </div>
                 <div class="note-actions">
-                    <a href="newNote.html" class="action-btn edit-btn" title="Editar">
+                    <a href="newNote.html" class="action-btn edit-btn" title="Editar"
+                    onclick="editNote(event, 'Lista de tareas', ' ✅ Estudiar para examen de matemáticas, ✅ Hacer ejercicios de física, ⬜ Terminar presentación de historia, ⬜ Repasar vocabulario inglés')">
                         <i class="fas fa-edit"></i>
                     </a>
                     <button class="action-btn share-btn" title="Compartir">
-                        <i class="fas fa-share-alt"></i>
+                        <a href="shareMessage.html"><i class="fas fa-share-alt"></i></a>
                     </button>
                     <button class="action-btn delete-btn" title="Eliminar">
                         <i class="fas fa-trash"></i>
@@ -252,11 +263,12 @@
                     </div>
                 </div>
                 <div class="note-actions">
-                    <a href="newNote.html" class="action-btn edit-btn" title="Editar">
+                    <a href="newNote.html" class="action-btn edit-btn" title="Editar"
+                    onclick="editNote(event, 'Historia: Fechas clave', ' 1492 - Descubrimiento de América,  1789 - Revolución Francesa, 1914-1918 - Primera Guerra Mundial, 1939-1945 - Segunda Guerra Mundial')">
                         <i class="fas fa-edit"></i>
                     </a>
                     <button class="action-btn share-btn" title="Compartir">
-                        <i class="fas fa-share-alt"></i>
+                        <a href="shareMessage.html"><i class="fas fa-share-alt"></i></a>
                     </button>
                     <button class="action-btn delete-btn" title="Eliminar">
                         <i class="fas fa-trash"></i>
@@ -313,7 +325,9 @@
             });
 
             // Filtrado de notas
+            // Filtrado de notas
             const filterSelect = document.querySelector('.filter-select');
+            const notesContainer = document.querySelector('.notes-container'); // Asegúrate de que sea el contenedor correcto
 
             filterSelect.addEventListener('change', function () {
                 const sortValue = this.value;
@@ -339,12 +353,11 @@
                     });
                 }
 
-                // Reordenar en el DOM
+                // Vaciar el contenedor y agregar los elementos ordenados
                 notesContainer.innerHTML = '';
-                notesArray.forEach(note => {
-                    notesContainer.appendChild(note);
-                });
+                notesArray.forEach(note => notesContainer.appendChild(note));
             });
+
 
             // Eliminar notas
             const deleteButtons = document.querySelectorAll('.delete-btn');
@@ -360,18 +373,20 @@
                     }
                 });
             });
-
-            // Compartir notas
-            const shareButtons = document.querySelectorAll('.share-btn');
-
-            shareButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    const noteTitle = this.closest('.note-card').querySelector('.note-title').textContent;
-                    alert(`Compartiendo nota: ${noteTitle}`);
-                    // Aquí se podría redirigir a una página de compartir o abrir un modal
-                });
-            });
         });
+    </script>
+    <script>
+        function editNote(event, title, content, date, tag, collaborators) {
+            event.preventDefault(); // Evita la navegación inmediata
+            localStorage.setItem('noteTitle', title);
+            localStorage.setItem('noteContent', content);
+            localStorage.setItem('noteDate', date);
+            localStorage.setItem('noteTag', tag);
+            localStorage.setItem('noteCollaborators', JSON.stringify(collaborators)); // Guardar colaboradores como JSON
+            window.location.href = 'editNote.html'; // Redirige después de guardar los datos
+        }
+
+
     </script>
 </body>
 

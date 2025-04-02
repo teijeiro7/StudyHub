@@ -226,7 +226,8 @@ body {
 }
 
 .save-btn {
-    background-color: var(--primary-color);
+    background-color: var(--border-color);
+    color: white;
 }
 
 .cancel-btn:hover {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta charset="utf-8" />
@@ -20,14 +20,14 @@
         <!-- Header navigation -->
         <div class="overlap-group">
             <div class="text-wrapper">
-                <a href="index.html" style="text-decoration: none; color: inherit;">StudyHub</a>
+                <a href="index.html" style="text-decoration: none; color: inherit;" title="Volver Página Principal">StudyHub</a>
             </div>
             <div class="user-controls">
-                <a href="search.html"><img class="image-4" src="../images/search.png" alt="Icono" /></a>
-                <a href="index.html"><img class="image-3" src="../images/home.png" alt="Icono" /></a>
-                <a href="settings.html"><img class="image-2" src="../images/settings.png" alt="Icono" /></a>
-                <a href="notifications.html"><img class="image" src="../images/notifications.png" alt="Icono" /></a>
-                <a href="profile.html"><img class="img" src="../images/user.png" alt="Icono" /></a>
+                <a href="search.html"><img class="image-4" src="../images/search.png" alt="Icono" title="Buscar archivos"/></a>
+                <a href="index.html"><img class="image-3" src="../images/home.png" alt="Icono" title="Volver Página Principal"/></a>
+                <a href="settings.html"><img class="image-2" src="../images/settings.png" alt="Icono" title="Ajustes"/></a>
+                <a href="notifications.html"><img class="image" src="../images/notifications.png" alt="Icono" title="Notificaciones" /></a>
+                <a href="profile.html"><img class="img" src="../images/user.png" alt="Icono" title="Perfil"/></a>
                 <div class="username">
                     <h3 class="username_title"><a href="profile.html">hola123</h3></a>
                 </div>
@@ -37,13 +37,19 @@
         <!-- Menú de navegación -->
         <div class="nav-menu">
             <div class="overlap-2">
-                <div class="text-wrapper-3"><a href="search.html">Búsqueda</a></div>
+                <a href="search.html" title="Buscar archivos">
+                    <div class="text-wrapper-3">Búsqueda</div>
+                </a>
             </div>
             <div class="div-wrapper">
-                <div class="text-wrapper-4"><a href="myDocs.html">Mis Archivos</a></div>
+                <a href="myDocs.html" title="Acceder a Mis Documentos">
+                    <div class="text-wrapper-4">Mis Archivos</div>
+                </a>
             </div>
             <div class="overlap-3">
-                <div class="text-wrapper-4"><a href="sharedDocs.html">Compartidos</a></div>
+                <a href="sharedDocs.html" title="Ver Documentos Compartidos">
+                    <div class="text-wrapper-4">Compartidos</div>
+                </a>
             </div>
         </div>
 
@@ -103,18 +109,22 @@
                 <h2>¿No encuentras tu duda?</h2>
                 <h3>Mándanos un correo</h3>
 
-                <form action="ayudaNot.html" method="get">
+                <form action="ayudaNot.html" method="get" id="contactForm">
                     <div class="form-field">
-                        <input type="text" placeholder="Nombre" required>
+                        <input type="text" id="name" placeholder="Nombre">
+                        <span class="error-message" id="nameError"></span>
                     </div>
                     <div class="form-field">
-                        <input type="email" placeholder="Correo" required>
+                        <input type="email" id="email" placeholder="Correo">
+                        <span class="error-message" id="emailError"></span>
                     </div>
                     <div class="form-field">
-                        <input type="text" placeholder="Asunto" required>
+                        <input type="text" id="subject" placeholder="Asunto">
+                        <span class="error-message" id="subjectError"></span>
                     </div>
                     <div class="form-field">
-                        <textarea placeholder="Descripción" rows="4" required></textarea>
+                        <textarea id="description" placeholder="Descripción" rows="4"></textarea>
+                        <span class="error-message" id="descriptionError"></span>
                     </div>
                     <button type="submit" class="submit-button">Enviar</button>
                 </form>
@@ -127,5 +137,66 @@
         </div>
     </div>
 </body>
+
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById('contactForm');
+
+            // Cuando se intente enviar el formulario
+            form.addEventListener('submit', function(event) {
+                let valid = true;
+
+                // Limpiar los mensajes de error anteriores
+                document.querySelectorAll('.error-message').forEach(function(errorSpan) {
+                    errorSpan.textContent = '';
+                });
+
+                // Validación manual de los campos
+                const name = document.getElementById('name');
+                const email = document.getElementById('email');
+                const subject = document.getElementById('subject');
+                const description = document.getElementById('description');
+
+                // Validar el campo Nombre
+                if (name.value.trim() === '') {
+                    document.getElementById('nameError').textContent = 'Este campo es obligatorio.';
+                    valid = false;
+                }
+
+                // Validar el campo Correo
+                if (email.value.trim() === '') {
+                    document.getElementById('emailError').textContent = 'Este campo es obligatorio.';
+                    valid = false;
+                } else if (!validateEmail(email.value.trim())) {
+                    document.getElementById('emailError').textContent = 'Por favor, ingrese un correo electrónico válido.';
+                    valid = false;
+                }
+
+                // Validar el campo Asunto
+                if (subject.value.trim() === '') {
+                    document.getElementById('subjectError').textContent = 'Este campo es obligatorio.';
+                    valid = false;
+                }
+
+                // Validar el campo Descripción
+                if (description.value.trim() === '') {
+                    document.getElementById('descriptionError').textContent = 'Este campo es obligatorio.';
+                    valid = false;
+                }
+
+                // Si hay errores, prevenimos el envío del formulario
+                if (!valid) {
+                    event.preventDefault();  // Esto previene la redirección
+                }
+            });
+
+            // Función para validar el correo electrónico
+            function validateEmail(email) {
+                const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                return emailRegex.test(email);
+            }
+        });
+</script>
+    
 
 </html>

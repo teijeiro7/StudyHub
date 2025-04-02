@@ -102,6 +102,15 @@ body {
     text-align: center;
 }
 
+.message-box-insignia {
+    background-color: #84b6f4;
+    border-radius: 25px; 
+    padding: 30px; 
+    width: 800px; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
 .message-header h2 {
     font-size: 2.5rem; 
     margin: 0;
@@ -160,6 +169,17 @@ body {
 
 .close-button:focus {
     outline: none;
+}
+
+.badge {
+    display: inline-block; /* Para que no ocupe todo el ancho, solo lo necesario */
+    padding: 10px 20px; /* Espaciado interno para que la imagen no toque los bordes */
+    margin-top: 15px; /* Espacio superior entre el badge y el contenido */
+}
+
+.badge img {
+    width: 110px; /* Tamaño de la imagen dentro del badge */
+    height: auto; /* Mantener las proporciones de la imagen */
 }
 
 /* Media queries para responsividad */

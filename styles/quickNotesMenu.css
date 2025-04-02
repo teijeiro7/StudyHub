@@ -111,6 +111,8 @@ a {
     gap: var(--spacing-lg);
     align-items: center;
     flex-wrap: wrap;
+    background-color: transparent !important;
+
 }
 
 .create-note-btn {
